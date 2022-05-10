@@ -101,13 +101,10 @@
 		A574352028251A2D0081321B /* Group1_OnlineBookStore */ = {
 			isa = PBXGroup;
 			children = (
-				A574352128251A2D0081321B /* AppDelegate.swift */,
-				A574352328251A2D0081321B /* SceneDelegate.swift */,
-				A574352528251A2D0081321B /* ViewController.swift */,
-				A574352728251A2D0081321B /* Main.storyboard */,
-				A574352D28251A340081321B /* Assets.xcassets */,
-				A574352F28251A340081321B /* LaunchScreen.storyboard */,
-				A574353228251A340081321B /* Info.plist */,
+				A5866F1A282A28AC005B0C8C /* Model */,
+				A5866F19282A28A0005B0C8C /* Controller */,
+				A5866F18282A289A005B0C8C /* View */,
+				A5866F17282A2838005B0C8C /* System files */,
 				A574352A28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld */,
 			);
 			path = Group1_OnlineBookStore;
@@ -129,6 +126,41 @@
 				A574354828251A360081321B /* Info.plist */,
 			);
 			path = Group1_OnlineBookStoreUITests;
+			sourceTree = "<group>";
+		};
+		A5866F17282A2838005B0C8C /* System files */ = {
+			isa = PBXGroup;
+			children = (
+				A574352D28251A340081321B /* Assets.xcassets */,
+				A574353228251A340081321B /* Info.plist */,
+				A574352128251A2D0081321B /* AppDelegate.swift */,
+				A574352328251A2D0081321B /* SceneDelegate.swift */,
+			);
+			name = "System files";
+			sourceTree = "<group>";
+		};
+		A5866F18282A289A005B0C8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A574352728251A2D0081321B /* Main.storyboard */,
+				A574352F28251A340081321B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5866F19282A28A0005B0C8C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A574352528251A2D0081321B /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A5866F1A282A28AC005B0C8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
