@@ -16,6 +16,11 @@
 		A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E52830B44F00083378 /* HomeScreenViewController.swift */; };
 		A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E72830B7A600083378 /* ReviewTableViewCell.swift */; };
 		A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56852E82830B7A600083378 /* ReviewTableViewCell.xib */; };
+		A56852ED2830C94D00083378 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852EC2830C94D00083378 /* Book.swift */; };
+		A56852EF2830CB6E00083378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852EE2830CB6E00083378 /* User.swift */; };
+		A56852F12830CB8D00083378 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F02830CB8D00083378 /* Category.swift */; };
+		A56852F32830CD0700083378 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F22830CD0700083378 /* Order.swift */; };
+		A56852F52830CE4B00083378 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F42830CE4B00083378 /* Customer.swift */; };
 		A574352228251A2D0081321B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352128251A2D0081321B /* AppDelegate.swift */; };
 		A574352428251A2D0081321B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352328251A2D0081321B /* SceneDelegate.swift */; };
 		A574352628251A2D0081321B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352528251A2D0081321B /* ViewController.swift */; };
@@ -54,6 +59,11 @@
 		A56852E52830B44F00083378 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		A56852E72830B7A600083378 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		A56852E82830B7A600083378 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		A56852EC2830C94D00083378 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		A56852EE2830CB6E00083378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A56852F02830CB8D00083378 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A56852F22830CD0700083378 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		A574351E28251A2D0081321B /* Group1_OnlineBookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group1_OnlineBookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574352128251A2D0081321B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A574352328251A2D0081321B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				A56852D92830849F00083378 /* Review.swift */,
+				A56852EC2830C94D00083378 /* Book.swift */,
+				A56852EE2830CB6E00083378 /* User.swift */,
+				A56852F02830CB8D00083378 /* Category.swift */,
+				A56852F22830CD0700083378 /* Order.swift */,
+				A56852F42830CE4B00083378 /* Customer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,10 +350,15 @@
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
+				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
+				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
+				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
+				A56852EF2830CB6E00083378 /* User.swift in Sources */,
+				A56852F12830CB8D00083378 /* Category.swift in Sources */,
 				A56852E32830B3D500083378 /* BookDetailViewController.swift in Sources */,
 				A574352428251A2D0081321B /* SceneDelegate.swift in Sources */,
 				A56852D628306BAB00083378 /* RatingControl.swift in Sources */,
