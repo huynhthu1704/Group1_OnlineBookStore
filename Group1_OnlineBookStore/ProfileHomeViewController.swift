@@ -1,5 +1,5 @@
 //
-//  HomeScreenViewController.swift
+//  ProfileHomeViewController.swift
 //  Group1_OnlineBookStore
 //
 //  Created by Huynh Thu on 2022-05-14.
@@ -8,20 +8,14 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController {
+class ProfileHomeViewController: UIViewController {
 
-    @IBAction func button(_ sender: UIButton) {
-
-        let myViewController = ProfileHomeViewController(nibName: "ProfileHomeViewController", bundle: nil)
-        self.present(myViewController, animated: true, completion: nil)
-           
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

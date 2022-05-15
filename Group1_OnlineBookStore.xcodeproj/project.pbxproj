@@ -21,6 +21,8 @@
 		A56852F12830CB8D00083378 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F02830CB8D00083378 /* Category.swift */; };
 		A56852F32830CD0700083378 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F22830CD0700083378 /* Order.swift */; };
 		A56852F52830CE4B00083378 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F42830CE4B00083378 /* Customer.swift */; };
+		A56852F82830CF9600083378 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F62830CF9600083378 /* ProfileHomeViewController.swift */; };
+		A56852F92830CF9600083378 /* ProfileHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56852F72830CF9600083378 /* ProfileHomeViewController.xib */; };
 		A574352228251A2D0081321B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352128251A2D0081321B /* AppDelegate.swift */; };
 		A574352428251A2D0081321B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352328251A2D0081321B /* SceneDelegate.swift */; };
 		A574352628251A2D0081321B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574352528251A2D0081321B /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 		A56852F02830CB8D00083378 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A56852F22830CD0700083378 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A56852F62830CF9600083378 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
+		A56852F72830CF9600083378 /* ProfileHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHomeViewController.xib; sourceTree = "<group>"; };
 		A574351E28251A2D0081321B /* Group1_OnlineBookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group1_OnlineBookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574352128251A2D0081321B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A574352328251A2D0081321B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */,
 				A56852E12830B3D500083378 /* BookDetailViewController.swift */,
 				A56852E52830B44F00083378 /* HomeScreenViewController.swift */,
+				A56852F62830CF9600083378 /* ProfileHomeViewController.swift */,
+				A56852F72830CF9600083378 /* ProfileHomeViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				A56852E42830B3D500083378 /* BookDetailViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
+				A56852F92830CF9600083378 /* ProfileHomeViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +357,7 @@
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
+				A56852F82830CF9600083378 /* ProfileHomeViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,

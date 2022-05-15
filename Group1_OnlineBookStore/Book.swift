@@ -20,7 +20,8 @@ class Book {
     var category : String
     var totalLikes : Int
     
-    init(name : String,
+    init(id :String,
+        name : String,
          author : String,
          price : Int,
          quantity : Int,
@@ -29,6 +30,7 @@ class Book {
          summary : String,
          category : String,
          totalLikes : Int = 0)    {
+        self.id = id
         self.name = name
         self.author = author
         self.price = price
