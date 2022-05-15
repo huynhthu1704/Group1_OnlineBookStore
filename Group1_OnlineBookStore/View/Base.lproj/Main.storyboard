@@ -388,6 +388,27 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-nH-1g9">
+                                                <rect key="frame" x="10" y="724" width="394" height="42"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNN-3G-9pg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="42"/>
+                                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="BUY NOW" image="cart.fill" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-De-c0T">
+                                                        <rect key="frame" x="217" y="0.0" width="177" height="42"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="ADD CART" image="cart.fill.badge.plus" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -399,9 +420,12 @@
                                             <constraint firstAttribute="trailing" secondItem="JnT-jk-013" secondAttribute="trailing" constant="10" id="Kb7-bl-9k4"/>
                                             <constraint firstItem="Tep-ye-dha" firstAttribute="top" secondItem="MIh-GT-Psh" secondAttribute="top" id="QHI-zW-XLk"/>
                                             <constraint firstItem="zzW-ob-Nb8" firstAttribute="top" secondItem="bRX-nF-Do2" secondAttribute="bottom" constant="30" id="apY-fs-cJQ"/>
+                                            <constraint firstItem="FPW-nH-1g9" firstAttribute="leading" secondItem="MIh-GT-Psh" secondAttribute="leading" constant="10" id="gLv-15-5p0"/>
+                                            <constraint firstAttribute="trailing" secondItem="FPW-nH-1g9" secondAttribute="trailing" constant="10" id="gUX-s6-J1m"/>
                                             <constraint firstItem="bRX-nF-Do2" firstAttribute="leading" secondItem="MIh-GT-Psh" secondAttribute="leading" constant="10" id="h2A-Sg-Gd3"/>
                                             <constraint firstItem="bRX-nF-Do2" firstAttribute="top" secondItem="JnT-jk-013" secondAttribute="bottom" constant="10" id="itx-CO-6c9"/>
                                             <constraint firstAttribute="trailing" secondItem="zzW-ob-Nb8" secondAttribute="trailing" constant="10" id="mh0-eU-eJP"/>
+                                            <constraint firstItem="FPW-nH-1g9" firstAttribute="top" secondItem="zzW-ob-Nb8" secondAttribute="bottom" constant="30" id="p8i-gb-jew"/>
                                             <constraint firstItem="Tep-ye-dha" firstAttribute="width" secondItem="MIh-GT-Psh" secondAttribute="width" id="qBH-YF-vua"/>
                                             <constraint firstItem="JnT-jk-013" firstAttribute="top" secondItem="Tep-ye-dha" secondAttribute="bottom" constant="10" id="rUI-q7-eWE"/>
                                         </constraints>
@@ -462,6 +486,8 @@
     <resources>
         <image name="XuXu" width="600" height="986.5"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="98"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
