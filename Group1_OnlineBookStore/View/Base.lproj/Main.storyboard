@@ -20,7 +20,7 @@
                     <connections>
                         <segue destination="mvd-C2-yUf" kind="relationship" relationship="viewControllers" id="w0O-C7-yLM"/>
                         <segue destination="eE7-LC-QFO" kind="relationship" relationship="viewControllers" id="Zh1-nf-SsA"/>
-                        <segue destination="w3s-je-q8Z" kind="relationship" relationship="viewControllers" id="hda-My-vVB"/>
+                        <segue destination="W11-ie-4D9" kind="relationship" relationship="viewControllers" id="hda-My-vVB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDJ-6B-wIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,22 +88,32 @@
             </objects>
             <point key="canvasLocation" x="-1475" y="52"/>
         </scene>
-        <!--Profile-->
+        <!--Profile Screen View Controller-->
         <scene sceneID="TLG-q5-x9Q">
             <objects>
-                <viewController id="w3s-je-q8Z" customClass="ProfileHomeViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" id="w3s-je-q8Z" customClass="ProfileScreenViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Tc-Qp-Zza">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD4-rN-aRP">
+                                <rect key="frame" x="100" y="283" width="215" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="View all orders"/>
+                                <connections>
+                                    <action selector="viewAllMyOrders:" destination="w3s-je-q8Z" eventType="touchUpInside" id="xNI-Ll-Hbo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fvv-Uy-GAu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="ALX-wi-nqW"/>
                     <navigationItem key="navigationItem" id="eER-2M-mSL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAV-dQ-fCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="25"/>
+            <point key="canvasLocation" x="221.73913043478262" y="24.776785714285712"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="AxC-NB-6sH">
@@ -190,7 +200,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWs-l2-T8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168.80000000000001" y="520.93596059113304"/>
+            <point key="canvasLocation" x="1078.2608695652175" y="520.3125"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="n1U-Fn-Gcl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W11-ie-4D9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="ALX-wi-nqW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0X-hw-AeA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w3s-je-q8Z" kind="relationship" relationship="rootViewController" id="ZSW-uE-9Kn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3K-6g-hTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688.40579710144937" y="24.776785714285712"/>
         </scene>
     </scenes>
     <resources>
