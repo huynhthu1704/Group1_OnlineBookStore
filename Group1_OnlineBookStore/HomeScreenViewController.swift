@@ -14,7 +14,6 @@ class HomeScreenViewController: UIViewController {
 
         let myViewController = ProfileHomeViewController(nibName: "ProfileHomeViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
-           
     }
     override func viewDidLoad() {
         super.viewDidLoad()
