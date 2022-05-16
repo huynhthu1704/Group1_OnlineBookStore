@@ -11,8 +11,7 @@
 		A56852DA2830849F00083378 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D92830849F00083378 /* Review.swift */; };
 		A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */; };
 		A56852E02830AE8F00083378 /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56852DE2830AE8F00083378 /* ShoppingCartViewController.xib */; };
-		A56852E32830B3D500083378 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E12830B3D500083378 /* BookDetailViewController.swift */; };
-		A56852E42830B3D500083378 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56852E22830B3D500083378 /* BookDetailViewController.xib */; };
+		A56852E32830B3D500083378 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E12830B3D500083378 /* BookViewController.swift */; };
 		A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E52830B44F00083378 /* HomeScreenViewController.swift */; };
 		A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852E72830B7A600083378 /* ReviewTableViewCell.swift */; };
 		A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56852E82830B7A600083378 /* ReviewTableViewCell.xib */; };
@@ -30,6 +29,8 @@
 		A574353128251A340081321B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A574352F28251A340081321B /* LaunchScreen.storyboard */; };
 		A574353C28251A360081321B /* Group1_OnlineBookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574353B28251A360081321B /* Group1_OnlineBookStoreTests.swift */; };
 		A574354728251A360081321B /* Group1_OnlineBookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */; };
+		A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBF72832868700890344 /* BookDetailViewController.swift */; };
+		A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBF82832868700890344 /* BookDetailViewController.xib */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -56,8 +57,7 @@
 		A56852D92830849F00083378 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		A56852DE2830AE8F00083378 /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
-		A56852E12830B3D500083378 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		A56852E22830B3D500083378 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		A56852E12830B3D500083378 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		A56852E52830B44F00083378 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		A56852E72830B7A600083378 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		A56852E82830B7A600083378 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		A574354228251A360081321B /* Group1_OnlineBookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Group1_OnlineBookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group1_OnlineBookStoreUITests.swift; sourceTree = "<group>"; };
 		A574354828251A360081321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A9CBF72832868700890344 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		A5A9CBF82832868700890344 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,7 +188,6 @@
 			children = (
 				D3AEFD3728312E3D00A8E69B /* Components */,
 				D3AEFD3628312E1500A8E69B /* Profile */,
-				A56852E22830B3D500083378 /* BookDetailViewController.xib */,
 				A56852DE2830AE8F00083378 /* ShoppingCartViewController.xib */,
 				A574352728251A2D0081321B /* Main.storyboard */,
 				A574352F28251A340081321B /* LaunchScreen.storyboard */,
@@ -201,8 +202,10 @@
 				D3AEFD3528312DB200A8E69B /* Profile */,
 				A574352528251A2D0081321B /* ViewController.swift */,
 				A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */,
-				A56852E12830B3D500083378 /* BookDetailViewController.swift */,
+				A56852E12830B3D500083378 /* BookViewController.swift */,
 				A56852E52830B44F00083378 /* HomeScreenViewController.swift */,
+				A5A9CBF72832868700890344 /* BookDetailViewController.swift */,
+				A5A9CBF82832868700890344 /* BookDetailViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,7 +370,7 @@
 			files = (
 				A56852E02830AE8F00083378 /* ShoppingCartViewController.xib in Resources */,
 				A574353128251A340081321B /* LaunchScreen.storyboard in Resources */,
-				A56852E42830B3D500083378 /* BookDetailViewController.xib in Resources */,
+				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
@@ -397,6 +400,7 @@
 			files = (
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
+				A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
@@ -409,7 +413,7 @@
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
 				A56852EF2830CB6E00083378 /* User.swift in Sources */,
 				A56852F12830CB8D00083378 /* Category.swift in Sources */,
-				A56852E32830B3D500083378 /* BookDetailViewController.swift in Sources */,
+				A56852E32830B3D500083378 /* BookViewController.swift in Sources */,
 				A574352428251A2D0081321B /* SceneDelegate.swift in Sources */,
 				A56852D628306BAB00083378 /* RatingControl.swift in Sources */,
 			);

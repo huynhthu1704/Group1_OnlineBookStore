@@ -1,43 +1,53 @@
 //
-//  BookViewController.swift
+//  BookDetailViewController.swift
 //  Group1_OnlineBookStore
 //
-//  Created by Huynh Thu on 2022-05-14.
+//  Created by Huynh Thu on 2022-05-16.
 //  Copyright © 2022 Huynh Thu. All rights reserved.
 //
-//let myViewController = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
-//      self.present(myViewController, animated: true, completion: nil)
+
 import UIKit
 
-class BookDetailViewController: UIViewController, UITableViewDataSource{
-    
-    @IBOutlet weak var reviewTableView: UITableView!
-    var reviews = [Review]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if  let review = Review(username: "thuhuynh", content: "It is fantastic", ratingValue: 4) {
-            reviews.append(review)          }
-        self.reviewTableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        reviewTableView.dataSource = self
-        
-        // Do any additional setup after loading the view.
-    }
+class BookDetailViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        reviews.count
+        return reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIndentifier = "cell"
-        if let cell = reviewTableView.dequeueReusableCell(withIdentifier: reuseIndentifier, for: indexPath) as? ReviewTableViewCell {
-            let review = reviews[indexPath.row]
-            cell.username.text = review.username
-            cell.content.text = review.content
-            cell.ratingControl.setRatingValue(ratingValue: review.ratingValue)
-            return cell
-        } else {
-            fatalError("Can not create the cell")
-        }
+              var cell: ReviewTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ReviewTableViewCell
+              if cell == nil {
+                  tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
+                  cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ReviewTableViewCell
+              }
+              let review = reviews[indexPath.row]
+              cell.username.text = review.username
+              cell.content.text = review.content
+              cell.ratingControl.setRatingValue(ratingValue: review.ratingValue)
+              return cell
         
     }
+    
+
+    @IBAction func didLiked(_ sender: UIButton) {
+    }
+    // Properties
+    
+    @IBOutlet weak var likeBtn: UIButton!
+    var reviews = [Review]()
+    @IBOutlet weak var reviewTableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
+        if let review = Review(username: "thuhuynh", content: "It is fantastic", ratingValue: 4) {
+             reviews.append(review)
+        }
+       
+        reviewTableView.dataSource = self
+        // Do any additional setup after loading the view.
+    }
+
+
+  
+
 }
