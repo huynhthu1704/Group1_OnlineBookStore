@@ -31,6 +31,7 @@
 		A574354728251A360081321B /* Group1_OnlineBookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */; };
 		A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBF72832868700890344 /* BookDetailViewController.swift */; };
 		A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBF82832868700890344 /* BookDetailViewController.xib */; };
+		A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFB2832A8EE00890344 /* CheckBox.swift */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		A574354828251A360081321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A9CBF72832868700890344 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		A5A9CBF82832868700890344 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		A5A9CBFB2832A8EE00890344 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */,
+				A5A9CBFB2832A8EE00890344 /* CheckBox.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			files = (
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
+				A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */,
 				A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,

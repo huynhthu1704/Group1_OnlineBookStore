@@ -10,10 +10,8 @@ import UIKit
 
 class ShoppingCartViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.textColor = UIColor.red
         // Do any additional setup after loading the view.
     }
 
