@@ -32,6 +32,8 @@
 		A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBF72832868700890344 /* BookDetailViewController.swift */; };
 		A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBF82832868700890344 /* BookDetailViewController.xib */; };
 		A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFB2832A8EE00890344 /* CheckBox.swift */; };
+		A5A9CBFF2832AC3C00890344 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */; };
+		A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +87,8 @@
 		A5A9CBF72832868700890344 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		A5A9CBF82832868700890344 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		A5A9CBFB2832A8EE00890344 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
+		A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartTableViewCell.xib; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 			children = (
 				D3DF34EF2832996100AA2245 /* Profile */,
 				A56852E72830B7A600083378 /* ReviewTableViewCell.swift */,
+				A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */,
 				A56852D528306BAB00083378 /* RatingControl.swift */,
 			);
 			name = Components;
@@ -237,7 +242,6 @@
 		D3AEFD3628312E1500A8E69B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A56852E82830B7A600083378 /* ReviewTableViewCell.xib */,
 			);
 			name = Profile;
 			path = "New Group";
@@ -246,6 +250,8 @@
 		D3AEFD3728312E3D00A8E69B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */,
+				A56852E82830B7A600083378 /* ReviewTableViewCell.xib */,
 				D3DF34F428329A0C00AA2245 /* Profile */,
 			);
 			path = Components;
@@ -375,6 +381,7 @@
 				A574353128251A340081321B /* LaunchScreen.storyboard in Resources */,
 				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
+				A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 			);
@@ -408,6 +415,7 @@
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
+				A5A9CBFF2832AC3C00890344 /* ShoppingCartTableViewCell.swift in Sources */,
 				D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
