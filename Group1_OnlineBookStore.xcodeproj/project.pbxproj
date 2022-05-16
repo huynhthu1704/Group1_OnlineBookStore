@@ -30,8 +30,6 @@
 		A574353128251A340081321B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A574352F28251A340081321B /* LaunchScreen.storyboard */; };
 		A574353C28251A360081321B /* Group1_OnlineBookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574353B28251A360081321B /* Group1_OnlineBookStoreTests.swift */; };
 		A574354728251A360081321B /* Group1_OnlineBookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */; };
-		D305EE842830E88C0013D839 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE822830E88C0013D839 /* MyOrdersViewController.swift */; };
-		D305EE852830E88C0013D839 /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D305EE832830E88C0013D839 /* MyOrdersViewController.xib */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +80,6 @@
 		A574354228251A360081321B /* Group1_OnlineBookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Group1_OnlineBookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group1_OnlineBookStoreUITests.swift; sourceTree = "<group>"; };
 		A574354828251A360081321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D305EE822830E88C0013D839 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
-		D305EE832830E88C0013D839 /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */,
-				D305EE822830E88C0013D839 /* MyOrdersViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -234,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				A56852E82830B7A600083378 /* ReviewTableViewCell.xib */,
-				D305EE832830E88C0013D839 /* MyOrdersViewController.xib */,
 			);
 			name = Profile;
 			path = "New Group";
@@ -356,7 +350,6 @@
 				A56852E42830B3D500083378 /* BookDetailViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
-				D305EE852830E88C0013D839 /* MyOrdersViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +387,6 @@
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
 				A56852EF2830CB6E00083378 /* User.swift in Sources */,
-				D305EE842830E88C0013D839 /* MyOrdersViewController.swift in Sources */,
 				A56852F12830CB8D00083378 /* Category.swift in Sources */,
 				A56852E32830B3D500083378 /* BookDetailViewController.swift in Sources */,
 				A574352428251A2D0081321B /* SceneDelegate.swift in Sources */,

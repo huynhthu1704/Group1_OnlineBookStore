@@ -31,13 +31,13 @@ class ProfileScreenViewController: UIViewController {
     }
     
     
-    @IBAction func btn(_ sender: UIButton) {
-        
-        let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
-        //        self.present(viewAllOrdersController, animated: true, completion: nil)
-        viewAllOrdersController.navigationItem.title = "My orders"
-        navigationController?.pushViewController(viewAllOrdersController, animated: true)
-    }
+//    @IBAction func btn(_ sender: UIButton) {
+//
+//        let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
+//        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+//        viewAllOrdersController.navigationItem.title = "My orders"
+//        navigationController?.pushViewController(viewAllOrdersController, animated: true)
+//    }
     /*
      // MARK: - Navigation
      
