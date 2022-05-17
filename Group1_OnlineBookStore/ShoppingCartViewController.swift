@@ -38,7 +38,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
+//        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
         let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
         books.append(book)
         shoppingCartTableView.dataSource = self

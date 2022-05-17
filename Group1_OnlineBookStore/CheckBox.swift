@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class CheckBox: UIButton {
+@IBDesignable class CheckBox: UIButton {
 // Images
 let checkedImage = UIImage(systemName:  "rectangle")! as UIImage
 let uncheckedImage = UIImage(systemName: "checkmark.rectangle.fill")! as UIImage

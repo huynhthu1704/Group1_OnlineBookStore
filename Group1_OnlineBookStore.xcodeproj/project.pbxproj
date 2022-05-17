@@ -34,6 +34,7 @@
 		A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFB2832A8EE00890344 /* CheckBox.swift */; };
 		A5A9CBFF2832AC3C00890344 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */; };
 		A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */; };
+		A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CC012832B89500890344 /* RoundedButton.swift */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		A5A9CBFB2832A8EE00890344 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartTableViewCell.xib; sourceTree = "<group>"; };
+		A5A9CC012832B89500890344 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,8 @@
 				A56852E72830B7A600083378 /* ReviewTableViewCell.swift */,
 				A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */,
 				A56852D528306BAB00083378 /* RatingControl.swift */,
+				A5A9CBFB2832A8EE00890344 /* CheckBox.swift */,
+				A5A9CC012832B89500890344 /* RoundedButton.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -234,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */,
-				A5A9CBFB2832A8EE00890344 /* CheckBox.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
+				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
