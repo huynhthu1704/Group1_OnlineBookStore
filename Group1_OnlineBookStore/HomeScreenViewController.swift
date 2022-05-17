@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = MyFavoritesViewController(nibName: "MyFavoritesViewController", bundle: nil)
+        let myViewController = WriteReviewViewController(nibName: "WriteReviewViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
