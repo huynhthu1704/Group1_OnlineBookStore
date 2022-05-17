@@ -8,28 +8,76 @@
 
 import UIKit
 
-class ProfileScreenViewController: UIViewController {
+class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     //MARK: Properties
     //MARK: UI for user's info area
     @IBOutlet weak var userStackView: UIStackView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userRank: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    
+    //MARK: UI for statistical area
+    @IBOutlet weak var statisticalStackView: UIStackView!
+    
+    //MARK: UI for My orders area
+    @IBOutlet weak var myOrdersStackView: UIStackView!
     var user:User?
     
+    //MARK: Collection my favorite
+    var books = [Book]()
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var myFavoritesStackView: UIStackView!
+    
+    //    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         userStackView.setBackgroundColor(.systemTeal)
-        let image = UIImage(named: "User's image")
-        self.user = User(id: "001", fullName: "Pham Van Thanh", pwd: "12345", birthday: Date(), slug: image, rank: "Gold member")
+        let imageUser = UIImage(named: "User's image")
+        self.user = User(id: "001", fullName: "Pham Van Thanh", pwd: "12345", birthday: Date(), slug: imageUser, rank: "Gold member")
         if let user = self.user {
             userName.text = user.fullName
             userRank.text = user.rank
             userImage.image = user.slug
         }
+        
+        statisticalStackView.setBackgroundColor(.white)
+        myOrdersStackView.setBackgroundColor(.white)
+        myFavoritesStackView.setBackgroundColor(.white)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "x", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
+        for _ in 0...8 {
+            books.append(book);
+        }
+    }
+    //My favorites
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return books.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteBookViewCell", for: indexPath) as? FavoriteBookCollectionViewCell{
+            let book = books[indexPath.row]
+            cell.bookImag.image = book.slug
+            cell.bookName.text = book.name
+            return cell
+        }else{
+            fatalError("Can not create the cell")
+        }
+    }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        collectionView.frame = view.bounds
+//     }
     
 //    @IBAction func btn(_ sender: UIButton) {
 //

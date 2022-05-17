@@ -31,6 +31,7 @@
 		A574353C28251A360081321B /* Group1_OnlineBookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574353B28251A360081321B /* Group1_OnlineBookStoreTests.swift */; };
 		A574354728251A360081321B /* Group1_OnlineBookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
+		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group1_OnlineBookStoreUITests.swift; sourceTree = "<group>"; };
 		A574354828251A360081321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
+		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		A56852EB2830C6A400083378 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3DF34EF2832996100AA2245 /* Profile */,
 				A56852E72830B7A600083378 /* ReviewTableViewCell.swift */,
 				A56852D528306BAB00083378 /* RatingControl.swift */,
 			);
@@ -237,8 +240,25 @@
 		D3AEFD3728312E3D00A8E69B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3DF34F428329A0C00AA2245 /* Profile */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D3DF34EF2832996100AA2245 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D3DF34F428329A0C00AA2245 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Profile;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +400,7 @@
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
+				D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,

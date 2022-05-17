@@ -15,7 +15,7 @@ class Book {
     var price : Int
     var quantity : Int
     var totalSold : Int
-    var slug : UIImage
+    var slug : UIImage?
     var summary : String
     var category : String
     var totalLikes : Int
@@ -26,7 +26,7 @@ class Book {
          price : Int,
          quantity : Int,
          totalSold : Int,
-         slug : UIImage,
+         slug : UIImage?,
          summary : String,
          category : String,
          totalLikes : Int = 0)    {
