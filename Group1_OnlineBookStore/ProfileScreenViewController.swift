@@ -50,7 +50,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "x", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
+        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
         for _ in 0...8 {
             books.append(book);
         }

@@ -12,6 +12,7 @@ class Book {
     var id : String
     var name : String
     var author : String
+    var publisher : String
     var price : Int
     var quantity : Int
     var totalSold : Int
@@ -23,6 +24,7 @@ class Book {
     init(id :String,
         name : String,
          author : String,
+         publisher : String,
          price : Int,
          quantity : Int,
          totalSold : Int,
@@ -33,6 +35,7 @@ class Book {
         self.id = id
         self.name = name
         self.author = author
+        self.publisher = publisher
         self.price = price
         self.quantity = quantity
         self.totalSold = totalSold
