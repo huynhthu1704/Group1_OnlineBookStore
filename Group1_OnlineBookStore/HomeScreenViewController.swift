@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+        let myViewController = ViewAllCommentViewController(nibName: "ViewAllCommentViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {

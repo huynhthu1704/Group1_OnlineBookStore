@@ -39,11 +39,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
-        if let review = Review(username: "thuhuynh", content: "It is fantastic", ratingValue: 4) {
-             reviews.append(review)
-        }
        
-        reviewTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 

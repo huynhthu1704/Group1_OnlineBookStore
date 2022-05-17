@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewAllCommentViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+            <connections>
+                <outlet property="reviewTableView" destination="PNZ-A2-BWK" id="ZfZ-4x-31J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAllComment" destination="sTy-RN-C4q" id="4jU-gg-maZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-xQ-Zdq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Y9-Ew-Elx" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="73Z-zP-QxA">
+                                    <rect key="frame" x="30" y="30" width="354" height="104"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ybi-8k-fjD">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="42"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-RN-C4q" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.38371843159243979" green="0.36069400880725955" blue="0.89357947335025378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="All">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-Hf-Ehd" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="128" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="1*">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dca-oY-ZFG" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="256" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="2*">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pRC-eN-do4">
+                                            <rect key="frame" x="0.0" y="62" width="354" height="42"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-SJ-HKG" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="3*">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-Fe-Tt2" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="128" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="4*">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11a-ks-lsp" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+                                                    <rect key="frame" x="256" y="0.0" width="98" height="42"/>
+                                                    <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="5*">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pRC-eN-do4" firstAttribute="leading" secondItem="73Z-zP-QxA" secondAttribute="leading" id="8ZN-C3-ia6"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ybi-8k-fjD" secondAttribute="trailing" id="JZO-QJ-TBX"/>
+                                        <constraint firstItem="Ybi-8k-fjD" firstAttribute="leading" secondItem="73Z-zP-QxA" secondAttribute="leading" id="KZW-LG-Y5W"/>
+                                        <constraint firstAttribute="trailing" secondItem="pRC-eN-do4" secondAttribute="trailing" id="yC1-v4-tcM"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lyC-up-8LX">
+                                    <rect key="frame" x="0.0" y="174" width="414" height="400"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-A2-BWK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </tableView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="PNZ-A2-BWK" secondAttribute="bottom" id="8rD-NW-cES"/>
+                                        <constraint firstItem="PNZ-A2-BWK" firstAttribute="top" secondItem="lyC-up-8LX" secondAttribute="top" id="M4P-cL-LQN"/>
+                                        <constraint firstAttribute="height" constant="400" id="UMf-g6-U92"/>
+                                        <constraint firstItem="PNZ-A2-BWK" firstAttribute="leading" secondItem="lyC-up-8LX" secondAttribute="leading" id="WW9-gk-TX2"/>
+                                        <constraint firstAttribute="trailing" secondItem="PNZ-A2-BWK" secondAttribute="trailing" id="gaI-tT-Zs7"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="lyC-up-8LX" firstAttribute="top" secondItem="73Z-zP-QxA" secondAttribute="bottom" constant="40" id="1pY-j3-JAd"/>
+                                <constraint firstItem="73Z-zP-QxA" firstAttribute="leading" secondItem="0Y9-Ew-Elx" secondAttribute="leading" constant="30" id="4Pn-Cz-0Xp"/>
+                                <constraint firstItem="lyC-up-8LX" firstAttribute="leading" secondItem="0Y9-Ew-Elx" secondAttribute="leading" id="6dK-yX-qaG"/>
+                                <constraint firstItem="73Z-zP-QxA" firstAttribute="top" secondItem="0Y9-Ew-Elx" secondAttribute="top" constant="30" id="Ex6-0d-Gqm"/>
+                                <constraint firstAttribute="height" constant="1200" id="gtO-HN-uRY"/>
+                                <constraint firstAttribute="trailing" secondItem="73Z-zP-QxA" secondAttribute="trailing" constant="30" id="hyB-sO-JIq"/>
+                                <constraint firstItem="lyC-up-8LX" firstAttribute="centerX" secondItem="0Y9-Ew-Elx" secondAttribute="centerX" id="iWZ-eN-a0w"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0Y9-Ew-Elx" secondAttribute="trailing" id="7KK-NI-N8r"/>
+                        <constraint firstItem="0Y9-Ew-Elx" firstAttribute="leading" secondItem="LhJ-xQ-Zdq" secondAttribute="leading" id="WMy-ps-W0N"/>
+                        <constraint firstAttribute="bottom" secondItem="0Y9-Ew-Elx" secondAttribute="bottom" id="dlf-QX-i6t"/>
+                        <constraint firstItem="0Y9-Ew-Elx" firstAttribute="top" secondItem="LhJ-xQ-Zdq" secondAttribute="top" id="y0z-vG-71s"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LhJ-xQ-Zdq" secondAttribute="bottom" id="7Ae-CC-hQA"/>
+                <constraint firstItem="LhJ-xQ-Zdq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Odc-Uf-yPI"/>
+                <constraint firstItem="LhJ-xQ-Zdq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QAx-Z3-epU"/>
+                <constraint firstItem="LhJ-xQ-Zdq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VoS-ac-Sou"/>
+                <constraint firstItem="0Y9-Ew-Elx" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="vZg-uD-0KO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="105.80357142857143"/>
+        </view>
+    </objects>
+</document>
