@@ -122,10 +122,10 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9rw-nT-bCS">
-                    <rect key="frame" x="47.5" y="531.5" width="319.5" height="88.5"/>
+                    <rect key="frame" x="39" y="531.5" width="336" height="88.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-dp-lsu" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
-                            <rect key="frame" x="84.5" y="0.0" width="150" height="42"/>
+                            <rect key="frame" x="93" y="0.0" width="150" height="42"/>
                             <color key="backgroundColor" red="0.43742012499999999" green="0.41036994960000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="qfB-fT-Qlg"/>
@@ -134,16 +134,16 @@
                             <state key="normal" title="Sign in"/>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tji-O3-u6a">
-                            <rect key="frame" x="0.0" y="62" width="319.5" height="26.5"/>
+                            <rect key="frame" x="0.0" y="62" width="336" height="26.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have any account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-sf-hu6">
-                                    <rect key="frame" x="0.0" y="0.0" width="234" height="26.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haven't have account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-sf-hu6">
+                                    <rect key="frame" x="0.0" y="0.0" width="250.5" height="26.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-tz-IsF">
-                                    <rect key="frame" x="242" y="0.0" width="77.5" height="26.5"/>
+                                    <rect key="frame" x="258.5" y="0.0" width="77.5" height="26.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

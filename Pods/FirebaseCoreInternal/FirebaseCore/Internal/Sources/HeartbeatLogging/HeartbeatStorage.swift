@@ -106,9 +106,9 @@ final class HeartbeatStorage: HeartbeatStorageProtocol {
   /// heartbeats bundle value.
   func readAndWriteAsync(using transform: @escaping (HeartbeatsBundle?) -> HeartbeatsBundle?) {
     queue.async { [self] in
-        let oldHeartbeatsBundle = try? self.load(from: storage)
+        let oldHeartbeatsBundle = try? self.load(from: self.storage)
       let newHeartbeatsBundle = transform(oldHeartbeatsBundle)
-        try? self.save(newHeartbeatsBundle, to: storage)
+        try? self.save(newHeartbeatsBundle, to: self.storage)
     }
   }
 

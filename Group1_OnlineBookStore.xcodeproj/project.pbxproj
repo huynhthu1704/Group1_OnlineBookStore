@@ -46,6 +46,8 @@
 		A574353128251A340081321B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A574352F28251A340081321B /* LaunchScreen.storyboard */; };
 		A574353C28251A360081321B /* Group1_OnlineBookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574353B28251A360081321B /* Group1_OnlineBookStoreTests.swift */; };
 		A574354728251A360081321B /* Group1_OnlineBookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */; };
+		A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */; };
+		A5947A41283405F600DA6D20 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */; };
 		A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBF72832868700890344 /* BookDetailViewController.swift */; };
 		A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBF82832868700890344 /* BookDetailViewController.xib */; };
 		A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFB2832A8EE00890344 /* CheckBox.swift */; };
@@ -128,6 +130,8 @@
 		A574354228251A360081321B /* Group1_OnlineBookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Group1_OnlineBookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574354628251A360081321B /* Group1_OnlineBookStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group1_OnlineBookStoreUITests.swift; sourceTree = "<group>"; };
 		A574354828251A360081321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		A5A9CBF72832868700890344 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		A5A9CBF82832868700890344 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookDetailViewController.xib; path = ../BookDetailViewController.xib; sourceTree = "<group>"; };
 		A5A9CBFB2832A8EE00890344 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -300,9 +304,11 @@
 				A51C78B52833C19F00A593B9 /* WriteReviewViewController.xib */,
 				A51C78A12833956600A593B9 /* PurchaseViewController.xib */,
 				A51C7899283383EA00A593B9 /* EditInfoViewController.xib */,
-				A574352728251A2D0081321B /* Main.storyboard */,
 				A5A9CBF82832868700890344 /* BookDetailViewController.xib */,
+				A574352728251A2D0081321B /* Main.storyboard */,
 				A574352F28251A340081321B /* LaunchScreen.storyboard */,
+				A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */,
+				A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
+				A5947A41283405F600DA6D20 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +663,7 @@
 				A51C78AE2833BAA400A593B9 /* MyFavoritesViewController.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
+				A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */,
 				A51C789E2833940A00A593B9 /* BookCollectionViewCell.swift in Sources */,
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
 				A51C78A22833956600A593B9 /* PurchaseViewController.swift in Sources */,

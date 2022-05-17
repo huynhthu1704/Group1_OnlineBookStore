@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = WriteReviewViewController(nibName: "WriteReviewViewController", bundle: nil)
+        let myViewController = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
