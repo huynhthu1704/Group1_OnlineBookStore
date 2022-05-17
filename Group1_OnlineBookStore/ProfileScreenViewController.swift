@@ -74,7 +74,21 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
-//    override func viewDidLayoutSubviews() {
+    //MARK: Button
+    
+    @IBAction func goToSettingAccount(_ sender: UIButton) {
+    }
+    
+    @IBAction func goToViewAllOrders(_ sender: UIButton) {
+    }
+    
+    @IBAction func goToViewAllFavorites(_ sender: UIButton) {
+    }
+    
+    @IBAction func goToMyReviewsScreen(_ sender: UITapGestureRecognizer) {
+        print("Go to My reviews screen")
+    }
+    //    override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //        collectionView.frame = view.bounds
 //     }
