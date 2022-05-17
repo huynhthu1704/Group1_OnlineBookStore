@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
+		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
 		A56852D628306BAB00083378 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D528306BAB00083378 /* RatingControl.swift */; };
 		A56852DA2830849F00083378 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D92830849F00083378 /* Review.swift */; };
 		A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A51C7898283383EA00A593B9 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		A51C7899283383EA00A593B9 /* EditInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditInfoViewController.xib; sourceTree = "<group>"; };
 		A56852D528306BAB00083378 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		A56852D92830849F00083378 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				A56852E52830B44F00083378 /* HomeScreenViewController.swift */,
 				A5A9CBF72832868700890344 /* BookDetailViewController.swift */,
 				A5A9CBF82832868700890344 /* BookDetailViewController.xib */,
+				A51C7898283383EA00A593B9 /* EditInfoViewController.swift */,
+				A51C7899283383EA00A593B9 /* EditInfoViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56852E02830AE8F00083378 /* ShoppingCartViewController.xib in Resources */,
+				A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */,
 				A574353128251A340081321B /* LaunchScreen.storyboard in Resources */,
 				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
@@ -422,6 +429,7 @@
 				D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
+				A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,

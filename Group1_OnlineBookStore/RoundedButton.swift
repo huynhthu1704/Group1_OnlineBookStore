@@ -20,6 +20,9 @@ import UIKit
     }
     
     private func setUp() {
+        self.tintColor = UIColor.white
+        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
            // Set up button's properties
          self.layer.cornerRadius = self.bounds.size.height/4
        }
