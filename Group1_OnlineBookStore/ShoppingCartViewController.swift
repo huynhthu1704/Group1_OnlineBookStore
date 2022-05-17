@@ -14,21 +14,21 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let reuseIndentifier = "shoppingCartCell"
-                     var cell: ShoppingCartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
-                     if cell == nil {
-                         tableView.register(UINib(nibName: "ShoppingCartTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
-                         cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
-                     }
-                     let book = books[indexPath.row]
+        let reuseIndentifier = "shoppingCartCell"
+        var cell: ShoppingCartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
+        if cell == nil {
+            tableView.register(UINib(nibName: "ShoppingCartTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
+        }
+        let book = books[indexPath.row]
         cell.bookImg.image = book.slug
         cell.bookName.text = book.name
         cell.price.text = String(book.price)
         cell.quantity.text = String(1)
-                     return cell
+        return cell
     }
     
-
+    
     @IBOutlet weak var shoppingCartTableView: UITableView!
     
     @IBOutlet weak var purchaseBtn: UIButton!
@@ -38,10 +38,10 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
+        //        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
         let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
         books.append(book)
         shoppingCartTableView.dataSource = self
     }
-
+    
 }

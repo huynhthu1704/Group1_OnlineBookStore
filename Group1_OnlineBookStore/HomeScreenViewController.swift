@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = EditInfoViewController(nibName: "EditInfoViewController", bundle: nil)
+        let myViewController = PurchaseViewController(nibName: "PurchaseViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
