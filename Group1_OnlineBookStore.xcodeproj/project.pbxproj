@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662E9A862833D55700D112E3 /* SeemoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E9A852833D55600D112E3 /* SeemoreCollectionViewCell.swift */; };
+		662E9A8E2833D65400D112E3 /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E9A8D2833D65400D112E3 /* SeemoreViewController.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
 		A51C789E2833940A00A593B9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */; };
@@ -73,6 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		662E9A852833D55600D112E3 /* SeemoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeemoreCollectionViewCell.swift; path = ../../../Documents/Group1_OnlineBookStore/Group1_OnlineBookStore/SeemoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		662E9A892833D59D00D112E3 /* SeemoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeemoreViewController.xib; sourceTree = "<group>"; };
+		662E9A8C2833D5DC00D112E3 /* SeemoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeemoreCollectionViewCell.xib; sourceTree = "<group>"; };
+		662E9A8D2833D65400D112E3 /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeemoreViewController.swift; path = ../../../Documents/Group1_OnlineBookStore/Group1_OnlineBookStore/SeemoreViewController.swift; sourceTree = "<group>"; };
 		A51C7898283383EA00A593B9 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		A51C7899283383EA00A593B9 /* EditInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditInfoViewController.xib; sourceTree = "<group>"; };
 		A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			children = (
 				D3DF34EF2832996100AA2245 /* Profile */,
 				A56852E72830B7A600083378 /* ReviewTableViewCell.swift */,
+				662E9A852833D55600D112E3 /* SeemoreCollectionViewCell.swift */,
 				A5A9CBFD2832AC3C00890344 /* ShoppingCartTableViewCell.swift */,
 				A56852D528306BAB00083378 /* RatingControl.swift */,
 				A5A9CBFB2832A8EE00890344 /* CheckBox.swift */,
@@ -234,6 +241,7 @@
 				D3AEFD3728312E3D00A8E69B /* Components */,
 				D3AEFD3628312E1500A8E69B /* Profile */,
 				A56852DE2830AE8F00083378 /* ShoppingCartViewController.xib */,
+				662E9A892833D59D00D112E3 /* SeemoreViewController.xib */,
 				A51C78A52833B10900A593B9 /* SignInViewController.xib */,
 				A51C78A92833B53100A593B9 /* SignUpViewController.xib */,
 				A51C78A12833956600A593B9 /* PurchaseViewController.xib */,
@@ -252,6 +260,7 @@
 				D3AEFD3528312DB200A8E69B /* Profile */,
 				A574352528251A2D0081321B /* ViewController.swift */,
 				A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */,
+				662E9A8D2833D65400D112E3 /* SeemoreViewController.swift */,
 				A56852E12830B3D500083378 /* BookViewController.swift */,
 				A56852E52830B44F00083378 /* HomeScreenViewController.swift */,
 				A5A9CBF72832868700890344 /* BookDetailViewController.swift */,
@@ -299,6 +308,7 @@
 		D3AEFD3728312E3D00A8E69B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				662E9A8C2833D5DC00D112E3 /* SeemoreCollectionViewCell.xib */,
 				A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */,
 				A56852E82830B7A600083378 /* ReviewTableViewCell.xib */,
 				A51C789D2833940A00A593B9 /* BookCollectionViewCell.xib */,
@@ -471,6 +481,7 @@
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */,
 				A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */,
+				662E9A8E2833D65400D112E3 /* SeemoreViewController.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
 				A51C78B62833C19F00A593B9 /* WriteReviewViewController.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
@@ -483,6 +494,7 @@
 				A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A51C78AE2833BAA400A593B9 /* MyFavoritesViewController.swift in Sources */,
+				662E9A862833D55700D112E3 /* SeemoreCollectionViewCell.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
 				A51C789E2833940A00A593B9 /* BookCollectionViewCell.swift in Sources */,
