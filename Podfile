@@ -8,6 +8,7 @@ pod 'FirebaseAuth'
 pod 'FirebaseCore'
 pod 'FirebaseFirestore'
 pod 'FirebaseStorage'
+pod 'FirebaseDatabase'
 pod 'Charts'
   # Pods for Group1_OnlineBookStore
 

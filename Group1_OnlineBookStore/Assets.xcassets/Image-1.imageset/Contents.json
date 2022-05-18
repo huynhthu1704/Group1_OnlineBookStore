@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "icons8-book-shelf-80.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-book-shelf-90.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-book-shelf-100.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

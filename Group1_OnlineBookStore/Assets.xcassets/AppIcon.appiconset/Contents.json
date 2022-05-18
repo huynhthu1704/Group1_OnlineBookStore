@@ -1,11 +1,13 @@
 {
   "images" : [
     {
+      "filename" : "icons8-books-emoji-40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "icons8-books-emoji-60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -31,6 +33,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "icons8-books-emoji-101.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"

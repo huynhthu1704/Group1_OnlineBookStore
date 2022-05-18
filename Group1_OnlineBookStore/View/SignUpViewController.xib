@@ -23,7 +23,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-ad-qfr">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XuXu" translatesAutoresizingMaskIntoConstraints="NO" id="sjT-fN-tdD">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookLaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="sjT-fN-tdD">
                                     <rect key="frame" x="0.0" y="20" width="160" height="160"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="160" id="J9f-wD-Vae"/>
@@ -233,6 +233,6 @@
         </view>
     </objects>
     <resources>
-        <image name="XuXu" width="600" height="986.5"/>
+        <image name="BookLaunchScreen" width="45" height="45"/>
     </resources>
 </document>
