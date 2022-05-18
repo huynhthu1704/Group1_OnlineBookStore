@@ -7,32 +7,39 @@
 //
 
 import Foundation
-
 class Order {
     var id : String
     var customerId :String
     var orderDate : Date
     var note : String
     var userId : String
-    var total : Int
     var deliveryFee : Int
-    var totalPrice : Int
+    var orderedBooks: [OrderedBook]
     
     init ( id : String,
      customerId :String,
      orderDate : Date,
      note : String,
      userId : String,
-     total : Int,
-     deliveryFee : Int,
-     totalPrice : Int){
+     deliveryFee : Int, books: [OrderedBook]){
         self.id = id
         self.customerId = customerId
         self.orderDate = orderDate
         self.note = note
         self.userId = userId
-        self.total = total
         self.deliveryFee = deliveryFee
-        self.totalPrice = totalPrice
+        self.orderedBooks = books
+    }
+    
+    func getTotal() -> Double {
+        var result:Double = 0.0
+        for item in self.orderedBooks {
+            result += Double((item.book.price * item.amount))
+        }
+        return result
+    }
+    
+    func getTotalWithFee() -> Double{
+        return getTotal() + Double(self.deliveryFee)
     }
 }

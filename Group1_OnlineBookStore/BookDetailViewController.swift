@@ -35,12 +35,13 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var likeBtn: UIButton!
     var reviews = [Review]()
+    var books = [Book]()
     @IBOutlet weak var reviewTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
-       
-        // Do any additional setup after loading the view.
+        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
+        navigationController?.title = book.name
     }
 
 

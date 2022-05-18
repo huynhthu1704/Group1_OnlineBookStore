@@ -12,13 +12,17 @@ class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = ViewAllCommentViewController(nibName: "ViewAllCommentViewController", bundle: nil)
-        self.present(myViewController, animated: true, completion: nil)
+        let myViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+        self.navigationController?.pushViewController(myViewController, animated: true)
+//        self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//                let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
+                //        self.present(viewAllOrdersController, animated: true, completion: nil)
+                //viewAllOrdersController.navigationItem.title = "My orders"
 
-        // Do any additional setup after loading the view.
     }
 
 }

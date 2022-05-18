@@ -26,6 +26,7 @@
 		A51C78B72833C19F00A593B9 /* WriteReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C78B52833C19F00A593B9 /* WriteReviewViewController.xib */; };
 		A51D06BF2834435D00CA199F /* ViewAllCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */; };
 		A51D06C02834435D00CA199F /* ViewAllCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51D06BE2834435D00CA199F /* ViewAllCommentViewController.xib */; };
+		A51D06C42834500200CA199F /* OrderedBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D06C32834500100CA199F /* OrderedBook.swift */; };
 		A56852D628306BAB00083378 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D528306BAB00083378 /* RatingControl.swift */; };
 		A56852DA2830849F00083378 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D92830849F00083378 /* Review.swift */; };
 		A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */; };
@@ -106,6 +107,7 @@
 		A51C78B52833C19F00A593B9 /* WriteReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewViewController.xib; sourceTree = "<group>"; };
 		A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCommentViewController.swift; sourceTree = "<group>"; };
 		A51D06BE2834435D00CA199F /* ViewAllCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllCommentViewController.xib; sourceTree = "<group>"; };
+		A51D06C32834500100CA199F /* OrderedBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBook.swift; sourceTree = "<group>"; };
 		A56852D528306BAB00083378 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		A56852D92830849F00083378 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
@@ -311,9 +313,7 @@
 				A5A9CBF82832868700890344 /* BookDetailViewController.xib */,
 				A574352728251A2D0081321B /* Main.storyboard */,
 				A574352F28251A340081321B /* LaunchScreen.storyboard */,
-				A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */,
 				A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */,
-				A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */,
 				A51D06BE2834435D00CA199F /* ViewAllCommentViewController.xib */,
 			);
 			path = View;
@@ -335,6 +335,8 @@
 				A51C78A42833B10900A593B9 /* SignInViewController.swift */,
 				A51C78A82833B53100A593B9 /* SignUpViewController.swift */,
 				A51C78AC2833BAA400A593B9 /* MyFavoritesViewController.swift */,
+				A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */,
+				A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */,
 				A51C78B42833C19F00A593B9 /* WriteReviewViewController.swift */,
 			);
 			name = Controller;
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				A56852D92830849F00083378 /* Review.swift */,
+				A51D06C32834500100CA199F /* OrderedBook.swift */,
 				A56852EC2830C94D00083378 /* Book.swift */,
 				A56852EE2830CB6E00083378 /* User.swift */,
 				A56852F02830CB8D00083378 /* Category.swift */,
@@ -652,6 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51D06C42834500200CA199F /* OrderedBook.swift in Sources */,
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */,
@@ -859,7 +863,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Group1_OnlineBookStore/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -878,7 +882,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Group1_OnlineBookStore/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
