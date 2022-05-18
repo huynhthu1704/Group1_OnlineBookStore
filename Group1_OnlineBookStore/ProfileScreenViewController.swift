@@ -80,6 +80,11 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
+        let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        navigationItem.title = ""
+        viewAllOrdersController.navigationItem.title = "My orders"
+        navigationController?.pushViewController(viewAllOrdersController, animated: true)
     }
     
     @IBAction func goToViewAllFavorites(_ sender: UIButton) {
