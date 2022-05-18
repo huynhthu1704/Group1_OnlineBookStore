@@ -7,22 +7,18 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
 
-        let myViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
-        self.navigationController?.pushViewController(myViewController, animated: true)
-//        self.present(myViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//                let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
-                //        self.present(viewAllOrdersController, animated: true, completion: nil)
-                //viewAllOrdersController.navigationItem.title = "My orders"
-
+        if (FirebaseAuth.Auth.auth().currentUser == nil) {
+        }
+                   let myViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+                    self.navigationController?.pushViewController(myViewController, animated: true)
     }
 
 }

@@ -193,6 +193,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="Sign up"/>
+                            <connections>
+                                <action selector="signUp:" destination="-1" eventType="touchUpInside" id="UNP-8B-0YF"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="le9-td-uWo">
                             <rect key="frame" x="0.0" y="62" width="291.5" height="26.5"/>

@@ -10,6 +10,20 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    
+    @IBAction func signUp(_ sender: RoundedButton) {
+//        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {[weak self]result, error in
+        //                guard let strongSelf = self else {
+        //                    return
+        //                }
+        //                guard error == nil else {
+        //
+        //                    return
+        //                }
+        //
+        //            })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -14,7 +14,7 @@ pod 'Charts'
   target 'Group1_OnlineBookStoreTests' do
     inherit! :search_paths
     # Pods for testing
-  end`````````````````````````````````````````````````````````
+  end
 
   target 'Group1_OnlineBookStoreUITests' do
     # Pods for testing
