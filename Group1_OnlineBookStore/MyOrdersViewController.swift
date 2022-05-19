@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MyOrdersViewController: UIViewController, UITableViewDataSource {
-
+class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     var orderedBooks = [OrderedBook]()
     
     override func viewDidLoad() {
@@ -48,28 +48,16 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource {
         cell.lblBookName.text = orderedBook.book.name + " - " + orderedBook.book.author
         cell.lblAmountPrice.text = "Amount: \(orderedBook.amount) |  $\(orderedBook.book.price)"
         return cell
-        
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let viewAllOrdersController = OrderDetailViewController(nibName: "OrderDetailViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        navigationItem.title = ""
+        viewAllOrdersController.navigationItem.title = "Order detail"
+        navigationController?.pushViewController(viewAllOrdersController, animated: true)
     }
-    */
-
+    
+    
+    
 }

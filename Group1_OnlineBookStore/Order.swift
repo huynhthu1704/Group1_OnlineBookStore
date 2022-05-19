@@ -17,11 +17,11 @@ class Order {
     var orderedBooks: [OrderedBook]
     
     init ( id : String,
-     customerId :String,
-     orderDate : Date,
-     note : String,
-     userId : String,
-     deliveryFee : Int, books: [OrderedBook]){
+           customerId :String,
+           orderDate : Date,
+           note : String,
+           userId : String,
+           deliveryFee : Int, books: [OrderedBook]){
         self.id = id
         self.customerId = customerId
         self.orderDate = orderDate

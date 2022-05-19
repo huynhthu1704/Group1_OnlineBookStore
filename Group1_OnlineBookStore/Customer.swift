@@ -13,6 +13,7 @@ class Customer {
     var name : String
     var address : String
     var phoneNumber : String
+    
     init(id : String,
         name : String,
         address : String,
