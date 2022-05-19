@@ -36,11 +36,11 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseIndentifier = "OrdersTableViewCell"
-        var cell: OrdersTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? OrdersTableViewCell
+        let reuseIndentifier = "OrderTableViewCell"
+        var cell: OrderTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? OrderTableViewCell
         if cell == nil {
-            tableView.register(UINib(nibName: "OrdersTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
-            cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? OrdersTableViewCell
+            tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? OrderTableViewCell
         }
         let orderedBook = orderedBooks[indexPath.row]
         cell.lblState.text = "To received"
