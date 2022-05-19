@@ -21,7 +21,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
                   cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ReviewTableViewCell
               }
               let review = reviews[indexPath.row]
-              cell.username.text = review.username
+        cell.username.text = review.userID
               cell.content.text = review.content
               cell.ratingControl.setRatingValue(ratingValue: review.ratingValue)
               return cell

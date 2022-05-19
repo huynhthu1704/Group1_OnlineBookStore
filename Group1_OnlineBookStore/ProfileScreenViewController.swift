@@ -82,7 +82,6 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
         let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
         //        self.present(viewAllOrdersController, animated: true, completion: nil)
-        navigationItem.title = ""
         viewAllOrdersController.navigationItem.title = "My orders"
         navigationController?.pushViewController(viewAllOrdersController, animated: true)
     }
@@ -93,6 +92,11 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     @IBAction func goToMyReviewsScreen(_ sender: UITapGestureRecognizer) {
         print("Go to My reviews screen")
     }
+    
+    @IBAction func goToToReivewScreen(_ sender: UITapGestureRecognizer) {
+        print("Go to To review screen")
+    }
+    
     //    override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //        collectionView.frame = view.bounds

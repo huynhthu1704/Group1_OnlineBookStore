@@ -9,16 +9,19 @@
 import Foundation
 
 class Review {
-    var username : String
+    var userID : String
+    var bookID : String
     var content : String?
     var ratingValue : Int
     // MARK: Constructor
-    init?(username : String, content : String?, ratingValue : Int) {
+    init?(userID : String, content : String?, ratingValue : Int, bookID: String) {
         
         guard 0 <= ratingValue && ratingValue <= 5 else {
             return nil
         }
-        self.username = username
+        self.userID = userID
         self.content = content ?? ""     ; self.ratingValue = ratingValue
+        self.bookID = bookID
+        
     }
 }

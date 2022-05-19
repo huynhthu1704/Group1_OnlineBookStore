@@ -17,6 +17,11 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var lblCustomerPhone: UILabel!
     @IBOutlet weak var lblCustomerAddress: UILabel!
     @IBOutlet weak var lblOrderState: UILabel!
+    @IBOutlet weak var lblTemporaryPrice: UILabel!
+    @IBOutlet weak var lblDiscount: UILabel!
+    @IBOutlet weak var lblTransportFee: UILabel!
+    @IBOutlet weak var lblTotalPrice: UILabel!
+    
     
     
     var orderID:String?
@@ -87,6 +92,10 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             
             lblOrderDate.text = "Order date: \(orderToShow.orderDate.getFormater(format: self.formatDate))"
             lblOrderState.text = orderToShow.state
+            lblTemporaryPrice.text = "$\(orderToShow.getTotal())"
+            lblDiscount.text = "$0"
+            lblTransportFee.text = "$\(orderToShow.deliveryFee)"
+            lblTotalPrice.text = "$\(orderToShow.getTotalWithFee())"
         }
         if let customerToShow = self.customerToShow{
             lblCustomerName.text = customerToShow.name
