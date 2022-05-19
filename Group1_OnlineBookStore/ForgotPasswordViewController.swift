@@ -10,6 +10,14 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBAction func resetPassword(_ sender: Any) {
+        let tabBar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBar")
+        UIApplication.shared.windows.first?.rootViewController = tabBar
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -17,8 +17,7 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         if (FirebaseAuth.Auth.auth().currentUser == nil) {
         }
-                   let myViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
-                    self.navigationController?.pushViewController(myViewController, animated: true)
+                  
     }
 
 }

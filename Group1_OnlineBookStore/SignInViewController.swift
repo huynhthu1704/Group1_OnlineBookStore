@@ -15,35 +15,47 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signUp(_ sender: UITapGestureRecognizer) {
-        let myViewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
-        self.navigationController?.pushViewController(myViewController, animated: true)
+        print("SignUp")
+        let signUpViewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
+        signUpViewController.modalPresentationStyle = .fullScreen
+        present(signUpViewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
     
+    @IBAction func forGotPassword(_ sender: UITapGestureRecognizer) {
+        print("Forgot")
+        let forgotPasswordViewController = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+          forgotPasswordViewController.modalPresentationStyle = .fullScreen
+          present(forgotPasswordViewController, animated: true, completion: nil)
+//               self.navigationController?.pushViewController(forgotPasswordViewController, animated: true)
+    }
     @IBAction func signIn(_ sender: Any) {
-        guard let email = emailField.text, !email.isEmpty,
-            let password = passwordField.text, !password.isEmpty else {
-                print("Missing data")
-                return
-        }
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] result, error in
-            guard let strongSelf = self else {
-                return
-            }
-            guard error == nil else {
-                strongSelf.showCreateAccount(email: email, password: password)
-                return
-            }
-            let myViewController = HomeScreenViewController()
-            self!.navigationController?.pushViewController(myViewController, animated: true)
-        })
+        let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
+        UIApplication.shared.windows.first?.rootViewController = tabBar
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+//        guard let email = emailField.text, !email.isEmpty,
+//            let password = passwordField.text, !password.isEmpty else {
+//                print("Missing data")
+////                return
+//        }
+//        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] result, error in
+//            guard let strongSelf = self else {
+//                return
+//            }
+//            guard error == nil else {
+//                strongSelf.showCreateAccount(email: email, password: password)
+//                return
+//            }
+//            let myViewController = HomeScreenViewController()
+//            self!.navigationController?.pushViewController(myViewController, animated: true)
+//        })
     }
     
     func showCreateAccount(email : String, password : String) {
         let alert = UIAlertController(title: "Create account", message: "Would you like to create account?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {_ in
-            let myViewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
-            self.navigationController?.pushViewController(myViewController, animated: true)
+           
             //
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in }))
@@ -54,11 +66,14 @@ class SignInViewController: UIViewController {
         
         emailField.autocapitalizationType = .none
         passwordField.isSecureTextEntry = true
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white ]
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        if FirebaseAuth.Auth.auth().currentUser != nil {
-            
-            print("Account existted")
-        }
+//        if FirebaseAuth.Auth.auth().currentUser != nil {
+//
+//            print("Account existted")
+//        }
     }
     
 }

@@ -12,13 +12,6 @@ import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    //        let window = UIWindow(frame: UIScreen.main.bounds)
-    //
-    //        let nextViewController =
-    //            ViewController(nibName: "BookDetailViewController", bundle: nil)
-    //         let nav = UINavigationController(rootViewController: nextViewController)
-    //        window.rootViewController = nav
-    //        window.makeKeyAndVisible()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         // Override point for customization after application launch.
