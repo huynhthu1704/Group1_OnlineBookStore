@@ -11,9 +11,11 @@ import FirebaseAuth
 class HomeScreenViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
-
+        let shoppingCartVC = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
+               self.navigationController?.pushViewController(shoppingCartVC, animated: true)
     }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         if (FirebaseAuth.Auth.auth().currentUser == nil) {
         }

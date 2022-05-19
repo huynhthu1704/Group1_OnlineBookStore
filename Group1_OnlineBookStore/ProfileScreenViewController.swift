@@ -12,9 +12,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     //MARK: Properties
     let identifier = "BookCollectionViewCell"
-
+    
     //MARK: UI for user's info area
-    @IBOutlet weak var userStackView: UIStackView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userRank: UILabel!
     @IBOutlet weak var userImage: UIImageView!
@@ -32,26 +31,33 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
-    //    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
-       
+        
+        // Make rounded iamge
         userImage.layer.cornerRadius = userImage.layer.frame.height/2
         userImage.layer.borderWidth = 1
         userImage.layer.borderColor = UIColor.white.cgColor
- userImage.layer.masksToBounds = true
+        userImage.layer.masksToBounds = true
+        
+        // Set attributes for navigation
         let navigationBar = self.navigationController?.navigationBar
-       
+        
+        // Hide nav's shadow
         navigationBar?.setValue(true, forKey: "hidesShadow")
+        
+        // Change nav's color
         navigationBar?.barTintColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
-               navigationBar?.titleTextAttributes = [.foregroundColor : UIColor.white]
-               navigationBar?.isTranslucent = false
+        navigationBar?.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navigationBar?.isTranslucent = false
+        
+        // Customer user's section background color
         userView.backgroundColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
+        
         let imageUser = UIImage(named: "User's image")
         self.user = User(id: "001", fullName: "Pham Van Thanh", pwd: "12345", birthday: Date(), slug: imageUser, rank: "Gold member")
         if let user = self.user {
@@ -70,7 +76,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         for _ in 1...6 {
             books.append(book);
         }
-               collectionView.register(UINib(nibName: "BookItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+        // register nib file for collection view cell
+        collectionView.register(UINib(nibName: "BookItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
     }
     //My favorites
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -79,12 +86,9 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return books.count
     }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookItemCollectionViewCell{
             let book = books[indexPath.row]
             cell.img.image = book.slug
@@ -120,26 +124,18 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     //    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        collectionView.frame = view.bounds
-//     }
+    //        super.viewDidLayoutSubviews()
+    //        collectionView.frame = view.bounds
+    //     }
     
-//    @IBAction func btn(_ sender: UIButton) {
-//
-//        let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
-//        //        self.present(viewAllOrdersController, animated: true, completion: nil)
-//        viewAllOrdersController.navigationItem.title = "My orders"
-//        navigationController?.pushViewController(viewAllOrdersController, animated: true)
-//    }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    //    @IBAction func btn(_ sender: UIButton) {
+    //
+    //        let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
+    //        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+    //        viewAllOrdersController.navigationItem.title = "My orders"
+    //        navigationController?.pushViewController(viewAllOrdersController, animated: true)
+    //    }
+
     
 }
 extension UIStackView {
@@ -153,6 +149,6 @@ extension UIStackView {
             backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-            ])
+        ])
     }
 }
