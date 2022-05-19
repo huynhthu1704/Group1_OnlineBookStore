@@ -10,15 +10,65 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookCollectionViewCell" customModule="Group1_OnlineBookStore" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="92" height="114"/>
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="92" height="114"/>
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIo-NN-gSd">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-qn-5Jc">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="XuXu" translatesAutoresizingMaskIntoConstraints="NO" id="Wz7-4M-aLI">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="49.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xu Xu dung khoc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLK-id-ii8">
+                                        <rect key="frame" x="0.0" y="49.5" width="100" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kk-Kg-8dK">
+                                        <rect key="frame" x="0.0" y="83" width="100" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wvj-qn-5Jc" firstAttribute="top" secondItem="tIo-NN-gSd" secondAttribute="top" id="5kO-QV-1dz"/>
+                            <constraint firstItem="wvj-qn-5Jc" firstAttribute="leading" secondItem="tIo-NN-gSd" secondAttribute="leading" id="9sm-1J-MRM"/>
+                            <constraint firstAttribute="trailing" secondItem="wvj-qn-5Jc" secondAttribute="trailing" id="HEW-LE-33r"/>
+                            <constraint firstAttribute="bottom" secondItem="wvj-qn-5Jc" secondAttribute="bottom" id="SLB-fN-P1o"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="tIo-NN-gSd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="39M-5n-Pth"/>
+                <constraint firstAttribute="trailing" secondItem="tIo-NN-gSd" secondAttribute="trailing" id="AqG-bj-Jlg"/>
+                <constraint firstItem="tIo-NN-gSd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jNc-b6-v5b"/>
+                <constraint firstAttribute="bottom" secondItem="tIo-NN-gSd" secondAttribute="bottom" id="kDp-3h-giE"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="92" height="114"/>
-            <point key="canvasLocation" x="139.13043478260872" y="84.375"/>
+            <size key="customSize" width="100" height="100"/>
+            <connections>
+                <outlet property="img" destination="Wz7-4M-aLI" id="wqQ-Fy-uTS"/>
+                <outlet property="name" destination="DLK-id-ii8" id="n3R-Op-126"/>
+                <outlet property="price" destination="7Kk-Kg-8dK" id="16F-Gv-rRU"/>
+            </connections>
+            <point key="canvasLocation" x="210.1449275362319" y="103.125"/>
         </collectionViewCell>
+        <tapGestureRecognizer id="iWj-XN-KNc"/>
     </objects>
+    <resources>
+        <image name="XuXu" width="600" height="986.5"/>
+    </resources>
 </document>
