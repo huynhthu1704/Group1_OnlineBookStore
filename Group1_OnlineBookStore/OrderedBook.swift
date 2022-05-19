@@ -9,10 +9,12 @@
 import Foundation
 
 class OrderedBook {
+    var orderID: String
     var book: Book
     var amount: Int
     
-    init(book:Book, amount: Int) {
+    init(orderID: String,book:Book, amount: Int) {
+        self.orderID = orderID
         self.book = book
         self.amount = amount
     }

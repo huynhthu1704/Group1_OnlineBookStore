@@ -15,13 +15,14 @@ class Order {
     var userId : String
     var deliveryFee : Int
     var orderedBooks: [OrderedBook]
+    var state: String
     
     init ( id : String,
            customerId :String,
            orderDate : Date,
            note : String,
            userId : String,
-           deliveryFee : Int, books: [OrderedBook]){
+           deliveryFee : Int, books: [OrderedBook], state: String){
         self.id = id
         self.customerId = customerId
         self.orderDate = orderDate
@@ -29,6 +30,7 @@ class Order {
         self.userId = userId
         self.deliveryFee = deliveryFee
         self.orderedBooks = books
+        self.state = state
     }
     
     func getTotal() -> Double {

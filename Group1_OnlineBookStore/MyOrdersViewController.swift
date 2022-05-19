@@ -15,13 +15,14 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         searchStackView.setBackgroundColor(.white)
+        orderTableView.delegate = self
         orderTableView.dataSource = self
         let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
         let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")
-        orderedBooks.append(OrderedBook(book: book, amount: 2))
-        orderedBooks.append(OrderedBook(book: book1, amount: 3))
-        orderedBooks.append(OrderedBook(book: book1, amount: 3))
-        orderedBooks.append(OrderedBook(book: book, amount: 2))
+        orderedBooks.append(OrderedBook(orderID: "OD15", book: book, amount: 2))
+        orderedBooks.append(OrderedBook(orderID: "OD16", book: book1, amount: 3))
+        orderedBooks.append(OrderedBook(orderID: "OD16", book: book1, amount: 3))
+        orderedBooks.append(OrderedBook(orderID: "OD15", book: book, amount: 2))
         
     }
     
@@ -50,14 +51,12 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let viewAllOrdersController = OrderDetailViewController(nibName: "OrderDetailViewController", bundle: nil)
-        //        self.present(viewAllOrdersController, animated: true, completion: nil)
-        navigationItem.title = ""
-        viewAllOrdersController.navigationItem.title = "Order detail"
-        navigationController?.pushViewController(viewAllOrdersController, animated: true)
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                let orderDetailView = OrderDetailViewController(nibName: "OrderDetailViewController", bundle: nil)
+                //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        orderDetailView.orderID = orderedBooks[indexPath.row].orderID
+                orderDetailView.navigationItem.title = "Order detail"
+                navigationController?.pushViewController(orderDetailView, animated: true)
     }
-    
-    
-    
 }

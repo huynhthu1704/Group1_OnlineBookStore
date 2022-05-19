@@ -63,6 +63,8 @@
 		A5B7A6DB2833CBF800194413 /* AdminHomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B7A6D92833CBF800194413 /* AdminHomeScreenViewController.xib */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3643F1A2835F41B00B385FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3643F192835F41B00B385FF /* GoogleService-Info.plist */; };
+		D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */; };
+		D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3643F1C28364B0600B385FF /* OrderedBookTableViewCell.xib */; };
 		D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F447928353847002E663E /* MyOrdersViewController.swift */; };
 		D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F447A28353847002E663E /* MyOrdersViewController.xib */; };
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
@@ -159,6 +161,8 @@
 		A5B7A6D92833CBF800194413 /* AdminHomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminHomeScreenViewController.xib; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3643F192835F41B00B385FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "save/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBookTableViewCell.swift; sourceTree = "<group>"; };
+		D3643F1C28364B0600B385FF /* OrderedBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedBookTableViewCell.xib; sourceTree = "<group>"; };
 		D38F447928353847002E663E /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		D38F447A28353847002E663E /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -420,6 +424,7 @@
 				D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */,
 				A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */,
 				D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */,
+				D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 		D3DF34F428329A0C00AA2245 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D3643F1C28364B0600B385FF /* OrderedBookTableViewCell.xib */,
 				D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */,
 			);
 			name = Profile;
@@ -563,6 +569,7 @@
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
 				D3643F1A2835F41B00B385FF /* GoogleService-Info.plist in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
+				D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */,
 				A5947A41283405F600DA6D20 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +718,7 @@
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A51D06BF2834435D00CA199F /* ViewAllCommentViewController.swift in Sources */,
 				A51C78AE2833BAA400A593B9 /* MyFavoritesViewController.swift in Sources */,
+				D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
 				A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */,
