@@ -55,7 +55,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         customers.append(cus2)
         //Initializating orders
         let order1 = Order(id: "OD15", customerId: "Cus1", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 35, books: [orderedBook1, orderedBook4], state: "Cancelled")
-        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To receive")
+        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To confirm")
         orders.append(order1)
         orders.append(order2)
         
@@ -103,18 +103,58 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             lblCustomerAddress.text = customerToShow.address
         }
     }
-
     
+    //MARK: Cancel the order
+    
+    @IBAction func cancelOrder(_ sender: UIButton) {
+        if let orderToShow = self.orderToShow {
+            switch orderToShow.state {
+            case "To confirm":
+                let alert = UIAlertController(title: "CANCEL ORDER", message: "Do you want to cancel the order?", preferredStyle: UIAlertController.Style.alert)
+                
+                        // add the actions (buttons)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {
+                    action in
+                    //Go to cancel the order screen
+                    print("Go to the cancel order screen")
+                }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
 
-    /*
-    // MARK: - Navigation
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            case "Cancelled":
+                let alert = UIAlertController(title: "CANCEL ORDER", message: "The order was cancelled!", preferredStyle: UIAlertController.Style.alert)
+                
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            default:
+                let alert = UIAlertController(title: "CANCEL ORDER", message: "The order is still delivering!", preferredStyle: UIAlertController.Style.alert)
+                
+                        // add the actions (buttons)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
-    */
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orderedBooksToShow.count
@@ -133,10 +173,10 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         cell.lblBookNameAuthor.text = "\(item.book.name) - \(item.book.author)"
         cell.lblBookPrice.text = "$ \(item.book.price)"
         cell.lblQty.text = "Qty: \(item.amount)"
-
+        
         return cell
     }
-
+    
 }
 extension Date{
     func getFormater(format:String) -> String {

@@ -11,18 +11,30 @@ import UIKit
 class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var orderedBooks = [OrderedBook]()
+    var orders = [Order]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchStackView.setBackgroundColor(.white)
         orderTableView.delegate = self
         orderTableView.dataSource = self
+                //Initializating orderedBooks
         let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
         let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")
-        orderedBooks.append(OrderedBook(orderID: "OD15", book: book, amount: 2))
-        orderedBooks.append(OrderedBook(orderID: "OD16", book: book1, amount: 3))
-        orderedBooks.append(OrderedBook(orderID: "OD16", book: book1, amount: 3))
-        orderedBooks.append(OrderedBook(orderID: "OD15", book: book, amount: 2))
+        let orderedBook1 = OrderedBook(orderID: "OD15", book: book, amount: 2)
+        let orderedBook2 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
+        let orderedBook3 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
+        let orderedBook4 = OrderedBook(orderID: "OD15", book: book, amount: 2)
+        orderedBooks.append(orderedBook1)
+        orderedBooks.append(orderedBook2)
+        orderedBooks.append(orderedBook3)
+        orderedBooks.append(orderedBook4)
+        
+        //Initializating orders
+        let order1 = Order(id: "OD15", customerId: "Cus1", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 35, books: [orderedBook1, orderedBook4], state: "Cancelled")
+        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To confirm")
+        orders.append(order1)
+        orders.append(order2)
         
     }
     
@@ -44,7 +56,12 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
             cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? OrderTableViewCell
         }
         let orderedBook = orderedBooks[indexPath.row]
-        cell.lblState.text = "To received"
+        for item in orders{
+            if orderedBook.orderID == item.id {
+                cell.lblState.text = item.state
+                break
+            }
+        }
         cell.imageBook.image = orderedBook.book.slug
         cell.lblBookName.text = orderedBook.book.name + " - " + orderedBook.book.author
         cell.lblAmountPrice.text = "Amount: \(orderedBook.amount) |  $\(orderedBook.book.price)"

@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mB-LB-8sp" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZG-Lb-yog">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
@@ -268,9 +268,25 @@
                                         <constraint firstAttribute="height" constant="166" id="vSk-Pi-XMa"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkU-ey-erZ">
+                                    <rect key="frame" x="25" y="828" width="364" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="CWL-3t-gPx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <state key="normal" title="Cancel My Order">
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelOrder:" destination="-1" eventType="touchUpInside" id="KcI-db-HIs"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="NkU-ey-erZ" secondAttribute="trailing" constant="25" id="9Fx-2u-xYt"/>
                                 <constraint firstItem="6xp-cg-btH" firstAttribute="top" secondItem="gZG-Lb-yog" secondAttribute="bottom" constant="10" id="AGd-2f-WQT"/>
                                 <constraint firstItem="Sht-fS-JJJ" firstAttribute="leading" secondItem="6mB-LB-8sp" secondAttribute="leading" id="Aq6-8l-3op"/>
                                 <constraint firstItem="gZG-Lb-yog" firstAttribute="top" secondItem="6mB-LB-8sp" secondAttribute="top" id="GpO-2a-08J"/>
@@ -278,12 +294,14 @@
                                 <constraint firstItem="gZG-Lb-yog" firstAttribute="leading" secondItem="6mB-LB-8sp" secondAttribute="leading" id="OJ7-Yw-xA0"/>
                                 <constraint firstAttribute="trailing" secondItem="Sht-fS-JJJ" secondAttribute="trailing" id="PSa-4u-klb"/>
                                 <constraint firstItem="EBt-78-5X1" firstAttribute="leading" secondItem="6mB-LB-8sp" secondAttribute="leading" id="aFm-oN-p36"/>
+                                <constraint firstItem="NkU-ey-erZ" firstAttribute="leading" secondItem="6mB-LB-8sp" secondAttribute="leading" constant="25" id="goz-K4-XBm"/>
                                 <constraint firstItem="Sht-fS-JJJ" firstAttribute="top" secondItem="6xp-cg-btH" secondAttribute="bottom" constant="10" id="mQH-aQ-jBr"/>
                                 <constraint firstAttribute="trailing" secondItem="gZG-Lb-yog" secondAttribute="trailing" id="oIK-aq-oTY"/>
                                 <constraint firstItem="6xp-cg-btH" firstAttribute="leading" secondItem="6mB-LB-8sp" secondAttribute="leading" id="qbX-2y-4nr"/>
                                 <constraint firstAttribute="trailing" secondItem="6xp-cg-btH" secondAttribute="trailing" id="tsz-Zg-jj7"/>
                                 <constraint firstAttribute="trailing" secondItem="EBt-78-5X1" secondAttribute="trailing" id="uJP-W1-rnl"/>
-                                <constraint firstAttribute="height" constant="810" id="vY5-70-6cO"/>
+                                <constraint firstAttribute="height" constant="880" id="vY5-70-6cO"/>
+                                <constraint firstItem="NkU-ey-erZ" firstAttribute="top" secondItem="EBt-78-5X1" secondAttribute="bottom" constant="10" id="zVL-RY-nd2"/>
                             </constraints>
                         </view>
                     </subviews>
