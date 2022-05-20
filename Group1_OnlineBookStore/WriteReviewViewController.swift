@@ -10,12 +10,22 @@ import UIKit
 
 class WriteReviewViewController: UIViewController {
 
-    @IBOutlet weak var reviewField: UITextView!
+    var book:Book?
+    @IBOutlet weak var lblPublisher: UILabel!
+    @IBOutlet weak var lblBookName: UILabel!
+    @IBOutlet weak var tvReview: UITextView!
+    @IBOutlet weak var imageBook: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        reviewField.layer.borderWidth = 1
-        reviewField.layer.borderColor =  UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
+        if let book = book {
+            imageBook.image = book.slug
+            lblBookName.text = book.name
+            lblPublisher.text = book.publisher
+        }
     }
 
+    @IBAction func submit(_ sender: UIButton) {
+        print("\(tvReview.text!) \n \(ratingControl.ratingValue)")
+    }
 }

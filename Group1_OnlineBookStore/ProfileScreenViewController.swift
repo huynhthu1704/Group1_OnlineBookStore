@@ -117,6 +117,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func goToViewAllFavorites(_ sender: UIButton) {
+        let viewAllFavorites = MyFavoritesViewController(nibName: "MyFavoritesViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        viewAllFavorites.navigationItem.title = "My favorites"
+        navigationController?.pushViewController(viewAllFavorites, animated: true)
     }
     
     @IBAction func goToMyReviewsScreen(_ sender: UITapGestureRecognizer) {
@@ -124,7 +128,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func goToToReivewScreen(_ sender: UITapGestureRecognizer) {
-        print("Go to To review screen")
+        let toReivewScreen = ToReviewsViewController(nibName: "ToReviewsViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        toReivewScreen.navigationItem.title = "To Review Books"
+        navigationController?.pushViewController(toReivewScreen, animated: true)
     }
     
     //    override func viewDidLayoutSubviews() {
