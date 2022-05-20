@@ -10,6 +10,7 @@ pod 'FirebaseFirestore'
 pod 'FirebaseStorage'
 pod 'FirebaseDatabase'
 pod 'Charts'
+pod 'DropDown'
   # Pods for Group1_OnlineBookStore
 
   target 'Group1_OnlineBookStoreTests' do

@@ -116,7 +116,10 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
                 alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {
                     action in
                     //Go to cancel the order screen
-                    print("Go to the cancel order screen")
+                    let cancelView = CancellingOrderScreenViewController(nibName: "CancellingOrderScreenViewController", bundle: nil)
+                    //        self.present(viewAllOrdersController, animated: true, completion: nil)
+                    cancelView.navigationItem.title = "Cancel Order"
+                    self.navigationController?.pushViewController(cancelView, animated: true)
                 }))
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
 
