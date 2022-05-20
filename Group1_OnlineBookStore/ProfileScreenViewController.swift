@@ -124,7 +124,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func goToMyReviewsScreen(_ sender: UITapGestureRecognizer) {
-        print("Go to My reviews screen")
+        let myReviewsScreen = MyReviewsViewController(nibName: "MyReviewsViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        myReviewsScreen.navigationItem.title = "My reviews"
+        navigationController?.pushViewController(myReviewsScreen, animated: true)
     }
     
     @IBAction func goToToReivewScreen(_ sender: UITapGestureRecognizer) {
