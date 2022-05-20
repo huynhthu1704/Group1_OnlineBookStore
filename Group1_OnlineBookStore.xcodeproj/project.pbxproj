@@ -67,6 +67,8 @@
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */; };
 		D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3643F1C28364B0600B385FF /* OrderedBookTableViewCell.xib */; };
+		D37CBECF28376EA500D60DD6 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CBECD28376EA500D60DD6 /* UserInfoViewController.swift */; };
+		D37CBED028376EA500D60DD6 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37CBECE28376EA500D60DD6 /* UserInfoViewController.xib */; };
 		D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F447928353847002E663E /* MyOrdersViewController.swift */; };
 		D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F447A28353847002E663E /* MyOrdersViewController.xib */; };
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
@@ -169,6 +171,8 @@
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBookTableViewCell.swift; sourceTree = "<group>"; };
 		D3643F1C28364B0600B385FF /* OrderedBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedBookTableViewCell.xib; sourceTree = "<group>"; };
+		D37CBECD28376EA500D60DD6 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		D37CBECE28376EA500D60DD6 /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		D38F447928353847002E663E /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		D38F447A28353847002E663E /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 				D38F448128354468002E663E /* OrderDetailViewController.swift */,
 				D3EEB2ED28373B530043D41C /* CancellingOrderScreenViewController.swift */,
 				D3EEB2EE28373B530043D41C /* CancellingOrderScreenViewController.xib */,
+				D37CBECD28376EA500D60DD6 /* UserInfoViewController.swift */,
+				D37CBECE28376EA500D60DD6 /* UserInfoViewController.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
 				D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */,
 				A5B7A6DB2833CBF800194413 /* AdminHomeScreenViewController.xib in Resources */,
+				D37CBED028376EA500D60DD6 /* UserInfoViewController.xib in Resources */,
 				D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */,
 				A5704F782836C4BB0069FFD8 /* BookItemCollectionViewCell.xib in Resources */,
 				A51D06C02834435D00CA199F /* ViewAllCommentViewController.xib in Resources */,
@@ -712,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51D06C42834500200CA199F /* OrderedBook.swift in Sources */,
+				D37CBECF28376EA500D60DD6 /* UserInfoViewController.swift in Sources */,
 				A574352628251A2D0081321B /* ViewController.swift in Sources */,
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */,

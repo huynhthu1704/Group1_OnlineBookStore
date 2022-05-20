@@ -103,6 +103,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK: Button
     
     @IBAction func goToSettingAccount(_ sender: UIButton) {
+        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
+        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        userInfo.navigationItem.title = "User Information"
+        navigationController?.pushViewController(userInfo, animated: true)
     }
     
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
