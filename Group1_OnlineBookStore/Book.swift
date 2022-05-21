@@ -20,9 +20,8 @@ class Book {
     var summary : String
     var category : String
     var totalLikes : Int
-    
     init(id :String,
-        name : String,
+         name : String,
          author : String,
          publisher : String,
          price : Int,
@@ -45,3 +44,12 @@ class Book {
         self.totalLikes = totalLikes
     }
 }
+var books = [
+    Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
+    Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help"),
+    Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
+       Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help"),
+       Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
+          Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help")
+]
+

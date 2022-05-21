@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Group1_OnlineBookStore_Group1_OnlineBookStoreUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Group1_OnlineBookStore_Group1_OnlineBookStoreUITests
+@end

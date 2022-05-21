@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		242D799DB70C22C44EA49C95 /* Pods_Group1_OnlineBookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */; };
 		41D08D5F2663B419CBEF6D05 /* Pods_Group1_OnlineBookStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */; };
+		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
 		A51C789E2833940A00A593B9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */; };
@@ -26,6 +27,8 @@
 		A51D06BF2834435D00CA199F /* ViewAllCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */; };
 		A51D06C02834435D00CA199F /* ViewAllCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51D06BE2834435D00CA199F /* ViewAllCommentViewController.xib */; };
 		A51D06C42834500200CA199F /* OrderedBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D06C32834500100CA199F /* OrderedBook.swift */; };
+		A5443B022838AA190057CEAA /* ListBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443B002838AA190057CEAA /* ListBookCollectionViewCell.swift */; };
+		A5443B032838AA190057CEAA /* ListBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5443B012838AA190057CEAA /* ListBookCollectionViewCell.xib */; };
 		A56852D628306BAB00083378 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D528306BAB00083378 /* RatingControl.swift */; };
 		A56852DA2830849F00083378 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852D92830849F00083378 /* Review.swift */; };
 		A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */; };
@@ -56,6 +59,8 @@
 		A590644A283519EC00D8E61B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5906449283519EC00D8E61B /* LaunchScreenViewController.swift */; };
 		A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */; };
 		A5947A41283405F600DA6D20 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */; };
+		A5A29E4F2837BEF000306642 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A29E4D2837BEF000306642 /* BookCollectionViewCell.swift */; };
+		A5A29E502837BEF000306642 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A29E4E2837BEF000306642 /* BookCollectionViewCell.xib */; };
 		A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBF72832868700890344 /* BookDetailViewController.swift */; };
 		A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CBF82832868700890344 /* BookDetailViewController.xib */; };
 		A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9CBFB2832A8EE00890344 /* CheckBox.swift */; };
@@ -119,9 +124,9 @@
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50E29B42837CFE800394471 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A51C7898283383EA00A593B9 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		A51C7899283383EA00A593B9 /* EditInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditInfoViewController.xib; sourceTree = "<group>"; };
-		A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		A51C78A02833956600A593B9 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		A51C78A12833956600A593B9 /* PurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseViewController.xib; sourceTree = "<group>"; };
 		A51C78A42833B10900A593B9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +141,8 @@
 		A51D06BD2834435D00CA199F /* ViewAllCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCommentViewController.swift; sourceTree = "<group>"; };
 		A51D06BE2834435D00CA199F /* ViewAllCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllCommentViewController.xib; sourceTree = "<group>"; };
 		A51D06C32834500100CA199F /* OrderedBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBook.swift; sourceTree = "<group>"; };
+		A5443B002838AA190057CEAA /* ListBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5443B012838AA190057CEAA /* ListBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListBookCollectionViewCell.xib; sourceTree = "<group>"; };
 		A56852D528306BAB00083378 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		A56852D92830849F00083378 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A56852DD2830AE8F00083378 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +158,6 @@
 		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		A5704F6B28367F590069FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		A5704F722836B5CF0069FFD8 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		A574351E28251A2D0081321B /* Group1_OnlineBookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group1_OnlineBookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +178,8 @@
 		A5906449283519EC00D8E61B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		A5947A3E283405F600DA6D20 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A5947A3F283405F600DA6D20 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		A5A29E4D2837BEF000306642 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5A29E4E2837BEF000306642 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5A9CBF72832868700890344 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		A5A9CBF82832868700890344 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookDetailViewController.xib; path = ../BookDetailViewController.xib; sourceTree = "<group>"; };
 		A5A9CBFB2832A8EE00890344 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -288,6 +296,9 @@
 				A51C78B02833BB0700A593B9 /* MyFavoritesTableViewCell.swift */,
 				A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */,
 				A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */,
+				A50E29B42837CFE800394471 /* NavigationBar.swift */,
+				A5443B002838AA190057CEAA /* ListBookCollectionViewCell.swift */,
+				A5443B012838AA190057CEAA /* ListBookCollectionViewCell.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -460,8 +471,9 @@
 				A51C78B12833BB0700A593B9 /* MyFavoritesTableViewCell.xib */,
 				A5A9CBFE2832AC3C00890344 /* ShoppingCartTableViewCell.xib */,
 				A56852E82830B7A600083378 /* ReviewTableViewCell.xib */,
-				A5704F722836B5CF0069FFD8 /* BookCollectionViewCell.xib */,
 				D3DF34F428329A0C00AA2245 /* Profile */,
+				A5A29E4D2837BEF000306642 /* BookCollectionViewCell.swift */,
+				A5A29E4E2837BEF000306642 /* BookCollectionViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -470,7 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */,
-				A51C789C2833940A00A593B9 /* BookCollectionViewCell.swift */,
 				D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */,
 				D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */,
 				D3EEF60B2837940A00779863 /* ToReviewBookTableViewCell.swift */,
@@ -605,13 +616,13 @@
 				A56852E02830AE8F00083378 /* ShoppingCartViewController.xib in Resources */,
 				D3BFB9C92835E70900E33849 /* OrderTableViewCell.xib in Resources */,
 				A51C78B32833BB0700A593B9 /* MyFavoritesTableViewCell.xib in Resources */,
-				A5704F742836B5CF0069FFD8 /* BookCollectionViewCell.xib in Resources */,
 				A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */,
 				A51C78AF2833BAA400A593B9 /* MyFavoritesViewController.xib in Resources */,
 				A51C78B72833C19F00A593B9 /* WriteReviewViewController.xib in Resources */,
 				A574353128251A340081321B /* LaunchScreen.storyboard in Resources */,
 				A51C78A32833956600A593B9 /* PurchaseViewController.xib in Resources */,
 				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
+				A5A29E502837BEF000306642 /* BookCollectionViewCell.xib in Resources */,
 				D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */,
 				D3EEF60A2837926600779863 /* ToReviewsViewController.xib in Resources */,
 				A5B7A6DB2833CBF800194413 /* AdminHomeScreenViewController.xib in Resources */,
@@ -620,6 +631,7 @@
 				D37CBED028376EA500D60DD6 /* UserInfoViewController.xib in Resources */,
 				D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */,
 				A5704F782836C4BB0069FFD8 /* BookItemCollectionViewCell.xib in Resources */,
+				A5443B032838AA190057CEAA /* ListBookCollectionViewCell.xib in Resources */,
 				A51D06C02834435D00CA199F /* ViewAllCommentViewController.xib in Resources */,
 				D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
@@ -773,6 +785,7 @@
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
 				A5A9CBFF2832AC3C00890344 /* ShoppingCartTableViewCell.swift in Sources */,
+				A5A29E4F2837BEF000306642 /* BookCollectionViewCell.swift in Sources */,
 				D3EEF6092837926600779863 /* ToReviewsViewController.swift in Sources */,
 				D3EEF6112837E46900779863 /* MyReviewsViewController.swift in Sources */,
 				D3EEF6152837E56000779863 /* ReviewedBookTableViewCell.swift in Sources */,
@@ -786,13 +799,14 @@
 				A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A51D06BF2834435D00CA199F /* ViewAllCommentViewController.swift in Sources */,
+				A5443B022838AA190057CEAA /* ListBookCollectionViewCell.swift in Sources */,
 				A51C78AE2833BAA400A593B9 /* MyFavoritesViewController.swift in Sources */,
 				D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
+				A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
 				A5704F772836C4BB0069FFD8 /* BookItemCollectionViewCell.swift in Sources */,
 				A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */,
-				A51C789E2833940A00A593B9 /* BookCollectionViewCell.swift in Sources */,
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
 				A51C78A22833956600A593B9 /* PurchaseViewController.swift in Sources */,
 				D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */,

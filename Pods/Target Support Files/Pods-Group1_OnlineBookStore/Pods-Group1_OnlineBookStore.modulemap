@@ -1,0 +1,6 @@
+framework module Pods_Group1_OnlineBookStore {
+  umbrella header "Pods-Group1_OnlineBookStore-umbrella.h"
+
+  export *
+  module * { export * }
+}
