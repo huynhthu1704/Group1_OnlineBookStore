@@ -22,8 +22,10 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var lblTransportFee: UILabel!
     @IBOutlet weak var lblTotalPrice: UILabel!
     
+    @IBOutlet weak var btnCancel: UIButton!
     
-    
+    @IBOutlet weak var contentView: UIView!
+    var hidden:Bool?
     var orderID:String?
     var orders = [Order]()
     var customers = [Customer]()
@@ -35,7 +37,11 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let hidden = hidden {
+            btnCancel.isHidden = hidden
+            let heightConstraint = NSLayoutConstraint(item: contentView!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 810)
+            contentView.addConstraint(heightConstraint)
+        }
         //Initializating orderedBooks
         let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
         let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")

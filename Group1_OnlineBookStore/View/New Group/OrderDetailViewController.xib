@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target">
             <connections>
                 <outlet property="booksTableView" destination="67z-vu-Peb" id="38n-Hn-Yot"/>
+                <outlet property="btnCancel" destination="NkU-ey-erZ" id="msI-iH-dyV"/>
+                <outlet property="contentView" destination="6mB-LB-8sp" id="odv-rb-rhP"/>
                 <outlet property="lblCustomerAddress" destination="yuy-CK-ljK" id="Dwd-UF-NUg"/>
                 <outlet property="lblCustomerName" destination="YjV-Lu-FS0" id="ur1-2l-mGe"/>
                 <outlet property="lblCustomerPhone" destination="IEF-Wc-Wyy" id="r7u-ef-z2V"/>

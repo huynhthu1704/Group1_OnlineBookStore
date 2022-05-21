@@ -75,6 +75,10 @@
 		D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F448228354468002E663E /* OrderDetailViewController.xib */; };
 		D3BFB9C82835E70900E33849 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */; };
 		D3BFB9C92835E70900E33849 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */; };
+		D3CECD9A28389EB700C035D5 /* OrderManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */; };
+		D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CECD9928389EB700C035D5 /* OrderManagementViewController.xib */; };
+		D3CECD9E28389F8000C035D5 /* OrderToManagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CECD9C28389F8000C035D5 /* OrderToManagingTableViewCell.swift */; };
+		D3CECD9F28389F8000C035D5 /* OrderToManagingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CECD9D28389F8000C035D5 /* OrderToManagingTableViewCell.xib */; };
 		D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */; };
 		D3EEB2EF28373B530043D41C /* CancellingOrderScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEB2ED28373B530043D41C /* CancellingOrderScreenViewController.swift */; };
 		D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EEB2EE28373B530043D41C /* CancellingOrderScreenViewController.xib */; };
@@ -187,6 +191,10 @@
 		D38F448228354468002E663E /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
 		D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementViewController.swift; sourceTree = "<group>"; };
+		D3CECD9928389EB700C035D5 /* OrderManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderManagementViewController.xib; sourceTree = "<group>"; };
+		D3CECD9C28389F8000C035D5 /* OrderToManagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderToManagingTableViewCell.swift; sourceTree = "<group>"; };
+		D3CECD9D28389F8000C035D5 /* OrderToManagingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderToManagingTableViewCell.xib; sourceTree = "<group>"; };
 		D3DF34F72832A18100AA2245 /* FavoriteBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3EEB2ED28373B530043D41C /* CancellingOrderScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellingOrderScreenViewController.swift; sourceTree = "<group>"; };
 		D3EEB2EE28373B530043D41C /* CancellingOrderScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancellingOrderScreenViewController.xib; sourceTree = "<group>"; };
@@ -429,6 +437,8 @@
 				D3EEF6082837926500779863 /* ToReviewsViewController.xib */,
 				D3EEF60F2837E46900779863 /* MyReviewsViewController.swift */,
 				D3EEF6102837E46900779863 /* MyReviewsViewController.xib */,
+				D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */,
+				D3CECD9928389EB700C035D5 /* OrderManagementViewController.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -467,6 +477,8 @@
 				D3EEF60C2837940A00779863 /* ToReviewBookTableViewCell.xib */,
 				D3EEF6132837E56000779863 /* ReviewedBookTableViewCell.swift */,
 				D3EEF6142837E56000779863 /* ReviewedBookTableViewCell.xib */,
+				D3CECD9C28389F8000C035D5 /* OrderToManagingTableViewCell.swift */,
+				D3CECD9D28389F8000C035D5 /* OrderToManagingTableViewCell.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -616,8 +628,10 @@
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
 				D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */,
 				A5704F6C28367F590069FFD8 /* GoogleService-Info.plist in Resources */,
+				D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 				D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */,
+				D3CECD9F28389F8000C035D5 /* OrderToManagingTableViewCell.xib in Resources */,
 				A5947A41283405F600DA6D20 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,9 +777,11 @@
 				D3EEF6112837E46900779863 /* MyReviewsViewController.swift in Sources */,
 				D3EEF6152837E56000779863 /* ReviewedBookTableViewCell.swift in Sources */,
 				A51C78A62833B10900A593B9 /* SignInViewController.swift in Sources */,
+				D3CECD9A28389EB700C035D5 /* OrderManagementViewController.swift in Sources */,
 				D3DF34F92832A18100AA2245 /* FavoriteBookCollectionViewCell.swift in Sources */,
 				A56852DA2830849F00083378 /* Review.swift in Sources */,
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
+				D3CECD9E28389F8000C035D5 /* OrderToManagingTableViewCell.swift in Sources */,
 				A5704F6E2836A3AD0069FFD8 /* RoundedTextField.swift in Sources */,
 				A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
