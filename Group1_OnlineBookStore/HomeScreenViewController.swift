@@ -36,33 +36,17 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         newBookCollectionViewHeight.constant = heightNewBook
         self.view.layoutIfNeeded()
         newBookCollectionView.reloadData()
-          UIScreen.main.bounds.size.width
+//          UIScreen.main.bounds.size.width
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBar =  self.navigationController?.navigationBar
         // Customer navigation bar
-        let nav = NavigationBar()
-        nav.setUp(navigationBar: navBar)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
-        searchBar.placeholder = "Find interesting book"
-        self.searchBar.searchTextField.backgroundColor = UIColor.white
-        // Set Cart bar button item
-        let cartBtn = UIButton(type: .custom)
-        let cartBtnImage = UIImage(systemName: "cart")
-        
-        cartBtn.setBackgroundImage(cartBtnImage, for: .normal)
-        cartBtn.imageView?.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
-        cartBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
-        cartBtn.frame = CGRect(x:0, y: 0, width: 35, height: 35)
-        
-        let cartView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
-        cartView.addSubview(cartBtn)
-        let cartButton = UIBarButtonItem(customView: cartView)
-        navigationItem.rightBarButtonItem = cartButton
-        
-        
+        let nav = NavigationBar(navigationController: self.navigationController)
+        nav.setUp()
+        nav.addSearchBarItem(navigationItem: navigationItem)
+        nav.addCartItem(navigationItem: navigationItem)
+
         // Register datasource + nib collection view cell for topSale collection view
         topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
         topSaleCollectionView.dataSource = self
