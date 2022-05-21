@@ -10,44 +10,44 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookCollectionViewCell" customModule="Group1_OnlineBookStore" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="202" height="246"/>
+            <rect key="frame" x="0.0" y="0.0" width="202" height="303"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="202" height="246"/>
+                <rect key="frame" x="0.0" y="0.0" width="202" height="303"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-a4-caw">
-                        <rect key="frame" x="0.0" y="0.0" width="202" height="246"/>
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="303"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="XuXu" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-Xb-jdu">
-                                <rect key="frame" x="0.0" y="0.0" width="202" height="171.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="XuXu" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-Xb-jdu">
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xu Xu dung khoc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k81-Xv-sdX">
-                                <rect key="frame" x="0.0" y="173.5" width="202" height="50"/>
+                                <rect key="frame" x="10" y="212" width="182" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hwo-7I-5Va"/>
+                                    <constraint firstAttribute="height" constant="55" id="hwo-7I-5Va"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-3f-qlZ">
-                                <rect key="frame" x="15" y="225.5" width="177" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="269" width="177" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="k81-Xv-sdX" secondAttribute="trailing" id="2Pk-2j-M1J"/>
+                            <constraint firstAttribute="trailing" secondItem="k81-Xv-sdX" secondAttribute="trailing" constant="10" id="2Pk-2j-M1J"/>
                             <constraint firstItem="VMN-Xb-jdu" firstAttribute="top" secondItem="t3a-a4-caw" secondAttribute="top" id="8uH-Oh-da1"/>
                             <constraint firstAttribute="trailing" secondItem="pfh-3f-qlZ" secondAttribute="trailing" constant="10" id="FFi-Wg-RW8"/>
                             <constraint firstItem="pfh-3f-qlZ" firstAttribute="top" secondItem="k81-Xv-sdX" secondAttribute="bottom" constant="2" id="OlX-Pg-vqw"/>
-                            <constraint firstItem="k81-Xv-sdX" firstAttribute="leading" secondItem="t3a-a4-caw" secondAttribute="leading" id="WU6-8n-ORT"/>
+                            <constraint firstItem="k81-Xv-sdX" firstAttribute="leading" secondItem="t3a-a4-caw" secondAttribute="leading" constant="10" id="WU6-8n-ORT"/>
                             <constraint firstItem="k81-Xv-sdX" firstAttribute="top" secondItem="VMN-Xb-jdu" secondAttribute="bottom" constant="2" id="XyE-tx-vBv"/>
                             <constraint firstItem="pfh-3f-qlZ" firstAttribute="leading" secondItem="t3a-a4-caw" secondAttribute="leading" constant="15" id="dtG-sq-wOb"/>
-                            <constraint firstAttribute="bottom" secondItem="pfh-3f-qlZ" secondAttribute="bottom" id="e37-9a-WKg"/>
+                            <constraint firstAttribute="bottom" secondItem="pfh-3f-qlZ" secondAttribute="bottom" constant="10" id="e37-9a-WKg"/>
                             <constraint firstAttribute="trailing" secondItem="VMN-Xb-jdu" secondAttribute="trailing" id="eQZ-Wd-sXL"/>
                             <constraint firstItem="VMN-Xb-jdu" firstAttribute="leading" secondItem="t3a-a4-caw" secondAttribute="leading" id="ldz-aO-kB2"/>
                         </constraints>
@@ -61,14 +61,14 @@
                 <constraint firstItem="t3a-a4-caw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gxl-3F-H2Y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="202" height="246"/>
+            <size key="customSize" width="202" height="303"/>
             <connections>
                 <outlet property="img" destination="VMN-Xb-jdu" id="cKV-QU-I8L"/>
                 <outlet property="name" destination="k81-Xv-sdX" id="G6C-pQ-qmy"/>
                 <outlet property="price" destination="pfh-3f-qlZ" id="jZp-do-17J"/>
                 <outlet property="view" destination="t3a-a4-caw" id="2BE-7m-kHA"/>
             </connections>
-            <point key="canvasLocation" x="242.0289855072464" y="176.11607142857142"/>
+            <point key="canvasLocation" x="242.0289855072464" y="157.03125"/>
         </collectionViewCell>
     </objects>
     <resources>

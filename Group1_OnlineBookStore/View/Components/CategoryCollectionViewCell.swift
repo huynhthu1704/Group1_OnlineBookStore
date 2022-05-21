@@ -15,6 +15,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        img.layer.borderColor = UIColor.white.cgColor
+        img.layer.borderWidth = 2
+        img.layer.cornerRadius = 10
+        img.layer.masksToBounds = true
     }
 
 }

@@ -25,18 +25,34 @@ class CategoryCollectionViewController: UICollectionViewController {
 //    }
     override func viewDidLoad(  ) {
         super.viewDidLoad()
-
         let nav = NavigationBar(navigationController: self.navigationController)
               nav.setUp()
               nav.addSearchBarItem(navigationItem: navigationItem)
-              nav.addCartItem(navigationItem: navigationItem)
+              addCartItem()
         // Register cell classes
         self.collectionView!.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         self.collectionView!.dataSource = self
                self.collectionView!.delegate = self
                self.collectionView!.collectionViewLayout = UICollectionViewFlowLayout()
     }
-
+    @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
+          print("Go to")
+          let vc = BookListViewController(nibName: "BookListViewController", bundle: nil)
+          self.navigationController?.pushViewController(vc, animated: true)
+      }
+      
+      public func addCartItem() {
+          // Set Cart bar button item
+          let cartBtn = UIButton(type: .custom)
+          let cartBtnImage = UIImage(systemName: "cart")
+          cartBtn.setBackgroundImage(cartBtnImage, for: .normal)
+          cartBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
+          cartBtn.frame = CGRect(x:0, y: 0, width: 35, height: 35)
+          let cartView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+          cartView.addSubview(cartBtn)
+          let cartButton = UIBarButtonItem(customView: cartView)
+          self.navigationItem.rightBarButtonItem = cartButton
+      }
 
     // MARK: UICollectionViewDataSource
 
@@ -59,38 +75,6 @@ class CategoryCollectionViewController: UICollectionViewController {
     
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 extension CategoryCollectionViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

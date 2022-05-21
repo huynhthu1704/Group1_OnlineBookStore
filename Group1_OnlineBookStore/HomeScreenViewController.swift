@@ -19,24 +19,27 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var newBookCollectionView: UICollectionView!
     @IBOutlet weak var topSaleCollectionView: UICollectionView!
     
-    
-    @IBOutlet weak var cartBarButtonitem: UIBarButtonItem!
     override func viewDidLayoutSubviews() {
-        print("DidLayout")
         super.viewDidLayoutSubviews()
         // Set top Sale collection view's height equal to its child cell
         let flow = topSaleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let heightTopSale = flow.collectionViewContentSize.height
         topSaleCollectionViewHeight.constant = heightTopSale
+        flow.minimumInteritemSpacing = 0
+        flow.minimumLineSpacing = 10
         topSaleCollectionView.collectionViewLayout = flow
+        self.view.layoutIfNeeded()
         topSaleCollectionView.reloadData()
-
+        
         // Set new book collection view's height equal to its child cell
-        let heightNewBook = newBookCollectionView.collectionViewLayout.collectionViewContentSize.height
+        let flow2 = newBookCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let heightNewBook = flow.collectionViewContentSize.height
         newBookCollectionViewHeight.constant = heightNewBook
+        flow2.minimumInteritemSpacing = 0
+        flow2.minimumLineSpacing = 10
+        newBookCollectionView.collectionViewLayout = flow2
         self.view.layoutIfNeeded()
         newBookCollectionView.reloadData()
-//          UIScreen.main.bounds.size.width
     }
     
     override func viewDidLoad() {
@@ -45,8 +48,8 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
         nav.addSearchBarItem(navigationItem: navigationItem)
-        nav.addCartItem(navigationItem: navigationItem)
-
+        addCartItem()
+        
         // Register datasource + nib collection view cell for topSale collection view
         topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
         topSaleCollectionView.dataSource = self
@@ -59,53 +62,58 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         newBookCollectionView.delegate = self
         newBookCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
-    @objc func goToShoppingCart() {
-        let shoppingCartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
-        self.navigationController?.pushViewController(shoppingCartVC, animated: true)
+    
+    @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
+        print("Go to")
+        let vc = BookListViewController(nibName: "BookListViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    public func addCartItem() {
+        // Set Cart bar button item
+        let cartBtn = UIButton(type: .custom)
+        let cartBtnImage = UIImage(systemName: "cart")
+        cartBtn.setBackgroundImage(cartBtnImage, for: .normal)
+        cartBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
+        cartBtn.frame = CGRect(x:0, y: 0, width: 35, height: 35)
+        let cartView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        cartView.addSubview(cartBtn)
+        let cartButton = UIBarButtonItem(customView: cartView)
+        self.navigationItem.rightBarButtonItem = cartButton
     }
 }
+
 extension HomeScreenViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("count\(books.count)")
-        
         return books.count
-        //        if collectionView == self.topSaleCollectionView {
-        //            return books.count
-        //        } else {
-        //            return books.count
-        //        }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("render1")
-        
         if collectionView == topSaleCollectionView {
-            print("renderTop")
             let cell = topSaleCollectionView.dequeueReusableCell(withReuseIdentifier: topSaleBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
             cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
-            print("render\(book.name)")
             return cell
         } else {
-            print("renderNew")
             let cell = newBookCollectionView.dequeueReusableCell(withReuseIdentifier: newBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
             cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
-            print("render\(book.name)")
             return cell
         }
-        
-        
     }
 }
+
 extension HomeScreenViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("size\(books[1].name)")
-    return CGSize(width: 150, height: 200)
+        return CGSize(width: UIScreen.main.bounds.width / 2 - 20, height: 250)
+    }
+}
+extension UINavigationBar {
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 80)
     }
 }

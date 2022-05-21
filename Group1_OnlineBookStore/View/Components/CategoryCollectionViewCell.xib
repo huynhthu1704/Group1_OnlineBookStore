@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="XuXu" translatesAutoresizingMaskIntoConstraints="NO" id="HYd-ev-ZFf">
-                        <rect key="frame" x="10" y="30" width="145" height="102"/>
+                        <rect key="frame" x="10" y="20" width="145" height="122"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truyen ngoai van" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqO-Ty-pvG">
-                        <rect key="frame" x="10" y="140" width="145" height="50"/>
+                        <rect key="frame" x="10" y="150" width="145" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="dTZ-1B-CFG"/>
                         </constraints>
@@ -32,9 +32,9 @@
             </view>
             <constraints>
                 <constraint firstItem="lqO-Ty-pvG" firstAttribute="top" secondItem="HYd-ev-ZFf" secondAttribute="bottom" constant="8" id="2pW-P7-kBn"/>
-                <constraint firstAttribute="bottom" secondItem="lqO-Ty-pvG" secondAttribute="bottom" constant="10" id="AQx-MH-Yb0"/>
+                <constraint firstAttribute="bottom" secondItem="lqO-Ty-pvG" secondAttribute="bottom" id="AQx-MH-Yb0"/>
                 <constraint firstAttribute="trailing" secondItem="lqO-Ty-pvG" secondAttribute="trailing" constant="10" id="DX5-ry-Z4q"/>
-                <constraint firstItem="HYd-ev-ZFf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="Ghm-1j-6am"/>
+                <constraint firstItem="HYd-ev-ZFf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Ghm-1j-6am"/>
                 <constraint firstItem="lqO-Ty-pvG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="bC3-xB-V7A"/>
                 <constraint firstAttribute="trailing" secondItem="HYd-ev-ZFf" secondAttribute="trailing" constant="10" id="f4e-pf-fQA"/>
                 <constraint firstItem="HYd-ev-ZFf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xBk-bk-efM"/>

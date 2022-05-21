@@ -9,7 +9,7 @@
 import UIKit
 
 class BookDetailViewController: UIViewController, UITableViewDataSource {
-
+    
     //MARK:  Properties
     @IBOutlet weak var likeBtn: UIButton!
     var reviews = [Review]()
@@ -18,16 +18,16 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationBar = self.navigationController?.navigationBar
-        // Hide nav's shadow
-        navigationBar?.setValue(true, forKey: "hidesShadow")
-        navigationBar?.tintColor = UIColor.white
-        // Change nav's color
-        navigationBar?.barTintColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
-        navigationBar?.titleTextAttributes = [.foregroundColor : UIColor.white]
-        navigationBar?.isTranslucent = false
+        let nav = NavigationBar(navigationController: self.navigationController)
+        nav.setUp()
+        addRightBarButtonItem()
         
         
+        likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
+        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
+        navigationController?.navigationItem.title = book.name
+    }
+    func addRightBarButtonItem() {
         // Set Cart bar button item
         let cartBtn = UIButton(type: .custom)
         let cartBtnImage = UIImage(systemName: "cart")
@@ -44,7 +44,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
         let searchBtn = UIButton(type: .custom)
         let backBtnImage1 = UIImage(systemName: "magnifyingglass")
         searchBtn.setBackgroundImage(backBtnImage1, for: .normal)
-        searchBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
+        searchBtn.addTarget(self, action: #selector(search), for: .touchUpInside)
         searchBtn.frame = CGRect(x:0, y:0, width: 35, height: 35)
         let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
         searchView.addSubview(searchBtn)
@@ -53,15 +53,23 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
         navigationItem.rightBarButtonItems?.append(searchButton)
         
         
-        
-        
-        likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
-        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
-        navigationController?.navigationItem.title = book.name
     }
+    
     @objc func goToShoppingCart() {
         let shoppingCartVC = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
         self.navigationController?.pushViewController(shoppingCartVC, animated: true)
+    }
+    @objc func search() {
+        addSearchBarItem()
+    }
+    
+    public func addSearchBarItem() {
+        print("Searchbar")
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: -5, width: 300, height: 20))
+        searchBar.placeholder = "Find interesting book"
+        searchBar.searchTextField.backgroundColor = UIColor.white
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
+        // Set Cart bar button item
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviews.count

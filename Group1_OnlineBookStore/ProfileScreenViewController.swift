@@ -13,6 +13,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK: Properties
     let identifier = "BookCollectionViewCell"
     
+    @IBAction func goToSetting(_ sender: UIBarButtonItem) {
+    }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userRank: UILabel!
