@@ -65,6 +65,9 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.imageBook.image = orderedBook.book.slug
         cell.lblBookName.text = orderedBook.book.name + " - " + orderedBook.book.author
         cell.lblAmountPrice.text = "Amount: \(orderedBook.amount) |  $\(orderedBook.book.price)"
+        cell.viewForOrder.layer.borderWidth = 1.5
+        cell.viewForOrder.layer.borderColor = UIColor.black.cgColor
+        cell.viewForOrder.layer.cornerRadius = 10
         return cell
     }
     

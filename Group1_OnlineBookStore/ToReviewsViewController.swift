@@ -50,7 +50,7 @@ class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let writeReviewScreen = WriteReviewViewController(nibName: "WriteReviewViewController", bundle: nil)
         //        self.present(viewAllOrdersController, animated: true, completion: nil)
-//        writeReviewScreen.navigationItem.title = "User Information"
+        writeReviewScreen.navigationItem.title = "Write review"
         writeReviewScreen.book = books[indexPath.row]
         navigationController?.pushViewController(writeReviewScreen, animated: true)
     }

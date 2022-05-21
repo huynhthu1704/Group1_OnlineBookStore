@@ -14,6 +14,7 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var lblBookName: UILabel!
     @IBOutlet weak var lblAmountPrice: UILabel!
+    @IBOutlet weak var viewForOrder: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
