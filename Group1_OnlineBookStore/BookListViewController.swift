@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BookListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextViewDelegate {
+class BookListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
     let identifier = "BookCell"
-     let searchBar = UISearchBar(frame: CGRect(x: 0, y: -5, width: 300, height: 20))
+    let searchBar = UISearchBar(frame: CGRect(x: 0, y: -5, width: 300, height: 20))
     var cartButton = UIBarButtonItem()
     var isSearchBarShown = false
     @IBOutlet weak var collectionHeight: NSLayoutConstraint!
@@ -23,9 +23,7 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
-         addRightBarButtonItem()
-        addSearchBarItem()
-        
+        addRightBarButtonItem()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
@@ -33,29 +31,29 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func addRightBarButtonItem() {
-         // Set Cart bar button item
-                  let cartBtn = UIButton(type: .custom)
-                  let cartBtnImage = UIImage(systemName: "cart")
-                  cartBtn.setBackgroundImage(cartBtnImage, for: .normal)
-                  cartBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
-                  cartBtn.frame = CGRect(x:0, y: 0, width: 35, height: 35)
-                  
-                  let cartView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
-                  cartView.addSubview(cartBtn)
-                  cartButton = UIBarButtonItem(customView: cartView)
-                  navigationItem.rightBarButtonItem = cartButton
-                  
-                  // Set Search bar button item
-                  let searchBtn = UIButton(type: .custom)
-                  let backBtnImage1 = UIImage(systemName: "magnifyingglass")
-                  searchBtn.setBackgroundImage(backBtnImage1, for: .normal)
-                  searchBtn.addTarget(self, action: #selector(search), for: .touchUpInside)
-                  searchBtn.frame = CGRect(x:0, y:0, width: 35, height: 35)
-                  let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
-                  searchView.addSubview(searchBtn)
-                  let searchButton = UIBarButtonItem(customView: searchView)
-                  navigationItem.rightBarButtonItems?.append(cartButton)
-                  navigationItem.rightBarButtonItems?.append(searchButton)
+        // Set Cart bar button item
+        let cartBtn = UIButton(type: .custom)
+        let cartBtnImage = UIImage(systemName: "cart")
+        cartBtn.setBackgroundImage(cartBtnImage, for: .normal)
+        cartBtn.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
+        cartBtn.frame = CGRect(x:0, y: 0, width: 35, height: 35)
+        
+        let cartView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        cartView.addSubview(cartBtn)
+        cartButton = UIBarButtonItem(customView: cartView)
+        navigationItem.rightBarButtonItem = cartButton
+        
+        // Set Search bar button item
+        let searchBtn = UIButton(type: .custom)
+        let backBtnImage1 = UIImage(systemName: "magnifyingglass")
+        searchBtn.setBackgroundImage(backBtnImage1, for: .normal)
+        searchBtn.addTarget(self, action: #selector(search), for: .touchUpInside)
+        searchBtn.frame = CGRect(x:0, y:0, width: 35, height: 35)
+        let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        searchView.addSubview(searchBtn)
+        let searchButton = UIBarButtonItem(customView: searchView)
+        navigationItem.rightBarButtonItems?.append(cartButton)
+        navigationItem.rightBarButtonItems?.append(searchButton)
     }
     
     @objc func goToShoppingCart() {
@@ -63,21 +61,22 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.navigationController?.pushViewController(shoppingCartVC, animated: true)
     }
     @objc func search() {
-//        addSearchBarItem()
-        self.isSearchBarShown = !self.isSearchBarShown
-        self.searchBar.isHidden = isSearchBarShown
-              navigationItem.rightBarButtonItems = nil
-            self.searchBar.searchTextField.becomeFirstResponder()
-      
+        if isSearchBarShown {
+            navigationItem.leftBarButtonItem = nil
+            print("result")
+        } else {
+            addSearchBarItem()
+        }
+        isSearchBarShown = !isSearchBarShown
     }
     
     public func addSearchBarItem() {
         print("Searchbar")
-       
+        
         self.searchBar.placeholder = "Find interesting book"
         self.searchBar.searchTextField.backgroundColor = UIColor.white
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.searchBar)
-        searchBar.isHidden = !isSearchBarShown
+        //        searchBar.isHidden = !isSearchBarShown
     }
     
     override func resignFirstResponder() -> Bool {
@@ -96,6 +95,9 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.collectionViewLayout = flow
         collectionView.reloadData()
         self.view.layoutIfNeeded()
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        addRightBarButtonItem()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return books.count
