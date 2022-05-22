@@ -46,7 +46,6 @@
 		A56852F12830CB8D00083378 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F02830CB8D00083378 /* Category.swift */; };
 		A56852F32830CD0700083378 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F22830CD0700083378 /* Order.swift */; };
 		A56852F52830CE4B00083378 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F42830CE4B00083378 /* Customer.swift */; };
-		A5704F6C28367F590069FFD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5704F6B28367F590069FFD8 /* GoogleService-Info.plist */; };
 		A5704F6E2836A3AD0069FFD8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */; };
 		A5704F772836C4BB0069FFD8 /* BookItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */; };
 		A5704F782836C4BB0069FFD8 /* BookItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */; };
@@ -81,6 +80,7 @@
 		D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F447A28353847002E663E /* MyOrdersViewController.xib */; };
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
 		D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F448228354468002E663E /* OrderDetailViewController.xib */; };
+		D3AFE055283A58A700F97810 /* UserModelThanh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE054283A58A700F97810 /* UserModelThanh.swift */; };
 		D3BFB9C82835E70900E33849 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */; };
 		D3BFB9C92835E70900E33849 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */; };
 		D3CECD9A28389EB700C035D5 /* OrderManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */; };
@@ -98,6 +98,8 @@
 		D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EEF6102837E46900779863 /* MyReviewsViewController.xib */; };
 		D3EEF6152837E56000779863 /* ReviewedBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEF6132837E56000779863 /* ReviewedBookTableViewCell.swift */; };
 		D3EEF6162837E56000779863 /* ReviewedBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EEF6142837E56000779863 /* ReviewedBookTableViewCell.xib */; };
+		D3F9E7F7283A1A2300E8B8DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F9E7F6283A1A2300E8B8DE /* GoogleService-Info.plist */; };
+		D3F9E7F9283A1DC100E8B8DE /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */; };
 		D8DD15C98AD2176C97653FF5 /* Pods_Group1_OnlineBookStore_Group1_OnlineBookStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25894788E794143D96168319 /* Pods_Group1_OnlineBookStore_Group1_OnlineBookStoreUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,7 +166,6 @@
 		A56852F02830CB8D00083378 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A56852F22830CD0700083378 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
-		A5704F6B28367F590069FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		D38F447A28353847002E663E /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		D38F448228354468002E663E /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
+		D3AFE054283A58A700F97810 /* UserModelThanh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelThanh.swift; sourceTree = "<group>"; };
 		D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,8 @@
 		D3EEF6102837E46900779863 /* MyReviewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReviewsViewController.xib; sourceTree = "<group>"; };
 		D3EEF6132837E56000779863 /* ReviewedBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewedBookTableViewCell.swift; sourceTree = "<group>"; };
 		D3EEF6142837E56000779863 /* ReviewedBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewedBookTableViewCell.xib; sourceTree = "<group>"; };
+		D3F9E7F6283A1A2300E8B8DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		DA2647B909DC6FCF0360F227 /* Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests/Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,8 +369,8 @@
 		A5866F17282A2838005B0C8C /* System files */ = {
 			isa = PBXGroup;
 			children = (
-				A5704F6B28367F590069FFD8 /* GoogleService-Info.plist */,
 				A574352D28251A340081321B /* Assets.xcassets */,
+				D3F9E7F6283A1A2300E8B8DE /* GoogleService-Info.plist */,
 				A574353228251A340081321B /* Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
 				A574352328251A2D0081321B /* SceneDelegate.swift */,
@@ -430,7 +434,9 @@
 				A56852D92830849F00083378 /* Review.swift */,
 				A51D06C32834500100CA199F /* OrderedBook.swift */,
 				A56852EC2830C94D00083378 /* Book.swift */,
+				D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */,
 				A56852EE2830CB6E00083378 /* User.swift */,
+				D3AFE054283A58A700F97810 /* UserModelThanh.swift */,
 				A56852F02830CB8D00083378 /* Category.swift */,
 				A56852F22830CD0700083378 /* Order.swift */,
 				A56852F42830CE4B00083378 /* Customer.swift */,
@@ -654,8 +660,8 @@
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
 				D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */,
-				A5704F6C28367F590069FFD8 /* GoogleService-Info.plist in Resources */,
 				D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */,
+				D3F9E7F7283A1A2300E8B8DE /* GoogleService-Info.plist in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 				D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */,
 				D3CECD9F28389F8000C035D5 /* OrderToManagingTableViewCell.xib in Resources */,
@@ -829,12 +835,14 @@
 				D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */,
 				D3EEB2EF28373B530043D41C /* CancellingOrderScreenViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
+				D3AFE055283A58A700F97810 /* UserModelThanh.swift in Sources */,
 				A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */,
 				A51C78B22833BB0700A593B9 /* MyFavoritesTableViewCell.swift in Sources */,
 				A5B7A6DA2833CBF800194413 /* AdminHomeScreenViewController.swift in Sources */,
 				A56852EF2830CB6E00083378 /* User.swift in Sources */,
 				D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */,
 				A56852F12830CB8D00083378 /* Category.swift in Sources */,
+				D3F9E7F9283A1DC100E8B8DE /* BookModel.swift in Sources */,
 				A56852E32830B3D500083378 /* BookViewController.swift in Sources */,
 				A574352428251A2D0081321B /* SceneDelegate.swift in Sources */,
 				D3EEF60D2837940A00779863 /* ToReviewBookTableViewCell.swift in Sources */,

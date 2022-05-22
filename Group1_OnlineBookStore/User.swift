@@ -9,18 +9,20 @@
 import UIKit
 
 class User {
-    var id : String
+    var id : Int
     var fullName : String
     var pwd : String
-    var slug: UIImage?
+    var slug: String
     var rank: String
-    var birthday : Date
-    init(id : String, fullName : String, pwd : String, birthday : Date, slug: UIImage?, rank: String) {
+    var phoneNumber : String
+    var role_id : Int
+    init(id : Int, fullName : String, pwd : String, phoneNumber : String, slug: String, rank: String, role_id : Int) {
         self.id = id
         self.fullName = fullName
         self.pwd = pwd
-        self.birthday = birthday
+        self.phoneNumber = phoneNumber
         self.slug = slug
         self.rank = rank
+        self.role_id = role_id
     }
 }

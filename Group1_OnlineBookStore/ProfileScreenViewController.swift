@@ -11,9 +11,18 @@ import UIKit
 class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: Properties
+    
+    
     let identifier = "BookCollectionViewCell"
+    var userModel = UserModel()
     
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
+        dump(userModel.users)
+    
+//        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
+//        //        self.present(viewAllOrdersController, animated: true, completion: nil)
+//        userInfo.navigationItem.title = "User Information"
+//        navigationController?.pushViewController(userInfo, animated: true)
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -36,6 +45,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
+        userModel.getAllData()
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -61,11 +71,11 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         userView.backgroundColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
         
         let imageUser = UIImage(named: "User's image")
-        self.user = User(id: "001", fullName: "Pham Van Thanh", pwd: "12345", birthday: Date(), slug: imageUser, rank: "Gold member")
+        self.user = User(id: 1, fullName: "Pham Van Thanh", pwd: "12345", phoneNumber: "1223343", slug: "", rank: "Gold member", role_id: 2)
         if let user = self.user {
             userName.text = user.fullName
             userRank.text = user.rank
-            userImage.image = user.slug
+            userImage.image = imageUser
         }
         
         statisticalStackView.setBackgroundColor(.white)
@@ -104,12 +114,6 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     //MARK: Button
     
-    @IBAction func goToSettingAccount(_ sender: UIButton) {
-        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
-        //        self.present(viewAllOrdersController, animated: true, completion: nil)
-        userInfo.navigationItem.title = "User Information"
-        navigationController?.pushViewController(userInfo, animated: true)
-    }
     
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
         let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
