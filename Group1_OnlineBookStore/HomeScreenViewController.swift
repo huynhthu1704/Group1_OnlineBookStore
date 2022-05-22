@@ -61,10 +61,6 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         newBookCollectionView.dataSource = self
         newBookCollectionView.delegate = self
         newBookCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        let userModel = UserModel()
-        let user = User(id: 1, fullName: "Pham Van Ngoc Thu", pwd: "robertthanh", phoneNumber: "0123445567", slug: "", rank: "Member", role_id: 2)
-        userModel.updateUser(user: user)
-        
     }
     
     @objc func goToShoppingCart(_ sender: UIBarButtonItem) {

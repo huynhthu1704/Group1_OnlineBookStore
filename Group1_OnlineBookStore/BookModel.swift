@@ -39,22 +39,31 @@
             }
         }
         
-        func addNewData(book: Book) {
-               do {
-                _ = try db.collection("books").addDocument(data: ["book_id": book.id, "author": book.author, "category_id": book.category, "name": book.name, "price":book.price, "publisher": book.publisher, "quantity": book.quantity, "slug": "", "summary" : book.summary, "total_likes" : book.totalLikes, "total_sold": book.totalSold])
-               }
-               catch {
-                   print(error.localizedDescription)
-               }
-           }
+        func addBook(book: Book) {
+            do {
+                db.collection("users").addDocument(data: [
+                    "book_id": book.id,
+                    "author": book.author,
+                    "category_id": book.category,
+                    "name": book.name,
+                    "price":book.price,
+                    "publisher": book.publisher,
+                    "quantity": book.quantity,
+                    "slug": "",
+                    "summary" : book.summary,
+                    "total_likes" : book.totalLikes,
+                    "total_sold": book.totalSold
+                ])
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
         
-        func delete(book: Book) {
-               do {
-                _ = try db.collection("books").addDocument(data: ["book_id": book.id, "author": book.author, "category_id": book.category, "name": book.name, "price":book.price, "publisher": book.publisher, "quantity": book.quantity, "slug": "", "summary" : book.summary, "total_likes" : book.totalLikes, "total_sold": book.totalSold])
-               }
-               catch {
-                   print(error.localizedDescription)
-               }
-           }
-        
+        func deleteBook(bookID : String) {
+            do {
+                db.collection("books").document("\(bookID)").delete()} catch {
+                    print(error.localizedDescription)
+            }
+        }
     }

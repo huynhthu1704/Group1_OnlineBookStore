@@ -79,7 +79,19 @@ class UserModel: ObservableObject {
     }
     func deleteUser(userId : Int) {
         do {
-            db.collection("users").document("\(userId)").delete()} catch {
+            db.collection("users").whereField("user_id", isEqualTo: userId)
+            .getDocuments() { (querySnapshot, err) in
+                               if let err = err {
+                                   print("Delete fail")
+                               } else if querySnapshot!.documents.count != 1 {
+                                   print("")
+                               } else {
+                                   let document = querySnapshot!.documents.first
+                                   document!.reference.delete()
+                               }
+            }
+        }
+            catch {
                 print(error.localizedDescription)
         }
     }

@@ -85,7 +85,7 @@
 		D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F447A28353847002E663E /* MyOrdersViewController.xib */; };
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
 		D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F448228354468002E663E /* OrderDetailViewController.xib */; };
-		D3AFE055283A58A700F97810 /* UserModelThanh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE054283A58A700F97810 /* UserModelThanh.swift */; };
+		D3AFE055283A58A700F97810 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE054283A58A700F97810 /* UserModel.swift */; };
 		D3BFB9C82835E70900E33849 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */; };
 		D3BFB9C92835E70900E33849 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */; };
 		D3CECD9A28389EB700C035D5 /* OrderManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */; };
@@ -216,7 +216,7 @@
 		D38F447A28353847002E663E /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		D38F448228354468002E663E /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
-		D3AFE054283A58A700F97810 /* UserModelThanh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelThanh.swift; sourceTree = "<group>"; };
+		D3AFE054283A58A700F97810 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementViewController.swift; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 				A56852EC2830C94D00083378 /* Book.swift */,
 				D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */,
 				A56852EE2830CB6E00083378 /* User.swift */,
-				D3AFE054283A58A700F97810 /* UserModelThanh.swift */,
+				D3AFE054283A58A700F97810 /* UserModel.swift */,
 				A56852F02830CB8D00083378 /* Category.swift */,
 				A56852F22830CD0700083378 /* Order.swift */,
 				A56852F42830CE4B00083378 /* Customer.swift */,
@@ -853,7 +853,7 @@
 				D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */,
 				D3EEB2EF28373B530043D41C /* CancellingOrderScreenViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
-				D3AFE055283A58A700F97810 /* UserModelThanh.swift in Sources */,
+				D3AFE055283A58A700F97810 /* UserModel.swift in Sources */,
 				A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */,
 				A51C78B22833BB0700A593B9 /* MyFavoritesTableViewCell.swift in Sources */,
 				A5B7A6DA2833CBF800194413 /* AdminHomeScreenViewController.swift in Sources */,
