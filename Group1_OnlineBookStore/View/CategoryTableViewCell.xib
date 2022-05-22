@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="CategoryTableViewCell" customModule="Group1_OnlineBookStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheOldManAndTheSea" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-OV-0OT">
+                        <rect key="frame" x="15" y="15" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="7qO-X8-Khu"/>
+                            <constraint firstAttribute="height" constant="100" id="sQ7-fp-kP4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIx-wl-fVm">
+                        <rect key="frame" x="130" y="54.5" width="159" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sIx-wl-fVm" firstAttribute="leading" secondItem="cbv-OV-0OT" secondAttribute="trailing" constant="15" id="38n-nF-UYh"/>
+                    <constraint firstItem="cbv-OV-0OT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="FnZ-nb-Tws"/>
+                    <constraint firstItem="sIx-wl-fVm" firstAttribute="centerY" secondItem="cbv-OV-0OT" secondAttribute="centerY" id="TiC-iU-fcA"/>
+                    <constraint firstItem="cbv-OV-0OT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bka-Kw-gOJ"/>
+                    <constraint firstAttribute="bottom" secondItem="cbv-OV-0OT" secondAttribute="bottom" constant="15" id="hyx-jT-ufj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sIx-wl-fVm" secondAttribute="trailing" constant="15" id="obK-1O-mQC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="cbv-OV-0OT" id="mWa-jF-0vV"/>
+                <outlet property="lblName" destination="sIx-wl-fVm" id="lCn-mD-Zks"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="59.598214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="TheOldManAndTheSea" width="333.33334350585938" height="508"/>
+    </resources>
+</document>
