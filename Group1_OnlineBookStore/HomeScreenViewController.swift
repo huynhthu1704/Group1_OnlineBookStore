@@ -63,12 +63,6 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         newBookCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         let userModel = UserModel()
         let user = User(id: 1, fullName: "Pham Van Ngoc Thu", pwd: "robertthanh", phoneNumber: "0123445567", slug: "", rank: "Member", role_id: 2)
-//        userModel.getAllData()
-//        let users : [User] = userModel.users
-//        print("count\(users.count)")
-//        for i in 0..<users.count {
-//            print(users[i].id)
-//            print(users[i].fullName)
         userModel.updateUser(user: user)
         
     }
