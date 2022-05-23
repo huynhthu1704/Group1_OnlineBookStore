@@ -17,7 +17,7 @@ class BookViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         bookName.text = "Welcome"
-        if  let review = Review(userID: "us01", content: "", ratingValue: 4, bookID: "B01") {
+        if  let review = Review(userID: 1, content: "", ratingValue: 4, bookID: 1) {
             reviews.append(review)          }
         //        reviewTableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         //
@@ -40,7 +40,7 @@ class BookViewController: UIViewController, UITableViewDataSource{
             cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ReviewTableViewCell
         }
         let review = reviews[indexPath.row]
-        cell.username.text = review.userID
+        cell.username.text = String(review.userID)
         cell.content.text = review.content
         cell.ratingControl.setRatingValue(ratingValue: review.ratingValue)
         return cell

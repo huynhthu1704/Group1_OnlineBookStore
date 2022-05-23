@@ -39,6 +39,7 @@
 		A5443B0B2838C3180057CEAA /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443B0A2838C3180057CEAA /* CategoryCollectionViewController.swift */; };
 		A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443B0C2838E0850057CEAA /* BookListViewController.swift */; };
 		A5443B0F2838E0850057CEAA /* BookListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5443B0D2838E0850057CEAA /* BookListViewController.xib */; };
+		A54C3A28283BAC2A009BA6E2 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */; };
 		A555E082283A2F5600D1A01A /* AdminCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */; };
 		A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A555E081283A2F5600D1A01A /* AdminCategoryViewController.xib */; };
 		A555E086283A2F6D00D1A01A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */; };
@@ -174,6 +175,8 @@
 		A5443B0A2838C3180057CEAA /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		A5443B0C2838E0850057CEAA /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		A5443B0D2838E0850057CEAA /* BookListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListViewController.xib; sourceTree = "<group>"; };
+		A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
+		A54C3A30283BBA3D009BA6E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Group1_OnlineBookStore/View/Components/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCategoryViewController.swift; sourceTree = "<group>"; };
 		A555E081283A2F5600D1A01A /* AdminCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminCategoryViewController.xib; sourceTree = "<group>"; };
 		A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -406,6 +409,7 @@
 				A574352D28251A340081321B /* Assets.xcassets */,
 				D302BD13283BB52200D093BB /* GoogleService-Info.plist */,
 				A574353228251A340081321B /* Info.plist */,
+				A54C3A30283BBA3D009BA6E2 /* GoogleService-Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
 				A574352328251A2D0081321B /* SceneDelegate.swift */,
 			);
@@ -466,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				A56852D92830849F00083378 /* Review.swift */,
+				A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */,
 				A51D06C32834500100CA199F /* OrderedBook.swift */,
 				D3AFE056283A898100F97810 /* OrderedBookModel.swift */,
 				A56852EC2830C94D00083378 /* Book.swift */,
@@ -882,6 +887,7 @@
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */,
 				D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */,
+				A54C3A28283BAC2A009BA6E2 /* ReviewModel.swift in Sources */,
 				A5704F772836C4BB0069FFD8 /* BookItemCollectionViewCell.swift in Sources */,
 				A5947A40283405F600DA6D20 /* ForgotPasswordViewController.swift in Sources */,
 				A56852E62830B44F00083378 /* HomeScreenViewController.swift in Sources */,
