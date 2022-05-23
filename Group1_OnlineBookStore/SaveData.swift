@@ -12,4 +12,6 @@ class SaveData{
     static var bookModel = BookModel()
     static var userModel = UserModel()
     static var favoriteModel = FavoriteModel()
+    static var categoryModel = CategoryModel()
+    
 }
