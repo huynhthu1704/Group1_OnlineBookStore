@@ -21,6 +21,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
            passwordField.isSecureTextEntry = true
            self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white ]
+        let currentUser = Auth.auth().currentUser
+        if currentUser != nil {
+            goToHomeScreen()
+        }
        }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
           self.view.endEditing(true)
@@ -45,8 +49,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func signIn(_ sender: Any) {
         //SaveData.bookModel.getAllData()
-        let currentUser = User(id: 2, fullName: "", pwd: "", phoneNumber: "", slug: "", rank: "", role_id: 1)
-        SaveData.userModel.getAllData()
+//        let currentUser = User(id: 2, fullName: "", pwd: "", phoneNumber: "", slug: "", rank: "", role_id: 1)
         SaveData.bookModel.getAllData()
         SaveData.favoriteModel.getOrderedBookByOrderId(userID: 2)
         let email = emailField.text!
@@ -64,20 +67,26 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 guard error == nil else {
-                    strongSelf.showCreateAccount(email: email, password: pwd)
+                    let alert = UIAlertController(title: "Warning", message: error?.localizedDescription, preferredStyle: .alert)
+                              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                            
+                              }))
+                    self!.present(alert, animated: true)
                     return
                 }
-                let tabBar = self?.storyboard?.instantiateViewController(identifier: "TabBar")
-                UIApplication.shared.windows.first?.rootViewController = tabBar
-                UIApplication.shared.windows.first?.makeKeyAndVisible()
-                SaveData.userModel.getCurrentUser()
+                self!.goToHomeScreen()
             })
             
         }
         
         
     }
-    
+    func goToHomeScreen() {
+        let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
+                      UIApplication.shared.windows.first?.rootViewController = tabBar
+                      UIApplication.shared.windows.first?.makeKeyAndVisible()
+                      SaveData.userModel.getCurrentUser()
+    }
     func showCreateAccount(email : String, password : String) {
         let alert = UIAlertController(title: "Create account", message: "Would you like to create account?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sign up", style: .default, handler: {_ in

@@ -16,6 +16,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     
     let identifier = "BookCollectionViewCell"
+    var currentUser : User?
+    var books = [Book]()
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
 //        let date = "08/19/2020 16:20"
 //        var orderedBooks = [OrderedBook]()
@@ -80,12 +82,12 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         
 //        let imageUser = UIImage(named: "User's image")
 //        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/books%2Fanimal_farm.jpg?alt=media&token=a02eef89-a41b-4daa-95ac-46f54ccfb8d8", rank: "Gold", role_id: 2)
-        let user = SaveData.userModel.users[0]
+//        let user = SaveData.userModel.users[0]
         //            let image = SaveData.userModel.slugToImage(slug: user.slug)
-        userName.text = user.fullName
-        userRank.text = user.rank
+        userName.text = currentUser?.fullName
+        userRank.text = currentUser?.rank
         //        userImage.image = image
-        guard let url = URL(string: user.slug) else { return  }
+        guard let url = URL(string: currentUser!.slug) else { return  }
         let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
             guard let data = data, error == nil else{
                 return
