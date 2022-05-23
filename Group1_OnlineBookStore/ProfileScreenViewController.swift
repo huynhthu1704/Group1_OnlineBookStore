@@ -80,6 +80,9 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         // Customer user's section background color
         userView.backgroundColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
         
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        self.view.layoutIfNeeded()
+        collectionView.reloadData()
 //        let imageUser = UIImage(named: "User's image")
 //        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/books%2Fanimal_farm.jpg?alt=media&token=a02eef89-a41b-4daa-95ac-46f54ccfb8d8", rank: "Gold", role_id: 2)
 //        let user = SaveData.userModel.users[0]
@@ -209,5 +212,10 @@ extension UIStackView {
 //            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
 //            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
 //        ])
+    }
+}
+extension ProfileScreenViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width / 2 - 40, height: 250)
     }
 }

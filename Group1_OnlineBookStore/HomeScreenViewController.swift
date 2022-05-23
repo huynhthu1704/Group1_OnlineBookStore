@@ -46,20 +46,20 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let reviews : [Review] = SaveData.reviewModel.reviews
-
+        let currentUser = Auth.auth().currentUser
+        if currentUser == nil {
+            let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInScreen")
+                   signIn.modalPresentationStyle = .fullScreen
+                   present(signIn, animated: true, completion: nil)
+        } else {
+            print(currentUser?.email)
+        }
         // Customer navigation bar
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
         nav.addSearchBarItem(navigationItem: navigationItem)
         addCartItem()
-        let user = Auth.auth().currentUser;
-        if (user == nil) {
-            // there is no user signed in when user is nil
         
-            print(user!.email)
-        } else {
-            print("User not found")
-        }
         // Register datasource + nib collection view cell for topSale collection view
         topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
         topSaleCollectionView.dataSource = self

@@ -49,15 +49,17 @@ class FavoriteModel: ObservableObject {
 //        catch {
 //            print(error.localizedDescription)
 //        }
-        
+        print("start")
         db.collection("favourites_book").whereField("user_id", isEqualTo: userID).addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
+              print("exist")
             self.books = documents.map { (queryDocumentSnapshot) -> Book in
                 let data = queryDocumentSnapshot.data()
                 let bookid = data["book_id"] as? String ?? ""
+                print("bookid\(bookid)")
                 var bookOnFavorite:Book = Book()
                 for item in self.booksModel.books{
                     if item.id == bookid {

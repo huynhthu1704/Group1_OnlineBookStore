@@ -11,17 +11,23 @@ import CoreData
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseDatabase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-         SaveData.reviewModel.getAllReview()
-
+        if Auth.auth().currentUser != nil {
+            SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
+            SaveData.reviewModel.getAllReview()
+            SaveData.userModel.getCurrentUser()
+            
+        }
+        
         //        UILabel.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Roboto"))
         // Custom spacing between bar button item
-//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.white
-
+        //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.white
+        
         UIStackView.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).spacing = -10
         return true
     }
@@ -89,13 +95,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 extension UISearchBar {
-
+    
     // Due to searchTextField property who available iOS 13 only, extend this property for iOS 13 previous version compatibility
     var compatibleSearchTextField: UITextField {
         guard #available(iOS 13.0, *) else { return legacySearchField }
         return self.searchTextField
     }
-
+    
     private var legacySearchField: UITextField {
         if let textField = self.subviews.first?.subviews.last as? UITextField {
             // Xcode 11 previous environment

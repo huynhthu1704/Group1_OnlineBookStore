@@ -51,7 +51,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         //SaveData.bookModel.getAllData()
 //        let currentUser = User(id: 2, fullName: "", pwd: "", phoneNumber: "", slug: "", rank: "", role_id: 1)
         SaveData.bookModel.getAllData()
-        SaveData.favoriteModel.getOrderedBookByOrderId(userID: 2)
+        SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
         let email = emailField.text!
         let pwd = passwordField.text!
         if email.isEmpty ||
