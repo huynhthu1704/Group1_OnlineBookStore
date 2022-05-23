@@ -43,27 +43,27 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             contentView.addConstraint(heightConstraint)
         }
         //Initializating orderedBooks
-        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
-        let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")
-        let orderedBook1 = OrderedBook(orderID: "OD15", book: book, amount: 2)
-        let orderedBook2 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
-        let orderedBook3 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
-        let orderedBook4 = OrderedBook(orderID: "OD15", book: book, amount: 2)
-        orderedBooks.append(orderedBook1)
-        orderedBooks.append(orderedBook2)
-        orderedBooks.append(orderedBook3)
-        orderedBooks.append(orderedBook4)
-        
-        //Initializating customers
-        let cus1 = Customer(id: "Cus1", name: "Nguyen Thi Mai Xuan", address: "547, Tan Thach, Chau Thanh, Ben Tren", phoneNumber: "0974422725")
-        let cus2 = Customer(id: "Cus1", name: "Pham Van Son", address: "53, Vo Van Ngan, Linh Chieu, Thu Duc", phoneNumber: "0327542028")
-        customers.append(cus1)
-        customers.append(cus2)
-        //Initializating orders
-        let order1 = Order(id: "OD15", customerId: "Cus1", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 35, books: [orderedBook1, orderedBook4], state: "Cancelled")
-        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To confirm")
-        orders.append(order1)
-        orders.append(order2)
+//        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
+//        let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")
+//        let orderedBook1 = OrderedBook(orderID: "OD15", book: book, amount: 2)
+//        let orderedBook2 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
+//        let orderedBook3 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
+//        let orderedBook4 = OrderedBook(orderID: "OD15", book: book, amount: 2)
+//        orderedBooks.append(orderedBook1)
+//        orderedBooks.append(orderedBook2)
+//        orderedBooks.append(orderedBook3)
+//        orderedBooks.append(orderedBook4)
+//
+//        //Initializating customers
+//        let cus1 = Customer(id: "Cus1", name: "Nguyen Thi Mai Xuan", address: "547, Tan Thach, Chau Thanh, Ben Tren", phoneNumber: "0974422725")
+//        let cus2 = Customer(id: "Cus1", name: "Pham Van Son", address: "53, Vo Van Ngan, Linh Chieu, Thu Duc", phoneNumber: "0327542028")
+//        customers.append(cus1)
+//        customers.append(cus2)
+//        //Initializating orders
+//        let order1 = Order(id: "OD15", customerId: "Cus1", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 35, books: [orderedBook1, orderedBook4], state: "Cancelled")
+//        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To confirm")
+//        orders.append(order1)
+//        orders.append(order2)
         
         navigationItem.title = "Order detail"
         //Delegate
@@ -83,12 +83,12 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         
-        for item in customers{
-            if orderToShow?.customerId == item.id{
-                customerToShow = item
-                break
-            }
-        }
+//        for item in customers{
+//            if orderToShow?.customerId == item.id{
+//                customerToShow = item
+//                break
+//            }
+//        }
         
         
         

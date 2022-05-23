@@ -9,7 +9,9 @@
 import Foundation
 class Order {
     var id : String
-    var customerId :String
+    var customerName : String
+    var customerAddress : String
+    var customerPhoneNumber : String
     var orderDate : Date
     var note : String
     var userId : String
@@ -18,13 +20,17 @@ class Order {
     var state: String
     
     init ( id : String,
-           customerId :String,
+           customerName :String,
+           cusAddress: String,
+           cusPhoneNumber: String,
            orderDate : Date,
            note : String,
            userId : String,
            deliveryFee : Int, books: [OrderedBook], state: String){
         self.id = id
-        self.customerId = customerId
+        self.customerName = customerName
+        self.customerAddress = cusAddress
+        self.customerPhoneNumber = cusPhoneNumber
         self.orderDate = orderDate
         self.note = note
         self.userId = userId

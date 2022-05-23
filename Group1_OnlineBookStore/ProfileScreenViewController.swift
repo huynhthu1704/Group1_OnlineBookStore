@@ -16,15 +16,18 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     
     let identifier = "BookCollectionViewCell"
-    var userModel = UserModel()
-    
+    var orderMo = OrderModel()
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
-        dump(userModel.users)
-        
+        let date = "08/19/2020 16:20"
+        var orderedBooks = [OrderedBook]()
+        orderedBooks.append(OrderedBook(orderID: "DH002", book: Book(id: "9", name: "", author: "", publisher: "", price: 1, quantity: 12, totalSold: 12, slug: nil, summary: "", category: ""), amount: 12))
+        let order = Order(id: "DH002", customerName: "Pham Van Thanh", cusAddress: "547, ap 4, Tan Thach, Chau Thanh, Ben Tre", cusPhoneNumber: "0348477517", orderDate: date.toDate() ?? Date(), note: "No note", userId: "2", deliveryFee: 3, books: orderedBooks, state: "To confirm")
+        orderMo.addOrder(order: order)
         //        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
         //        //        self.present(viewAllOrdersController, animated: true, completion: nil)
         //        userInfo.navigationItem.title = "User Information"
         //        navigationController?.pushViewController(userInfo, animated: true)
+        dump(bookModel.books)
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -41,13 +44,15 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     //MARK: Collection my favorite
     var books = [Book]()
+    var bookModel = BookModel()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-        userModel.getAllData()
+        print("count: \(SaveData.bookModel.books.count)")
+        self.books = SaveData.bookModel.books
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -100,10 +105,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
-        for _ in 1...6 {
-            books.append(book);
-        }
+//        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
+//        for _ in 1...6 {
+//            books.append(book);
+//        }
         // register nib file for collection view cell
         collectionView.register(UINib(nibName: "BookItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
     }

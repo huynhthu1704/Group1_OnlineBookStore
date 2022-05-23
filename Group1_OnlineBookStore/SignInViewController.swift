@@ -31,6 +31,7 @@ class SignInViewController: UIViewController {
 //               self.navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }
     @IBAction func signIn(_ sender: Any) {
+        SaveData.bookModel.getAllData()
         let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()
@@ -50,6 +51,7 @@ class SignInViewController: UIViewController {
 //            let myViewController = HomeScreenViewController()
 //            self!.navigationController?.pushViewController(myViewController, animated: true)
 //        })
+        
     }
     
     func showCreateAccount(email : String, password : String) {
