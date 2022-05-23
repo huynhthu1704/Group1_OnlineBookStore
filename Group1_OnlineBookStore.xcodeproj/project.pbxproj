@@ -15,6 +15,7 @@
 		665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */; };
 		665AE54B283BB9B90081CA6A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE54A283BB9B90081CA6A /* CategoryModel.swift */; };
 		66808DA4283C0743005B26CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66808DA3283C0743005B26CC /* GoogleService-Info.plist */; };
+		66808DA6283C0CB3005B26CC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DA5283C0CB3005B26CC /* CategoryViewController.swift */; };
 		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
@@ -147,6 +148,7 @@
 		665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookYCollectionViewCell.xib; sourceTree = "<group>"; };
 		665AE54A283BB9B90081CA6A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		66808DA3283C0743005B26CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		66808DA5283C0CB3005B26CC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +328,7 @@
 				A555E081283A2F5600D1A01A /* AdminCategoryViewController.xib */,
 				A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */,
 				A555E085283A2F6D00D1A01A /* CategoryTableViewCell.xib */,
+				66808DA5283C0CB3005B26CC /* CategoryViewController.swift */,
 			);
 			name = Admin;
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 				A5443B062838BDD80057CEAA /* CategoryCollectionViewCell.swift in Sources */,
 				D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */,
 				D3EEB2EF28373B530043D41C /* CancellingOrderScreenViewController.swift in Sources */,
+				66808DA6283C0CB3005B26CC /* CategoryViewController.swift in Sources */,
 				A574352228251A2D0081321B /* AppDelegate.swift in Sources */,
 				D3AFE055283A58A700F97810 /* UserModel.swift in Sources */,
 				A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */,
