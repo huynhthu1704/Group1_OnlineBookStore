@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
             SaveData.reviewModel.getAllReview()
             SaveData.userModel.getCurrentUser()
+            SaveData.categoryModel.getAllData()
             
         }
         
