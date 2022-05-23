@@ -45,12 +45,15 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let reviews : [Review] = SaveData.reviewModel.reviews
+
         // Customer navigation bar
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
         nav.addSearchBarItem(navigationItem: navigationItem)
         addCartItem()
-        
+        print("reviews")
+        dump(reviews)
         // Register datasource + nib collection view cell for topSale collection view
         topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
         topSaleCollectionView.dataSource = self
