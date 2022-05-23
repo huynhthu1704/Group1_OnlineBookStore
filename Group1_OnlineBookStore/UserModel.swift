@@ -79,10 +79,10 @@ class UserModel: ObservableObject {
         }
     }
     
-    func getCurrentUser() {
+    func getCurrentUser(userID: Int) {
            do {
                //db.collection("users").do
-               db.collection("users").whereField("user_id", isEqualTo: 2)
+               db.collection("users").whereField("user_id", isEqualTo: userID)
                    .getDocuments() { (querySnapshot, err) in
                        if let err = err {
                            print("Update fail")

@@ -20,34 +20,53 @@ class FavoriteModel: ObservableObject {
     }
     
     func getOrderedBookByOrderId(userID: Int){
-        do {
-            db.collection("favourites_book").whereField("user_id", isEqualTo: userID)
-                .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Get fail")
-                    } else if querySnapshot!.documents.count != 1 {
-                        print("")
-                    } else {
-                        if let documents = querySnapshot?.documents{
-                            self.books = documents.map { (queryDocumentSnapshot) -> Book in
-                                let data = queryDocumentSnapshot.data()
-                                let bookid = data["book_id"] as? String ?? ""
-                                var bookOnFavorite:Book = Book()
-                                for item in self.booksModel.books{
-                                    if item.id == bookid {
-                                        bookOnFavorite = item
-                                        break
-                                    }
-                                }
-                                return bookOnFavorite
-                            }
-                        }
-                        
-                    }
+//        do {
+//            db.collection("favourites_book")
+//                .getDocuments() { (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Get fail")
+//                    } else if querySnapshot!.documents.count != 1 {
+//                        print("")
+//                    } else {
+//                        if let documents = querySnapshot?.documents{
+//                            self.books = documents.map { (queryDocumentSnapshot) -> Book in
+//                                let data = queryDocumentSnapshot.data()
+//                                let bookid = data["book_id"] as? String ?? ""
+//                                var bookOnFavorite:Book = Book()
+//                                for item in self.booksModel.books{
+//                                    if item.id == bookid {
+//                                        bookOnFavorite = item
+//                                        break
+//                                    }
+//                                }
+//                                return bookOnFavorite
+//                            }
+//                        }
+//
+//                    }
+//            }
+//        }
+//        catch {
+//            print(error.localizedDescription)
+//        }
+        
+        db.collection("favourites_book").whereField("user_id", isEqualTo: userID).addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
             }
-        }
-        catch {
-            print(error.localizedDescription)
+            self.books = documents.map { (queryDocumentSnapshot) -> Book in
+                let data = queryDocumentSnapshot.data()
+                let bookid = data["book_id"] as? String ?? ""
+                var bookOnFavorite:Book = Book()
+                for item in self.booksModel.books{
+                    if item.id == bookid {
+                        bookOnFavorite = item
+                        break
+                    }
+                }
+                return bookOnFavorite
+            }
         }
     }
     

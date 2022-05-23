@@ -22,11 +22,12 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
 //        orderedBooks.append(OrderedBook(orderID: "DH002", book: Book(id: "9", name: "", author: "", publisher: "", price: 1, quantity: 12, totalSold: 12, slug: nil, summary: "", category: ""), amount: 12))
 //        let order = Order(id: "DH002", customerName: "Pham Van Thanh", cusAddress: "547, ap 4, Tan Thach, Chau Thanh, Ben Tre", cusPhoneNumber: "0348477517", orderDate: date.toDate() ?? Date(), note: "No note", userId: "2", deliveryFee: 3, books: orderedBooks, state: "To confirm")
 //        orderMo.addOrder(order: order)
-        //        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
-        //        //        self.present(viewAllOrdersController, animated: true, completion: nil)
-        //        userInfo.navigationItem.title = "User Information"
-        //        navigationController?.pushViewController(userInfo, animated: true)
-        SaveData.favoriteModel.deleteFavoriteBook(userID: 2, bookID: "9")
+//                let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
+//                //        self.present(viewAllOrdersController, animated: true, completion: nil)
+//                userInfo.navigationItem.title = "User Information"
+//                navigationController?.pushViewController(userInfo, animated: true)
+        
+        dump(SaveData.favoriteModel.books)
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -42,18 +43,14 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     var user:User?
     
     //MARK: Collection my favorite
-    var books = [Book]()
-    var bookModel = BookModel()
-    var userModel = UserModel()
-    var currentUser : User?
+    var favoriteBooks = [Book]()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-        dump(SaveData.favoriteModel.books)
-        books = SaveData.bookModel.books
+        favoriteBooks = SaveData.favoriteModel.books
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -80,25 +77,24 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         
 //        let imageUser = UIImage(named: "User's image")
 //        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/books%2Fanimal_farm.jpg?alt=media&token=a02eef89-a41b-4daa-95ac-46f54ccfb8d8", rank: "Gold", role_id: 2)
-        if let user = self.currentUser {
-//            let image = SaveData.userModel.slugToImage(slug: user.slug)
-            userName.text = user.fullName
-            userRank.text = user.rank
-//        userImage.image = image
-            guard let url = URL(string: user.slug) else { return  }
-            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
-                guard let data = data, error == nil else{
-                    return
-                }
-
-                DispatchQueue.main.async{
-
-                    let img = UIImage(data: data)
-                    self.userImage.image = img
-                }
-            })
-            task.resume()
-        }
+        let user = SaveData.userModel.users[0]
+        //            let image = SaveData.userModel.slugToImage(slug: user.slug)
+        userName.text = user.fullName
+        userRank.text = user.rank
+        //        userImage.image = image
+        guard let url = URL(string: user.slug) else { return  }
+        let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            
+            DispatchQueue.main.async{
+                
+                let img = UIImage(data: data)
+                self.userImage.image = img
+            }
+        })
+        task.resume()
         
         statisticalStackView.setBackgroundColor(.white)
         myOrdersStackView.setBackgroundColor(.white)
@@ -118,16 +114,32 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        return favoriteBooks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookItemCollectionViewCell{
-            let book = books[indexPath.row]
-//            cell.img.image = book.slug
+            let book = favoriteBooks[indexPath.row]
+            
+            if let url = URL(string: book.slug){
+                let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                    guard let data = data, error == nil else{
+                        return
+                    }
+                    
+                    DispatchQueue.main.async{
+                        
+                        let img = UIImage(data: data)
+                        cell.img.image = img
+                    }
+                })
+                task.resume()
+            }
+            //            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
+            
             return cell
         }else{
             fatalError("Can not create the cell")

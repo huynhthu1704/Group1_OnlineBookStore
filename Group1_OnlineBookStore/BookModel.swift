@@ -31,11 +31,12 @@
                     let publisher = data["publisher"] as? String ?? ""
                     let quantity = data["quantity"] as? Int ?? 0
                     let summary = data["summary"] as? String ?? ""
+                    let slug = data["slug"] as? String ?? ""
                     let totalSold = data["total_sold"] as? Int ?? 0
                     let totalLikes = data["total_likes"] as? Int ?? 0
                     let created_at = data["created_at"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
                     
-                    return Book(id: id, name: name, author: author, publisher: publisher, price: price, quantity: quantity, totalSold: totalSold, slug:"", summary: summary, category: category_id, created_at: created_at.toDate() ?? Date(), totalLikes: totalLikes)
+                    return Book(id: id, name: name, author: author, publisher: publisher, price: price, quantity: quantity, totalSold: totalSold, slug: slug, summary: summary, category: category_id, created_at: created_at.toDate() ?? Date(), totalLikes: totalLikes)
                 }
             }
         }
