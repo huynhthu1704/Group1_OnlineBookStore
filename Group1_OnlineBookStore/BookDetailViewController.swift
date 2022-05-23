@@ -24,8 +24,8 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
         
         
         likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
-        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
-        navigationController?.navigationItem.title = book.name
+//        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: "", summary: "This is a good book, it's really interesting", category: "Fairy tale")
+//        navigationController?.navigationItem.title = book.name
     }
     func addRightBarButtonItem() {
         // Set Cart bar button item

@@ -33,8 +33,9 @@
                     let summary = data["summary"] as? String ?? ""
                     let totalSold = data["total_sold"] as? Int ?? 0
                     let totalLikes = data["total_likes"] as? Int ?? 0
+                    let created_at = data["created_at"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
                     
-                    return Book(id: id, name: name, author: author, publisher: publisher, price: price, quantity: quantity, totalSold: totalSold, slug: UIImage(named: "TheOldManAndTheSea")!, summary: summary, category: category_id, totalLikes: totalLikes)
+                    return Book(id: id, name: name, author: author, publisher: publisher, price: price, quantity: quantity, totalSold: totalSold, slug:"", summary: summary, category: category_id, created_at: created_at.toDate() ?? Date(), totalLikes: totalLikes)
                 }
             }
         }
@@ -52,7 +53,9 @@
                     "slug": "",
                     "summary" : book.summary,
                     "total_likes" : book.totalLikes,
-                    "total_sold": book.totalSold
+                    "total_sold": book.totalSold,
+                    "created_at": book.created_at.getFormater(format: "MM/dd/yyyy HH:mm")
+                    
                 ])
             }
             catch {

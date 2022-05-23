@@ -16,15 +16,15 @@ class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableVi
         super.viewDidLoad()
         ToReviewBookTableView.dataSource = self
         ToReviewBookTableView.delegate = self
-        let book = Book(id: "1", name: "The Old Man and The Sea", author: "Author 1", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "TheOldManAndTheSea"), summary: "x", category: "x")
-        let book1 = Book(id: "2", name: "Neo Ve Cua Y", author: "Author 2", publisher: "Ha Noi Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "NeoVeCuaY"), summary: "x", category: "x")
-        let book2 = Book(id: "3", name: "Lord Of The Flies", author: "Author 2", publisher: "TPHCM Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "LordOfTheFlies"), summary: "x", category: "x")
-        let book3 = Book(id: "4", name: "Animal Farm", author: "Author 2", publisher: "Nhi Dong Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "AnimalFarm"), summary: "x", category: "x")
-        books.append(book)
-        books.append(book1)
-        books.append(book2)
-        books.append(book3)
-        books.append(book2)
+//        let book = Book(id: "1", name: "The Old Man and The Sea", author: "Author 1", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "TheOldManAndTheSea"), summary: "x", category: "x")
+//        let book1 = Book(id: "2", name: "Neo Ve Cua Y", author: "Author 2", publisher: "Ha Noi Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "NeoVeCuaY"), summary: "x", category: "x")
+//        let book2 = Book(id: "3", name: "Lord Of The Flies", author: "Author 2", publisher: "TPHCM Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "LordOfTheFlies"), summary: "x", category: "x")
+//        let book3 = Book(id: "4", name: "Animal Farm", author: "Author 2", publisher: "Nhi Dong Publishing company", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "AnimalFarm"), summary: "x", category: "x")
+//        books.append(book)
+//        books.append(book1)
+//        books.append(book2)
+//        books.append(book3)
+//        books.append(book2)
     }
 
 
@@ -40,7 +40,7 @@ class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableVi
             cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ToReviewBookTableViewCell
         }
         let book = books[indexPath.row]
-        cell.imageBook.image = book.slug
+//        cell.imageBook.image = book.slug
         cell.lblBookNameAuthor.text = "\(book.name) - \(book.author)"
         cell.lblBookPuslishingCompany.text = book.publisher
         cell.book = book

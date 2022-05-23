@@ -19,10 +19,10 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     var orderMo = OrderModel()
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
         let date = "08/19/2020 16:20"
-        var orderedBooks = [OrderedBook]()
-        orderedBooks.append(OrderedBook(orderID: "DH002", book: Book(id: "9", name: "", author: "", publisher: "", price: 1, quantity: 12, totalSold: 12, slug: nil, summary: "", category: ""), amount: 12))
-        let order = Order(id: "DH002", customerName: "Pham Van Thanh", cusAddress: "547, ap 4, Tan Thach, Chau Thanh, Ben Tre", cusPhoneNumber: "0348477517", orderDate: date.toDate() ?? Date(), note: "No note", userId: "2", deliveryFee: 3, books: orderedBooks, state: "To confirm")
-        orderMo.addOrder(order: order)
+//        var orderedBooks = [OrderedBook]()
+//        orderedBooks.append(OrderedBook(orderID: "DH002", book: Book(id: "9", name: "", author: "", publisher: "", price: 1, quantity: 12, totalSold: 12, slug: nil, summary: "", category: ""), amount: 12))
+//        let order = Order(id: "DH002", customerName: "Pham Van Thanh", cusAddress: "547, ap 4, Tan Thach, Chau Thanh, Ben Tre", cusPhoneNumber: "0348477517", orderDate: date.toDate() ?? Date(), note: "No note", userId: "2", deliveryFee: 3, books: orderedBooks, state: "To confirm")
+//        orderMo.addOrder(order: order)
         //        let userInfo = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
         //        //        self.present(viewAllOrdersController, animated: true, completion: nil)
         //        userInfo.navigationItem.title = "User Information"
@@ -45,14 +45,16 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK: Collection my favorite
     var books = [Book]()
     var bookModel = BookModel()
+    var userModel = UserModel()
+    var currentUser : User?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("count: \(SaveData.bookModel.books.count)")
-        self.books = SaveData.bookModel.books
+        dump(SaveData.bookModel.books)
+        books = SaveData.bookModel.books
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -77,26 +79,26 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         // Customer user's section background color
         userView.backgroundColor = UIColor(red: 0.26, green: 0.36, blue: 0.86, alpha: 1)
         
-        let imageUser = UIImage(named: "User's image")
-        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/users%2FWIN_20211231_18_15_36_Pro%20(2).jpg?alt=media&token=38c3a93e-18e8-45d0-9af4-684ceed47466", rank: "Gold member", role_id: 2)
-        if let user = self.user {
+//        let imageUser = UIImage(named: "User's image")
+//        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/books%2Fanimal_farm.jpg?alt=media&token=a02eef89-a41b-4daa-95ac-46f54ccfb8d8", rank: "Gold", role_id: 2)
+        if let user = self.currentUser {
+//            let image = SaveData.userModel.slugToImage(slug: user.slug)
             userName.text = user.fullName
             userRank.text = user.rank
+//        userImage.image = image
             guard let url = URL(string: user.slug) else { return  }
             let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
                 guard let data = data, error == nil else{
-                    self.userImage.image = imageUser
                     return
                 }
-                
+
                 DispatchQueue.main.async{
-                    
+
                     let img = UIImage(data: data)
                     self.userImage.image = img
                 }
             })
             task.resume()
-            
         }
         
         statisticalStackView.setBackgroundColor(.white)
@@ -124,7 +126,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookItemCollectionViewCell{
             let book = books[indexPath.row]
-            cell.img.image = book.slug
+//            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
             return cell
@@ -185,11 +187,11 @@ extension UIStackView {
         backgroundView.backgroundColor = color
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         self.insertSubview(backgroundView, at: 0)
-        NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
+//            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+//            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+//        ])
     }
 }

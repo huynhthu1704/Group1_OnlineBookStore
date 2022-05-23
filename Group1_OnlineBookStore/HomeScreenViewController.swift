@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     //MARK: Properties
+    let books = [Book]()
     let topSaleBook = [Book]()
     let topSaleBookIdentifier = "TopSaleBookCollectionViewCell"
     let newBookIdentifier = "NewBookCollectionViewCell"
@@ -92,14 +93,14 @@ extension HomeScreenViewController : UICollectionViewDataSource {
         if collectionView == topSaleCollectionView {
             let cell = topSaleCollectionView.dequeueReusableCell(withReuseIdentifier: topSaleBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
-            cell.img.image = book.slug
+//            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
             return cell
         } else {
             let cell = newBookCollectionView.dequeueReusableCell(withReuseIdentifier: newBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
-            cell.img.image = book.slug
+//            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
             return cell

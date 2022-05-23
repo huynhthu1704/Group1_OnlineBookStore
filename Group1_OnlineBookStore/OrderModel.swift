@@ -32,7 +32,7 @@ class OrderModel: ObservableObject {
                 let address = data["address"] as? String ?? ""
                 let cusName = data["customer_name"] as? String ?? ""
                 let note = data["note"] as? String ?? ""
-                let orderDate = data["order_date"] as? Date ?? Date()
+                let orderDate = data["order_date"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
                 let cusPhoneNumber = data["phone_number"] as? String ?? ""
                 let status = data["status"] as? String ?? ""
                 let userId = data["user_id"] as? String ?? ""
@@ -43,7 +43,7 @@ class OrderModel: ObservableObject {
                         orderedBookArray.append(item)
                     }
                 }
-                return Order(id: orderId, customerName: cusName, cusAddress: address, cusPhoneNumber: cusPhoneNumber, orderDate: orderDate, note: note, userId: userId, deliveryFee: deliveryFee, books: orderedBookArray, state: status)
+                return Order(id: orderId, customerName: cusName, cusAddress: address, cusPhoneNumber: cusPhoneNumber, orderDate: orderDate.toDate() ?? Date(), note: note, userId: userId, deliveryFee: deliveryFee, books: orderedBookArray, state: status)
             }
         }
     }

@@ -12,6 +12,7 @@ import FirebaseFirestore
 class UserModel: ObservableObject {
     
     @Published var users = [User]()
+    @Published var currentUser : User?
     
     private var db = Firestore.firestore()
     
@@ -77,6 +78,34 @@ class UserModel: ObservableObject {
             
         }
     }
+    
+    func getCurrentUser() {
+           do {
+               //db.collection("users").do
+               db.collection("users").whereField("user_id", isEqualTo: 2)
+                   .getDocuments() { (querySnapshot, err) in
+                       if let err = err {
+                           print("Update fail")
+                       } else if querySnapshot!.documents.count != 1 {
+                           print("Multiple user found")
+                       } else {
+                       let document = querySnapshot!.documents.first
+                        let data = document!.data()
+                                         let id = data["user_id"] as? Int ?? 0
+                                         let fullName = data["fullname"] as? String ?? ""
+                                         let password = data["password"] as? String ?? ""
+                                         let phone = data["phone_number"] as? String ?? ""
+                                         let rank = data["rank"] as? String ?? ""
+                                         let role_id = data["role_id"] as? Int ?? -1
+                                         let slug = data["slug"] as? String ?? ""
+                        print("username: \(id)")
+                        self.currentUser = User(id: id, fullName: fullName , pwd: password, phoneNumber: phone, slug: slug, rank: rank, role_id: role_id)
+                    }
+               }
+               
+               
+           }
+       }
     func deleteUser(userId : Int) {
         do {
             db.collection("users").whereField("user_id", isEqualTo: userId)
@@ -95,6 +124,23 @@ class UserModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
-    
+    func slugToImage(slug : String) -> UIImage{
+        var img = UIImage()
+        if let url = URL(string:slug) {
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                guard let data = data, error == nil else{
+                    return
+                }
+                
+                DispatchQueue.main.async{
+                    
+                    let image = UIImage(data: data)
+                    img = image!
+                }
+            })
+            task.resume()
+        }
+        return img
+    }
 }
 

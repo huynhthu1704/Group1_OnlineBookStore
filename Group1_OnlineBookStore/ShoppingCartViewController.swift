@@ -21,7 +21,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
         }
         let book = books[indexPath.row]
-        cell.bookImg.image = book.slug
+//        cell.bookImg.image = book.slug
         cell.bookName.text = book.name
         cell.price.text = String(book.price)
         cell.quantity.text = String(1)
@@ -39,8 +39,8 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
-        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
-        books.append(book)
+//        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: "", summary: "This is a good book, it's really interesting", category: "Fairy tale")
+//        books.append(book)
         shoppingCartTableView.dataSource = self
     }
     

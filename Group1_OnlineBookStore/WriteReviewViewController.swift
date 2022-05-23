@@ -19,7 +19,7 @@ class WriteReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let book = book {
-            imageBook.image = book.slug
+//            imageBook.image = book.slug
             lblBookName.text = book.name
             lblPublisher.text = book.publisher
         }

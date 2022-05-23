@@ -16,9 +16,10 @@ class Book {
     var price : Int
     var quantity : Int
     var totalSold : Int
-    var slug : UIImage?
+    var slug : String
     var summary : String
     var category : String
+    var created_at: Date
     var totalLikes : Int
     init(id :String,
          name : String,
@@ -27,9 +28,10 @@ class Book {
          price : Int,
          quantity : Int,
          totalSold : Int,
-         slug : UIImage?,
+         slug : String,
          summary : String,
          category : String,
+         created_at: Date,
          totalLikes : Int = 0)    {
         self.id = id
         self.name = name
@@ -42,6 +44,7 @@ class Book {
         self.summary = summary
         self.category = category
         self.totalLikes = totalLikes
+        self.created_at = created_at
     }
     init(){
         self.id = "No id"
@@ -51,18 +54,10 @@ class Book {
         self.price = -1
         self.quantity = -1
         self.totalSold = -1
-        self.slug = nil
+        self.slug = ""
         self.summary = "No summary"
         self.category = "No category"
+        self.created_at = Date()
         self.totalLikes = -1
     }
 }
-var books = [
-    Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
-    Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help"),
-    Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
-       Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help"),
-       Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
-          Book(id: "2", name: "Tuoi tre dang gia bao nhieu", author: "Rosie Nguyen", publisher: "NXB Ha Noi", price: 120000, quantity: 3, totalSold: 1, slug: UIImage(named: "XuXu")!, summary: "It's really interesting", category: "Self help")
-]
-

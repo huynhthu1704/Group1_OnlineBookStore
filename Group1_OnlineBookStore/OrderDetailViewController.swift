@@ -178,7 +178,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         }
         let item = orderedBooksToShow[indexPath.row]
         
-        cell.imageBook.image = item.book.slug
+//        cell.imageBook.image = item.book.slug
         cell.lblBookNameAuthor.text = "\(item.book.name) - \(item.book.author)"
         cell.lblBookPrice.text = "$ \(item.book.price)"
         cell.lblQty.text = "Qty: \(item.amount)"

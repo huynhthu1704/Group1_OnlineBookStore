@@ -21,7 +21,7 @@ class PurchaseViewController: UIViewController, UITableViewDataSource, UITableVi
                cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
            }
            let book = books[indexPath.row]
-           cell.bookImg.image = book.slug
+//           cell.bookImg.image = book.slug
            cell.bookName.text = book.name
            cell.price.text = String(book.price)
            cell.quantity.text = String(1)
@@ -33,9 +33,9 @@ class PurchaseViewController: UIViewController, UITableViewDataSource, UITableVi
     var books = [Book]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura",publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale")
-        books.append(book)
-        print(book.name)
+//        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura",publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: "", summary: "This is a good book, it's really interesting", category: "Fairy tale")
+//        books.append(book)
+//        print(book.name)
         bookTableView.delegate = self
         bookTableView.dataSource = self
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class BookListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
+    let books = [Book]()
     let identifier = "BookCell"
     let searchBar = UISearchBar(frame: CGRect(x: 0, y: -5, width: 300, height: 20))
     var cartButton = UIBarButtonItem()
@@ -106,7 +107,7 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! BookCollectionViewCell
         let book = books[indexPath.row]
-        cell.img.image  = book.slug
+//        cell.img.image  = book.slug
         cell.name.text = book.name
         cell.price.text = String(book.price)
         return cell

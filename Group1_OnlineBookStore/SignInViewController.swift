@@ -31,6 +31,8 @@ class SignInViewController: UIViewController {
 //               self.navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }
     @IBAction func signIn(_ sender: Any) {
+        //SaveData.bookModel.getAllData()
+        SaveData.userModel.getCurrentUser()
         SaveData.bookModel.getAllData()
         let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
         UIApplication.shared.windows.first?.rootViewController = tabBar
