@@ -32,7 +32,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
       }
        
     @IBAction func signUp(_ sender: UITapGestureRecognizer) {
-        print("SignUp")
         SaveData.userModel.getAllData()
         let signUpViewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
         signUpViewController.modalPresentationStyle = .fullScreen

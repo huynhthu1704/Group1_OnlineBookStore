@@ -52,6 +52,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
+
         currentUser = SaveData.userModel.currentUser
         dump(SaveData.favoriteModel.books)
         books = SaveData.bookModel.books
@@ -83,10 +84,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         self.view.layoutIfNeeded()
         collectionView.reloadData()
-//        let imageUser = UIImage(named: "User's image")
-//        self.user = User(id: 1, fullName: "Ngoc Thu", pwd: "12345", phoneNumber: "1223343", slug: "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/books%2Fanimal_farm.jpg?alt=media&token=a02eef89-a41b-4daa-95ac-46f54ccfb8d8", rank: "Gold", role_id: 2)
-//        let user = SaveData.userModel.users[0]
-        //            let image = SaveData.userModel.slugToImage(slug: user.slug)
+//
         userName.text = currentUser?.fullName
         userRank.text = currentUser?.rank
         //        userImage.image = image
@@ -109,11 +107,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         myFavoritesStackView.setBackgroundColor(.white)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-//        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
-//        for _ in 1...6 {
-//            books.append(book);
-//        }
+     
         // register nib file for collection view cell
         collectionView.register(UINib(nibName: "BookItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
     }
@@ -124,7 +118,14 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favoriteBooks.count
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+          let book = favoriteBooks[indexPath.row]
+        SaveData.bookModel.getBookDetail(bookId: book.id)
+           let bookDetailViewController = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
+           bookDetailViewController.modalPresentationStyle = .fullScreen
+           present(bookDetailViewController, animated: true, completion: nil)
+
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookItemCollectionViewCell{

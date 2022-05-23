@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Custom spacing between bar button item
         //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.white
         
-        UIStackView.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).spacing = -10
+//        UIStackView.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).spacing = -10
         return true
     }
     
