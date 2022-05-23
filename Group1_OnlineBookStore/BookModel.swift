@@ -62,8 +62,48 @@
         
         func deleteBook(bookID : String) {
             do {
-                db.collection("books").document("\(bookID)").delete()} catch {
-                    print(error.localizedDescription)
+                db.collection("books").whereField("book_id", isEqualTo: bookID)
+                    .getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Delete fail")
+                        } else if querySnapshot!.documents.count != 1 {
+                            print("")
+                        } else {
+                            let document = querySnapshot!.documents.first
+                            document!.reference.delete()
+                        }
+                }
+            }
+            catch {
+                print(error.localizedDescription)
             }
         }
+        func updateBook(book : Book) {
+            do {
+                //db.collection("users").do
+                db.collection("books").whereField("book_id", isEqualTo: book.id)
+                    .getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Update fail")
+                        } else if querySnapshot!.documents.count != 1 {
+                            print("Multiple book found")
+                        } else {
+                            let document = querySnapshot!.documents.first
+                            document!.reference.updateData([
+                                "author": book.author,
+                                "category_id": book.category,
+                                "name": book.name,
+                                "price":book.price,
+                                "publisher": book.publisher,
+                                "quantity": book.quantity,
+                                "slug": "",
+                                "summary" : book.summary,
+                                "total_likes" : book.totalLikes,
+                                "total_sold": book.totalSold
+                            ])
+                        }
+                }
+            }
+        }
+        
     }

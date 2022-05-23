@@ -86,6 +86,7 @@
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
 		D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F448228354468002E663E /* OrderDetailViewController.xib */; };
 		D3AFE055283A58A700F97810 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE054283A58A700F97810 /* UserModel.swift */; };
+		D3AFE057283A898100F97810 /* OrderedBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE056283A898100F97810 /* OrderedBookModel.swift */; };
 		D3BFB9C82835E70900E33849 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */; };
 		D3BFB9C92835E70900E33849 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */; };
 		D3CECD9A28389EB700C035D5 /* OrderManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */; };
@@ -217,6 +218,7 @@
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		D38F448228354468002E663E /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
 		D3AFE054283A58A700F97810 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D3AFE056283A898100F97810 /* OrderedBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBookModel.swift; sourceTree = "<group>"; };
 		D3BFB9C62835E70900E33849 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		D3BFB9C72835E70900E33849 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementViewController.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 			children = (
 				A56852D92830849F00083378 /* Review.swift */,
 				A51D06C32834500100CA199F /* OrderedBook.swift */,
+				D3AFE056283A898100F97810 /* OrderedBookModel.swift */,
 				A56852EC2830C94D00083378 /* Book.swift */,
 				D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */,
 				A56852EE2830CB6E00083378 /* User.swift */,
@@ -859,6 +862,7 @@
 				A5B7A6DA2833CBF800194413 /* AdminHomeScreenViewController.swift in Sources */,
 				A56852EF2830CB6E00083378 /* User.swift in Sources */,
 				A555E082283A2F5600D1A01A /* AdminCategoryViewController.swift in Sources */,
+				D3AFE057283A898100F97810 /* OrderedBookModel.swift in Sources */,
 				D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */,
 				A56852F12830CB8D00083378 /* Category.swift in Sources */,
 				D3F9E7F9283A1DC100E8B8DE /* BookModel.swift in Sources */,

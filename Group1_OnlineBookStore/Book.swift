@@ -43,6 +43,19 @@ class Book {
         self.category = category
         self.totalLikes = totalLikes
     }
+    init(){
+        self.id = "No id"
+        self.name = "No name"
+        self.author = "No author"
+        self.publisher = "No publisher"
+        self.price = -1
+        self.quantity = -1
+        self.totalSold = -1
+        self.slug = nil
+        self.summary = "No summary"
+        self.category = "No category"
+        self.totalLikes = -1
+    }
 }
 var books = [
     Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: UIImage(named: "XuXu")!, summary: "This is a good book, it's really interesting", category: "Fairy tale"),
