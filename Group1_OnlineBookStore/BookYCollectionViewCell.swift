@@ -11,6 +11,9 @@ import UIKit
 class BookYCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var img: UIImageView!
+  
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

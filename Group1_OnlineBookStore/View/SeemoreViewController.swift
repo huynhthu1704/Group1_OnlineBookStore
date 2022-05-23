@@ -17,7 +17,7 @@ class SeemoreViewController: UIViewController,UICollectionViewDataSource,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookItemCollectionViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? BookYCollectionViewCell{
             let book = books[indexPath.row]
             
             if let url = URL(string: book.slug){
@@ -35,8 +35,8 @@ class SeemoreViewController: UIViewController,UICollectionViewDataSource,UIColle
                 task.resume()
             }
             //            cell.img.image = book.slug
-            cell.name.text = book.name
-            cell.price.text = String(book.price)
+            cell.lblName.text = book.name
+            cell.lblPrice.text = String(book.price)
             
             return cell
         }else{
@@ -44,7 +44,7 @@ class SeemoreViewController: UIViewController,UICollectionViewDataSource,UIColle
         }
     }
     
-let identifier = "BookCollectionViewCell"
+let identifier = "BookYCollectionViewCell"
     var books = [Book]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -54,7 +54,8 @@ books = SaveData.bookModel.books
            collectionView.dataSource = self
         
            // register nib file for collection view cell
-           collectionView.register(UINib(nibName: "BookItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+           collectionView.register(UINib(nibName: "BookYCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+        self.title = "All Book"
         // Do any additional setup after loading the view.
     }
 
@@ -72,6 +73,6 @@ books = SaveData.bookModel.books
 }
 extension SeemoreViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width / 2 - 40, height: 250)
+        return CGSize(width: UIScreen.main.bounds.width / 3 - 10, height: 250)
     }
 }
