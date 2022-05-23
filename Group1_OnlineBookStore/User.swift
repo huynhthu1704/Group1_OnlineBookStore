@@ -14,13 +14,13 @@ class User {
     var pwd : String
     var slug: String
     var rank: String
-    var phoneNumber : String
+    var email : String
     var role_id : Int
-    init(id : Int, fullName : String, pwd : String, phoneNumber : String, slug: String, rank: String, role_id : Int) {
+    init(id : Int, fullName : String, pwd : String, email : String, slug: String, rank: String, role_id : Int) {
         self.id = id
         self.fullName = fullName
         self.pwd = pwd
-        self.phoneNumber = phoneNumber
+        self.email = email
         self.slug = slug
         self.rank = rank
         self.role_id = role_id

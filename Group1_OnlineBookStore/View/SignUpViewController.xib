@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target">
             <connections>
-                <outlet property="birthDay" destination="VWt-NE-zT9" id="hao-Q2-CxF"/>
                 <outlet property="email" destination="6JX-gp-855" id="B7u-9B-kCM"/>
                 <outlet property="fullName" destination="vxl-6U-mem" id="WiL-05-Rb8"/>
                 <outlet property="password" destination="YC2-Hw-XPZ" id="znp-QP-5tC"/>
@@ -65,7 +64,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Fz1-oy-NOt">
-                    <rect key="frame" x="30" y="214" width="354" height="352.5"/>
+                    <rect key="frame" x="30" y="214" width="354" height="282"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fa-a9-xha">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="70.5"/>
@@ -109,29 +108,8 @@
                                 <constraint firstAttribute="bottom" secondItem="6JX-gp-855" secondAttribute="bottom" id="bh2-b8-txo"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-cp-aEC">
-                            <rect key="frame" x="0.0" y="141" width="354" height="70.5"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBZ-nc-vIE">
-                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWt-NE-zT9">
-                                    <rect key="frame" x="0.0" y="36.5" width="354" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="VWt-NE-zT9" secondAttribute="bottom" id="7SI-5h-YJC"/>
-                                <constraint firstAttribute="trailing" secondItem="VWt-NE-zT9" secondAttribute="trailing" id="UJF-K3-iL1"/>
-                                <constraint firstItem="VWt-NE-zT9" firstAttribute="leading" secondItem="dRb-cp-aEC" secondAttribute="leading" id="pXa-j8-11M"/>
-                            </constraints>
-                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pUL-OK-fMV">
-                            <rect key="frame" x="0.0" y="211.5" width="354" height="70.5"/>
+                            <rect key="frame" x="0.0" y="141" width="354" height="70.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-ge-bLI">
                                     <rect key="frame" x="0.0" y="0.0" width="92" height="26.5"/>
@@ -152,7 +130,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DzH-sm-QgE">
-                            <rect key="frame" x="0.0" y="282" width="354" height="70.5"/>
+                            <rect key="frame" x="0.0" y="211.5" width="354" height="70.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-A9-vOU">
                                     <rect key="frame" x="0.0" y="0.0" width="173.5" height="26.5"/>
@@ -180,15 +158,13 @@
                         <constraint firstAttribute="trailing" secondItem="DzH-sm-QgE" secondAttribute="trailing" id="L5t-jU-R5r"/>
                         <constraint firstAttribute="trailing" secondItem="qiN-2l-qnG" secondAttribute="trailing" id="W9d-Vi-M31"/>
                         <constraint firstAttribute="bottom" secondItem="DzH-sm-QgE" secondAttribute="bottom" id="a1Y-SZ-bMo"/>
-                        <constraint firstItem="dRb-cp-aEC" firstAttribute="leading" secondItem="Fz1-oy-NOt" secondAttribute="leading" id="gyS-68-IKR"/>
                         <constraint firstItem="6fa-a9-xha" firstAttribute="leading" secondItem="Fz1-oy-NOt" secondAttribute="leading" id="lw3-4f-P8E"/>
-                        <constraint firstAttribute="trailing" secondItem="dRb-cp-aEC" secondAttribute="trailing" id="oPz-GS-Pkq"/>
                         <constraint firstItem="DzH-sm-QgE" firstAttribute="leading" secondItem="Fz1-oy-NOt" secondAttribute="leading" id="tMZ-uA-jag"/>
                         <constraint firstItem="qiN-2l-qnG" firstAttribute="leading" secondItem="Fz1-oy-NOt" secondAttribute="leading" id="uwD-2M-TXd"/>
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9z5-3T-IkB">
-                    <rect key="frame" x="57.5" y="596.5" width="299.5" height="88.5"/>
+                    <rect key="frame" x="57.5" y="526" width="299.5" height="88.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-0X-FOk" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
                             <rect key="frame" x="74.5" y="0.0" width="150" height="42"/>

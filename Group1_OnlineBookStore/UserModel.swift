@@ -8,12 +8,12 @@
 
 import Foundation
 import FirebaseFirestore
-
+import FirebaseAuth
 class UserModel: ObservableObject {
     
     @Published var users = [User]()
     @Published var currentUser : User?
-    
+    @Published var size : Int = 0
     private var db = Firestore.firestore()
     
     func getAllData() {
@@ -22,40 +22,43 @@ class UserModel: ObservableObject {
                 print("No documents")
                 return
             }
+            self.size = 0
             self.users = documents.map { (queryDocumentSnapshot) -> User in
                 let data = queryDocumentSnapshot.data()
                 let id = data["user_id"] as? Int ?? 0
                 let fullName = data["fullname"] as? String ?? ""
                 let password = data["password"] as? String ?? ""
-                let phone = data["phone_number"] as? String ?? ""
+                let email = data["email"] as? String ?? ""
                 let rank = data["rank"] as? String ?? ""
                 let role_id = data["role_id"] as? Int ?? -1
                 let slug = data["slug"] as? String ?? ""
-                return User(id: id, fullName: fullName, pwd: password, phoneNumber: phone, slug: slug, rank: rank, role_id: role_id)
+                self.size += 1
+                print(String(self.size))
+                return User(id: id, fullName: fullName, pwd: password, email: email, slug: slug, rank: rank, role_id: role_id)
             }
         }
     }
     
     func addUser(user : User) {
         do {
-            db.collection("users").addDocument(data: [
-                "fullname": user.fullName,
-                "password" : user.pwd,
-                "phone_number" : user.phoneNumber,
-                "rank" : user.rank,
-                "role_id" : user.role_id,
-                "slug" : user.slug,
-                "user_id" : user.id
-            ])
+            do {
+                db.collection("users").addDocument(data: [
+                    "fullname": user.fullName,
+                    "password" : user.pwd,
+                    "email" : user.email,
+                    "rank" : "Member",
+                    "role_id" : user.role_id,
+                    "slug" : "https://firebasestorage.googleapis.com/v0/b/onlinebookstore-79227.appspot.com/o/users%2Fdefault_user.jpg?alt=media&token=3e65db1e-02f9-4c0c-a51a-107079306796",
+                    "user_id" : self.size + 1
+                ])
+            }
+            catch {
+                print(error.localizedDescription)
+            }
         }
-        catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func updateUser(user : User) {
-        do {
-            //db.collection("users").do
+        
+        func updateUser(user : User) {
+            
             db.collection("users").whereField("user_id", isEqualTo: user.id)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
@@ -67,45 +70,41 @@ class UserModel: ObservableObject {
                         document!.reference.updateData([
                             "fullname": user.fullName,
                             "password" : user.pwd,
-                            "phone_number" : user.phoneNumber,
+                            "email" : user.email,
                             "rank" : user.rank,
                             "role_id" : user.role_id,
                             "slug" : user.slug
                         ])
                     }
             }
-            
-            
         }
     }
     
-    func getCurrentUser(userID: Int) {
-           do {
-               //db.collection("users").do
-               db.collection("users").whereField("user_id", isEqualTo: userID)
-                   .getDocuments() { (querySnapshot, err) in
-                       if let err = err {
-                           print("Update fail")
-                       } else if querySnapshot!.documents.count != 1 {
-                           print("Multiple user found")
-                       } else {
-                       let document = querySnapshot!.documents.first
+    func getCurrentUser() {
+        do {
+            let email = Auth.auth().currentUser?.email
+            //db.collection("users").do
+            db.collection("users").whereField("email", isEqualTo: email)
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print(err.localizedDescription)
+                    } else if querySnapshot!.documents.count != 1 {
+                        print("Multiple user found")
+                    } else {
+                        let document = querySnapshot!.documents.first
                         let data = document!.data()
-                                         let id = data["user_id"] as? Int ?? 0
-                                         let fullName = data["fullname"] as? String ?? ""
-                                         let password = data["password"] as? String ?? ""
-                                         let phone = data["phone_number"] as? String ?? ""
-                                         let rank = data["rank"] as? String ?? ""
-                                         let role_id = data["role_id"] as? Int ?? -1
-                                         let slug = data["slug"] as? String ?? ""
-                        print("username: \(id)")
-                        self.currentUser = User(id: id, fullName: fullName , pwd: password, phoneNumber: phone, slug: slug, rank: rank, role_id: role_id)
+                        let id = data["user_id"] as? Int ?? 0
+                        let fullName = data["fullname"] as? String ?? ""
+                        let password = data["password"] as? String ?? ""
+                        let email = data["email"] as? String ?? ""
+                        let rank = data["rank"] as? String ?? ""
+                        let role_id = data["role_id"] as? Int ?? -1
+                        let slug = data["slug"] as? String ?? ""
+                        self.currentUser = User(id: id, fullName: fullName , pwd: password, email: email, slug: slug, rank: rank, role_id: role_id)
                     }
-               }
-               
-               
-           }
-       }
+            }
+        }
+    }
     func deleteUser(userId : Int) {
         do {
             db.collection("users").whereField("user_id", isEqualTo: userId)

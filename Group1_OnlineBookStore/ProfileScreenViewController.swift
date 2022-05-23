@@ -50,6 +50,9 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentUser = SaveData.userModel.currentUser
+        dump(SaveData.favoriteModel.books)
+        books = SaveData.bookModel.books
         favoriteBooks = SaveData.favoriteModel.books
         // Set text color for username and rank
         userName.textColor = UIColor.white

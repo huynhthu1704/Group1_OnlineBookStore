@@ -52,8 +52,14 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         nav.setUp()
         nav.addSearchBarItem(navigationItem: navigationItem)
         addCartItem()
-        print("reviews")
-        dump(reviews)
+        let user = Auth.auth().currentUser;
+        if (user == nil) {
+            // there is no user signed in when user is nil
+        
+            print(user!.email)
+        } else {
+            print("User not found")
+        }
         // Register datasource + nib collection view cell for topSale collection view
         topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
         topSaleCollectionView.dataSource = self
