@@ -24,6 +24,9 @@
                         <constraint firstAttribute="width" constant="70" id="3sY-kT-Gw6"/>
                     </constraints>
                     <state key="normal" title="All"/>
+                    <connections>
+                        <action selector="goToAll:" destination="-1" eventType="touchUpInside" id="F3c-KH-dOA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-Y0-odx">
                     <rect key="frame" x="284" y="64" width="70" height="30"/>

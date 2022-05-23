@@ -28,6 +28,7 @@ class AdminCategoryViewController: UIViewController,UITableViewDataSource,UITabl
     var categoryModel = CategoryModel()
     var categories = [Category]()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categories = SaveData.categoryModel.categories
@@ -43,7 +44,13 @@ class AdminCategoryViewController: UIViewController,UITableViewDataSource,UITabl
 //        }
     }
 
-
+    @IBAction func goToAll(_ sender: Any) {
+        let toReivewScreen = SeemoreViewController(nibName: "SeemoreViewController", bundle: nil)
+               
+               
+               navigationController?.pushViewController(toReivewScreen, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

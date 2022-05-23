@@ -16,6 +16,8 @@
 		665AE54B283BB9B90081CA6A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE54A283BB9B90081CA6A /* CategoryModel.swift */; };
 		66808DA4283C0743005B26CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66808DA3283C0743005B26CC /* GoogleService-Info.plist */; };
 		66808DA6283C0CB3005B26CC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DA5283C0CB3005B26CC /* CategoryViewController.swift */; };
+		66808DAD283C15E3005B26CC /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DAB283C15E3005B26CC /* SeemoreViewController.swift */; };
+		66808DAE283C15E3005B26CC /* SeemoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66808DAC283C15E3005B26CC /* SeemoreViewController.xib */; };
 		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
@@ -149,6 +151,8 @@
 		665AE54A283BB9B90081CA6A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		66808DA3283C0743005B26CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66808DA5283C0CB3005B26CC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		66808DAB283C15E3005B26CC /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
+		66808DAC283C15E3005B26CC /* SeemoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeemoreViewController.xib; sourceTree = "<group>"; };
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +333,8 @@
 				A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */,
 				A555E085283A2F6D00D1A01A /* CategoryTableViewCell.xib */,
 				66808DA5283C0CB3005B26CC /* CategoryViewController.swift */,
+				66808DAB283C15E3005B26CC /* SeemoreViewController.swift */,
+				66808DAC283C15E3005B26CC /* SeemoreViewController.xib */,
 			);
 			name = Admin;
 			sourceTree = "<group>";
@@ -714,6 +720,7 @@
 				D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */,
 				665AE545283B96770081CA6A /* SearchResultViewController.xib in Resources */,
 				D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */,
+				66808DAE283C15E3005B26CC /* SeemoreViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 				D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */,
 				D3CECD9F28389F8000C035D5 /* OrderToManagingTableViewCell.xib in Resources */,
@@ -906,6 +913,7 @@
 				D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */,
 				A56852F12830CB8D00083378 /* Category.swift in Sources */,
 				D3F9E7F9283A1DC100E8B8DE /* BookModel.swift in Sources */,
+				66808DAD283C15E3005B26CC /* SeemoreViewController.swift in Sources */,
 				A56852E32830B3D500083378 /* BookViewController.swift in Sources */,
 				A555E086283A2F6D00D1A01A /* CategoryTableViewCell.swift in Sources */,
 				A574352428251A2D0081321B /* SceneDelegate.swift in Sources */,

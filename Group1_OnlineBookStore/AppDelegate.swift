@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SaveData.reviewModel.getAllReview()
             SaveData.userModel.getCurrentUser()
             SaveData.categoryModel.getAllData()
+            SaveData.bookModel.getAllData()
             
         }
         

@@ -12,6 +12,7 @@ class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var img: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
