@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseFirestore
+import FirebaseStorage
 class AdminCategoryViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -18,24 +19,28 @@ class AdminCategoryViewController: UIViewController,UITableViewDataSource,UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as? CategoryTableViewCell)!
-        cell.img.image = UIImage(named: "XuXu")
-        cell.lblName.text = "Xu xu dung khoc"
+        let category = categories[indexPath.row]
+//        cell.img = category.img
+        cell.lblName.text = category.name
         return cell
     
     }
-    
+    var categoryModel = CategoryModel()
     var categories = [Category]()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        categories = SaveData.categoryModel.categories
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableViewCell")
-let category = Category(id: "123", name: "Ke tam xuong", img: UIImage(named: "XuXu"))
-        // Do any additional setup after loading the view.
-        for _ in 1...8{
-            categories.append(category)
-        }
+        
+//let category = Category(id: "123", name: "Ke tam xuong", img: UIImage(named: "XuXu"))
+//        // Do any additional setup after loading the view.
+//        for _ in 1...8{
+//            categories.append(category)
+//        }
     }
 
 

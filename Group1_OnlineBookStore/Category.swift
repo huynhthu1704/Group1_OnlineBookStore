@@ -11,16 +11,11 @@ import UIKit
 class Category {
     var id : String
     var name : String
-    var img : UIImage?
-    init(id : String, name : String, img: UIImage?) {
+    var img : String
+    init(id : String, name : String, img: String) {
         self.id = id
         self.name = name
         self.img = img
     }
 }
-let categories : [Category] = [
-    Category(id: "1", name: "Fairy tale", img: UIImage(named: "XuXu")),
-     Category(id: "2", name: "Self help", img: UIImage(named: "XuXu")),
-     Category(id: "3", name: "English book", img: UIImage(named: "XuXu")),
 
-]

@@ -10,6 +10,11 @@
 		242D799DB70C22C44EA49C95 /* Pods_Group1_OnlineBookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */; };
 		41D08D5F2663B419CBEF6D05 /* Pods_Group1_OnlineBookStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */; };
 		665AE541283B7D7F0081CA6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 665AE540283B7D7F0081CA6A /* GoogleService-Info.plist */; };
+		665AE544283B96770081CA6A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE542283B96770081CA6A /* SearchResultViewController.swift */; };
+		665AE545283B96770081CA6A /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665AE543283B96770081CA6A /* SearchResultViewController.xib */; };
+		665AE548283BB1C10081CA6A /* BookYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE546283BB1C10081CA6A /* BookYCollectionViewCell.swift */; };
+		665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */; };
+		665AE54B283BB9B90081CA6A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE54A283BB9B90081CA6A /* CategoryModel.swift */; };
 		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
@@ -135,6 +140,11 @@
 		40257FBE373CD0AF55D94438 /* Pods-Group1_OnlineBookStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41E04748863A811F745C3001 /* Pods-Group1_OnlineBookStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStore.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStore/Pods-Group1_OnlineBookStore.release.xcconfig"; sourceTree = "<group>"; };
 		665AE540283B7D7F0081CA6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		665AE542283B96770081CA6A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		665AE543283B96770081CA6A /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
+		665AE546283BB1C10081CA6A /* BookYCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYCollectionViewCell.swift; sourceTree = "<group>"; };
+		665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookYCollectionViewCell.xib; sourceTree = "<group>"; };
+		665AE54A283BB9B90081CA6A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +474,7 @@
 				A56852F42830CE4B00083378 /* Customer.swift */,
 				D302BD0F283B47EA00D093BB /* Extension.swift */,
 				D302BD11283B985200D093BB /* SaveData.swift */,
+				665AE54A283BB9B90081CA6A /* CategoryModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -491,6 +502,10 @@
 				D3EEF6102837E46900779863 /* MyReviewsViewController.xib */,
 				D3CECD9828389EB700C035D5 /* OrderManagementViewController.swift */,
 				D3CECD9928389EB700C035D5 /* OrderManagementViewController.xib */,
+				665AE542283B96770081CA6A /* SearchResultViewController.swift */,
+				665AE543283B96770081CA6A /* SearchResultViewController.xib */,
+				665AE546283BB1C10081CA6A /* BookYCollectionViewCell.swift */,
+				665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -681,12 +696,14 @@
 				A5443B0F2838E0850057CEAA /* BookListViewController.xib in Resources */,
 				D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
+				665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */,
 				A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */,
 				A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
 				665AE541283B7D7F0081CA6A /* GoogleService-Info.plist in Resources */,
 				D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */,
+				665AE545283B96770081CA6A /* SearchResultViewController.xib in Resources */,
 				D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
 				D3643F1E28364B0600B385FF /* OrderedBookTableViewCell.xib in Resources */,
@@ -825,6 +842,7 @@
 				A56852E92830B7A600083378 /* ReviewTableViewCell.swift in Sources */,
 				A5A9CBFC2832A8EE00890344 /* CheckBox.swift in Sources */,
 				A590644A283519EC00D8E61B /* LaunchScreenViewController.swift in Sources */,
+				665AE544283B96770081CA6A /* SearchResultViewController.swift in Sources */,
 				A5443B0B2838C3180057CEAA /* CategoryCollectionViewController.swift in Sources */,
 				A5A9CBF92832868700890344 /* BookDetailViewController.swift in Sources */,
 				A56852DF2830AE8F00083378 /* ShoppingCartViewController.swift in Sources */,
@@ -847,11 +865,13 @@
 				A56852F52830CE4B00083378 /* Customer.swift in Sources */,
 				D3CECD9E28389F8000C035D5 /* OrderToManagingTableViewCell.swift in Sources */,
 				A5704F6E2836A3AD0069FFD8 /* RoundedTextField.swift in Sources */,
+				665AE54B283BB9B90081CA6A /* CategoryModel.swift in Sources */,
 				A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */,
 				A56852F32830CD0700083378 /* Order.swift in Sources */,
 				A51D06BF2834435D00CA199F /* ViewAllCommentViewController.swift in Sources */,
 				A5443B022838AA190057CEAA /* ListBookCollectionViewCell.swift in Sources */,
 				A51C78AE2833BAA400A593B9 /* MyFavoritesViewController.swift in Sources */,
+				665AE548283BB1C10081CA6A /* BookYCollectionViewCell.swift in Sources */,
 				D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */,
 				A5A9CC022832B89500890344 /* RoundedButton.swift in Sources */,
 				A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */,

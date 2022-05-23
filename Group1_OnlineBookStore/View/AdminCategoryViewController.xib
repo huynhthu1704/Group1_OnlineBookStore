@@ -19,16 +19,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mt-hM-eDh">
-                    <rect key="frame" x="60" y="64" width="60" height="30"/>
+                    <rect key="frame" x="60" y="64" width="70" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="xHt-4m-4YQ"/>
+                        <constraint firstAttribute="width" constant="70" id="3sY-kT-Gw6"/>
                     </constraints>
                     <state key="normal" title="All"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-Y0-odx">
-                    <rect key="frame" x="294" y="64" width="60" height="30"/>
+                    <rect key="frame" x="284" y="64" width="70" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="psG-DG-cQm"/>
+                        <constraint firstAttribute="width" constant="70" id="Dm1-xQ-fPK"/>
                     </constraints>
                     <state key="normal" title="Category"/>
                 </button>
@@ -44,17 +44,16 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="mXi-vg-oVe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="77v-sQ-Bnv"/>
-                <constraint firstItem="Z41-Y0-odx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="9BP-rn-2t1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mXi-vg-oVe" secondAttribute="trailing" id="Cct-Si-ych"/>
                 <constraint firstItem="mXi-vg-oVe" firstAttribute="top" secondItem="PIV-Mt-thT" secondAttribute="bottom" constant="20" id="F6e-YE-5Rs"/>
-                <constraint firstItem="PIV-Mt-thT" firstAttribute="top" secondItem="1mt-hM-eDh" secondAttribute="bottom" constant="20" id="LKz-mZ-2ER"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z41-Y0-odx" secondAttribute="trailing" constant="60" id="Vl7-sr-JnK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z41-Y0-odx" secondAttribute="trailing" constant="60" id="Feb-I3-b4U"/>
+                <constraint firstItem="PIV-Mt-thT" firstAttribute="top" secondItem="1mt-hM-eDh" secondAttribute="bottom" constant="20" id="Hap-FK-xwJ"/>
+                <constraint firstItem="1mt-hM-eDh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="U5d-Aj-zd4"/>
                 <constraint firstItem="PIV-Mt-thT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="a4E-eS-n47"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PIV-Mt-thT" secondAttribute="trailing" constant="60" id="bTr-kg-LCU"/>
-                <constraint firstItem="1mt-hM-eDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="g9r-mz-NwI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mXi-vg-oVe" secondAttribute="bottom" id="tiX-I1-bZI"/>
-                <constraint firstItem="PIV-Mt-thT" firstAttribute="top" secondItem="Z41-Y0-odx" secondAttribute="bottom" constant="20" id="wdL-Az-vQO"/>
-                <constraint firstItem="1mt-hM-eDh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="y7A-XS-rZT"/>
+                <constraint firstItem="1mt-hM-eDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="wEE-8q-XeT"/>
+                <constraint firstItem="Z41-Y0-odx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="wwH-bl-jdA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="121.73913043478262" y="110.49107142857143"/>
