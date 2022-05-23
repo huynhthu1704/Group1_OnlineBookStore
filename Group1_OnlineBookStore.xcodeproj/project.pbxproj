@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		242D799DB70C22C44EA49C95 /* Pods_Group1_OnlineBookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */; };
 		41D08D5F2663B419CBEF6D05 /* Pods_Group1_OnlineBookStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */; };
-		665AE541283B7D7F0081CA6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 665AE540283B7D7F0081CA6A /* GoogleService-Info.plist */; };
 		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
@@ -78,6 +77,8 @@
 		A5B7A6DB2833CBF800194413 /* AdminHomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B7A6D92833CBF800194413 /* AdminHomeScreenViewController.xib */; };
 		D302BD10283B47EA00D093BB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302BD0F283B47EA00D093BB /* Extension.swift */; };
 		D302BD12283B985200D093BB /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302BD11283B985200D093BB /* SaveData.swift */; };
+		D302BD14283BB52200D093BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D302BD13283BB52200D093BB /* GoogleService-Info.plist */; };
+		D302BD16283BCA8500D093BB /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302BD15283BCA8500D093BB /* FavoriteModel.swift */; };
 		D305EE872830E94B0013D839 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */; };
 		D343CD7C283B264E00CF3B2C /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343CD7B283B264D00CF3B2C /* OrderModel.swift */; };
 		D3643F1D28364B0600B385FF /* OrderedBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */; };
@@ -134,7 +135,6 @@
 		2B5DC4E97CC6FA3D9A070450 /* Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.debug.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests/Pods-Group1_OnlineBookStore-Group1_OnlineBookStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40257FBE373CD0AF55D94438 /* Pods-Group1_OnlineBookStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41E04748863A811F745C3001 /* Pods-Group1_OnlineBookStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStore.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStore/Pods-Group1_OnlineBookStore.release.xcconfig"; sourceTree = "<group>"; };
-		665AE540283B7D7F0081CA6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +212,8 @@
 		A5B7A6D92833CBF800194413 /* AdminHomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminHomeScreenViewController.xib; sourceTree = "<group>"; };
 		D302BD0F283B47EA00D093BB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D302BD11283B985200D093BB /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		D302BD13283BB52200D093BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D302BD15283BCA8500D093BB /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
 		D305EE862830E94B0013D839 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		D343CD7B283B264D00CF3B2C /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		D3643F1B28364B0600B385FF /* OrderedBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedBookTableViewCell.swift; sourceTree = "<group>"; };
@@ -389,8 +391,8 @@
 		A5866F17282A2838005B0C8C /* System files */ = {
 			isa = PBXGroup;
 			children = (
-				665AE540283B7D7F0081CA6A /* GoogleService-Info.plist */,
 				A574352D28251A340081321B /* Assets.xcassets */,
+				D302BD13283BB52200D093BB /* GoogleService-Info.plist */,
 				A574353228251A340081321B /* Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
 				A574352328251A2D0081321B /* SceneDelegate.swift */,
@@ -456,6 +458,7 @@
 				D3AFE056283A898100F97810 /* OrderedBookModel.swift */,
 				A56852EC2830C94D00083378 /* Book.swift */,
 				D3F9E7F8283A1DC100E8B8DE /* BookModel.swift */,
+				D302BD15283BCA8500D093BB /* FavoriteModel.swift */,
 				A56852EE2830CB6E00083378 /* User.swift */,
 				D3AFE054283A58A700F97810 /* UserModel.swift */,
 				A56852F02830CB8D00083378 /* Category.swift */,
@@ -685,7 +688,7 @@
 				A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
 				A51C78AB2833B53100A593B9 /* SignUpViewController.xib in Resources */,
-				665AE541283B7D7F0081CA6A /* GoogleService-Info.plist in Resources */,
+				D302BD14283BB52200D093BB /* GoogleService-Info.plist in Resources */,
 				D3EEB2F028373B530043D41C /* CancellingOrderScreenViewController.xib in Resources */,
 				D3CECD9B28389EB700C035D5 /* OrderManagementViewController.xib in Resources */,
 				A574352928251A2D0081321B /* Main.storyboard in Resources */,
@@ -832,6 +835,7 @@
 				A51C78B62833C19F00A593B9 /* WriteReviewViewController.swift in Sources */,
 				D3BFB9C82835E70900E33849 /* OrderTableViewCell.swift in Sources */,
 				A56852ED2830C94D00083378 /* Book.swift in Sources */,
+				D302BD16283BCA8500D093BB /* FavoriteModel.swift in Sources */,
 				A574352C28251A2D0081321B /* Group1_OnlineBookStore.xcdatamodeld in Sources */,
 				A5A9CBFF2832AC3C00890344 /* ShoppingCartTableViewCell.swift in Sources */,
 				D302BD10283B47EA00D093BB /* Extension.swift in Sources */,

@@ -16,9 +16,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     
     let identifier = "BookCollectionViewCell"
-    var orderMo = OrderModel()
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
-        let date = "08/19/2020 16:20"
+//        let date = "08/19/2020 16:20"
 //        var orderedBooks = [OrderedBook]()
 //        orderedBooks.append(OrderedBook(orderID: "DH002", book: Book(id: "9", name: "", author: "", publisher: "", price: 1, quantity: 12, totalSold: 12, slug: nil, summary: "", category: ""), amount: 12))
 //        let order = Order(id: "DH002", customerName: "Pham Van Thanh", cusAddress: "547, ap 4, Tan Thach, Chau Thanh, Ben Tre", cusPhoneNumber: "0348477517", orderDate: date.toDate() ?? Date(), note: "No note", userId: "2", deliveryFee: 3, books: orderedBooks, state: "To confirm")
@@ -27,7 +26,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         //        //        self.present(viewAllOrdersController, animated: true, completion: nil)
         //        userInfo.navigationItem.title = "User Information"
         //        navigationController?.pushViewController(userInfo, animated: true)
-        dump(bookModel.books)
+        SaveData.favoriteModel.deleteFavoriteBook(userID: 2, bookID: "9")
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -53,7 +52,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-        dump(SaveData.bookModel.books)
+        dump(SaveData.favoriteModel.books)
         books = SaveData.bookModel.books
         // Set text color for username and rank
         userName.textColor = UIColor.white

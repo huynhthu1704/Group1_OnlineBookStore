@@ -34,6 +34,7 @@ class SignInViewController: UIViewController {
         //SaveData.bookModel.getAllData()
         SaveData.userModel.getCurrentUser()
         SaveData.bookModel.getAllData()
+        SaveData.favoriteModel.getOrderedBookByOrderId(userID: 2)
         let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()
