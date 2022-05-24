@@ -53,9 +53,7 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         print("did load")
         super.viewDidLoad()
-        SaveData.bookModel.getAllBooks(completion: {bookList in
-                          self.books = bookList
-                          dump(bookList)
+        SaveData.bookModel.getAllData(completion: {
                           self.topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.topSaleBookIdentifier)
                          
                           self.topSaleCollectionView.collectionViewLayout = UICollectionViewFlowLayout()

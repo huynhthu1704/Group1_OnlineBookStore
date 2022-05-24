@@ -22,7 +22,7 @@
                     print("No documents")
                     return
                 }
-                listBook = documents.map { (queryDocumentSnapshot) -> Book in
+                self.books = documents.map { (queryDocumentSnapshot) -> Book in
                     let data = queryDocumentSnapshot.data()
                     let id = data["book_id"] as? String ?? ""
                     let name = data["name"] as? String ?? ""
