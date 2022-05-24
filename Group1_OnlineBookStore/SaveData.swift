@@ -14,6 +14,9 @@ class SaveData{
     static var reviewModel = ReviewModel()
     static var favoriteModel = FavoriteModel()
     static var categoryModel = CategoryModel()
+    static var shoppingCartModel = ShoppingCartModel()
+    
+    
     static var orderModel = OrderModel()
     static var orderedBooksModel = OrderedBookModel()
 }

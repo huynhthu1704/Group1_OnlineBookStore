@@ -9,7 +9,6 @@
 import UIKit
 
 class ShoppingCartTableViewCell: UITableViewCell {
-
     // Properties
     @IBOutlet weak var selectBtn: CheckBox!
     @IBOutlet weak var bookName: UILabel!
@@ -24,7 +23,7 @@ class ShoppingCartTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        selectBtn.isSelected = false
         // Configure the view for the selected state
     }
     

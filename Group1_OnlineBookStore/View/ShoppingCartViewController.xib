@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="purchaseBtn" destination="Nvc-Hc-55s" id="Eyw-Fn-x7v"/>
                 <outlet property="shoppingCartTableView" destination="Ag7-NS-gLi" id="CMs-T3-eKI"/>
+                <outlet property="totalPrice" destination="evu-3d-9jF" id="ylb-iq-Akh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,34 +21,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ag7-NS-gLi">
-                    <rect key="frame" x="0.0" y="54" width="414" height="500"/>
+                    <rect key="frame" x="20" y="64" width="374" height="500"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="500" id="zFe-Nd-ilu"/>
                     </constraints>
                 </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-SP-jew">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-SP-jew">
                     <rect key="frame" x="10" y="805" width="394" height="47"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT1-Cz-Gvg" customClass="CheckBox" customModule="Group1_OnlineBookStore" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="11.5" width="128" height="24"/>
+                            <rect key="frame" x="0.0" y="11.5" width="131.5" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Select all" image="rectangle" catalog="system">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="selectAllItem:" destination="-1" eventType="touchUpInside" id="iSD-1Y-cab"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evu-3d-9jF">
-                            <rect key="frame" x="133" y="11.5" width="128" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evu-3d-9jF">
+                            <rect key="frame" x="131.5" y="11.5" width="131" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvc-Hc-55s" customClass="RoundedButton" customModule="Group1_OnlineBookStore" customModuleProvider="target">
-                            <rect key="frame" x="266" y="0.0" width="128" height="47"/>
+                            <rect key="frame" x="262.5" y="0.0" width="131.5" height="47"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" title="Purchase"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -63,12 +67,12 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Ypv-SP-jew" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="1Wj-Vb-PvV"/>
-                <constraint firstItem="Ag7-NS-gLi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4UQ-I9-CIf"/>
-                <constraint firstAttribute="trailing" secondItem="Ypv-SP-jew" secondAttribute="trailing" constant="10" id="Ecy-jN-ctJ"/>
-                <constraint firstItem="Ag7-NS-gLi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="IbB-go-Jtg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ag7-NS-gLi" secondAttribute="trailing" id="TdB-3w-4UY"/>
-                <constraint firstItem="Ypv-SP-jew" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-10" id="YIP-7O-UEU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ag7-NS-gLi" secondAttribute="trailing" constant="20" id="Ks8-C6-oTn"/>
+                <constraint firstItem="Ypv-SP-jew" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="T7e-4h-oon"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ypv-SP-jew" secondAttribute="bottom" constant="10" id="eQu-dK-w8D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ypv-SP-jew" secondAttribute="trailing" constant="10" id="jhx-qP-zfF"/>
+                <constraint firstItem="Ag7-NS-gLi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="pA3-kW-axD"/>
+                <constraint firstItem="Ag7-NS-gLi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vaS-G3-VSr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>

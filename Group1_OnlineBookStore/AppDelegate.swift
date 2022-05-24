@@ -19,12 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         if Auth.auth().currentUser != nil {
             SaveData.reviewModel.getAllReview()
-            SaveData.userModel.getCurrentUser()
             SaveData.categoryModel.getAllData()
-//            SaveData.bookModel.getAllData()
-            SaveData.bookModel.getBookById()
-            SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
-            SaveData.orderedBooksModel.getAll()
+                       SaveData.bookModel.getAllData()
+                       SaveData.shoppingCartModel.getAllShoppingCart()
+            SaveData.userModel.getCurrentUser(completion: {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let tabBar = storyboard.instantiateViewController(identifier: "TabBar")
+                                   UIApplication.shared.windows.first?.rootViewController = tabBar
+                                   UIApplication.shared.windows.first?.makeKeyAndVisible()})
+           
+            
         }
         
         //        UILabel.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Roboto"))

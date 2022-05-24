@@ -9,9 +9,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target">
             <connections>
+                <outlet property="addToFavorites" destination="AfL-Te-dww" id="ws6-BC-xB9"/>
+                <outlet property="author" destination="n94-gy-p6n" id="OQs-Fb-cEY"/>
+                <outlet property="img" destination="oFX-wT-PaW" id="6f1-sn-W0n"/>
                 <outlet property="likeBtn" destination="AfL-Te-dww" id="ej0-3F-n75"/>
+                <outlet property="name" destination="jON-qi-v2B" id="AV8-Fa-BLi"/>
+                <outlet property="price" destination="IT0-Ep-sZQ" id="EBH-s5-K3A"/>
+                <outlet property="publisher" destination="DUV-eB-f07" id="jCx-5M-xFf"/>
+                <outlet property="quantity" destination="1Bf-HF-B5c" id="8vc-oc-8Ou"/>
                 <outlet property="reviewTableView" destination="zZn-QB-OY0" id="lzW-gM-YWe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAllReview" destination="h8a-hE-dEI" id="ZJ1-yk-V34"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -89,6 +97,9 @@
                                                         </label>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eZV-6e-DvO">
                                                             <rect key="frame" x="20" y="0.0" width="111" height="40"/>
+                                                            <connections>
+                                                                <action selector="updateQuantity:" destination="-1" eventType="valueChanged" id="3bI-vv-o3z"/>
+                                                            </connections>
                                                         </stepper>
                                                     </subviews>
                                                 </stackView>
@@ -135,9 +146,13 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all &gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8a-hE-dEI">
                                             <rect key="frame" x="297" y="0.0" width="97" height="24"/>
+                                            <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="zFA-1S-h3b" appends="YES" id="cjv-zR-Ijp"/>
+                                            </connections>
                                         </label>
                                     </subviews>
                                 </stackView>
@@ -153,6 +168,9 @@
                                             <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                             <state key="normal" title="Add cart" image="cart.badge.plus" catalog="system"/>
+                                            <connections>
+                                                <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="uNt-0g-6Fq"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uar-9R-4w5">
                                             <rect key="frame" x="201" y="0.0" width="193" height="50"/>
@@ -163,6 +181,9 @@
                                             <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                             <state key="normal" title="Buy Now" image="cart" catalog="system"/>
+                                            <connections>
+                                                <action selector="buyNow:" destination="-1" eventType="touchUpInside" id="FNF-Zh-maz"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -208,6 +229,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="118.84057971014494" y="100.44642857142857"/>
         </view>
+        <tapGestureRecognizer id="zFA-1S-h3b">
+            <connections>
+                <action selector="viewAllReviews:" destination="-1" id="fdh-qE-KcJ"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="XuXu" width="600" height="986.5"/>

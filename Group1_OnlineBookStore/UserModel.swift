@@ -80,7 +80,7 @@ class UserModel: ObservableObject {
         }
     }
     
-    func getCurrentUser() {
+    func getCurrentUser(completion : @escaping () -> Void) {
         do {
             let email = Auth.auth().currentUser?.email
             //db.collection("users").do
@@ -101,6 +101,7 @@ class UserModel: ObservableObject {
                         let role_id = data["role_id"] as? Int ?? -1
                         let slug = data["slug"] as? String ?? ""
                         self.currentUser = User(id: id, fullName: fullName , pwd: password, email: email, slug: slug, rank: rank, role_id: role_id)
+                        completion()
                     }
             }
         }

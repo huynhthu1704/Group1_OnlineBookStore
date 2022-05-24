@@ -68,10 +68,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 
                 let user = User(id: 0, fullName: fullName, pwd: password, email: email, slug: "", rank: "", role_id: 2)
                 SaveData.userModel.addUser(user: user)
-                let tabBar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBar")
-                UIApplication.shared.windows.first?.rootViewController = tabBar
-                UIApplication.shared.windows.first?.makeKeyAndVisible()
-                SaveData.userModel.getCurrentUser()
+               
+                SaveData.userModel.getCurrentUser( completion: {
+                    let tabBar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBar")
+                               UIApplication.shared.windows.first?.rootViewController = tabBar
+                    UIApplication.shared.windows.first?.makeKeyAndVisible()})
 
             })
         }

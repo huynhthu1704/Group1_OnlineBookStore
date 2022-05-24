@@ -44,8 +44,8 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-                self.tabBarController?.tabBar.isHidden = false
-
+        self.tabBarController?.tabBar.isHidden = false
+        
     }
     
     override func viewDidLoad() {
@@ -54,10 +54,10 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         let currentUser = Auth.auth().currentUser
         if currentUser == nil {
             let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInScreen")
-                   signIn.modalPresentationStyle = .fullScreen
-                   present(signIn, animated: true, completion: nil)
+            signIn.modalPresentationStyle = .fullScreen
+            present(signIn, animated: true, completion: nil)
         } else {
-            SaveData.userModel.getCurrentUser()
+            dump(SaveData.userModel.currentUser)
         }
         // Customer navigation bar
         let nav = NavigationBar(navigationController: self.navigationController)
@@ -79,8 +79,7 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     }
     
     @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
-        print("Go to")
-        let vc = AdminCategoryViewController(nibName: "AdminCategoryViewController", bundle: nil)
+        let vc = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -107,14 +106,14 @@ extension HomeScreenViewController : UICollectionViewDataSource {
         if collectionView == topSaleCollectionView {
             let cell = topSaleCollectionView.dequeueReusableCell(withReuseIdentifier: topSaleBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
-//            cell.img.image = book.slug
+            //            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
             return cell
         } else {
             let cell = newBookCollectionView.dequeueReusableCell(withReuseIdentifier: newBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
-//            cell.img.image = book.slug
+            //            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
             return cell

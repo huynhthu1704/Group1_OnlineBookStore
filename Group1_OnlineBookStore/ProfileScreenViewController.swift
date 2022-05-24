@@ -98,7 +98,6 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
 //
         userName.text = currentUser?.fullName
         userRank.text = currentUser?.rank
-        //        userImage.image = image
         guard let url = URL(string: currentUser!.slug) else { return  }
         let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
             guard let data = data, error == nil else{
@@ -131,11 +130,11 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
           let book = favoriteBooks[indexPath.row]
-            SaveData.bookModel.getBookDetail(bookId: book.id)
-           let bookDetailViewController = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
-           bookDetailViewController.modalPresentationStyle = .fullScreen
-//           present(bookDetailViewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(bookDetailViewController, animated: true)
+            SaveData.bookModel.getBookDetail(bookId: book.id, completion: {_ in
+                let bookDetailViewController = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
+                self.navigationController?.pushViewController(bookDetailViewController, animated: true)
+
+            })
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         

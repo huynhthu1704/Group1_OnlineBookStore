@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 @IBDesignable class CheckBox: UIButton {
 // Images
-let checkedImage = UIImage(systemName:  "rectangle")! as UIImage
-let uncheckedImage = UIImage(systemName: "checkmark.rectangle.fill")! as UIImage
+let uncheckedImage = UIImage(systemName:  "rectangle")! as UIImage
+let checkedImage = UIImage(systemName: "checkmark.rectangle.fill")! as UIImage
 
 // Bool property
 var isChecked: Bool = false {

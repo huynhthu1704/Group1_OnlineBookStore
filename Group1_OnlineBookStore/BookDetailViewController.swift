@@ -14,19 +14,60 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var likeBtn: UIButton!
     var reviews = [Review]()
     var books = [Book]()
+    let book = SaveData.bookModel.book
     @IBOutlet weak var reviewTableView: UITableView!
     
+    @IBAction func viewAllReviews(_ sender: Any) {
+    }
+    @IBOutlet weak var img: UIImageView!
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var author: UILabel!
+    
+    @IBOutlet weak var publisher: UILabel!
+    
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var quantity: UILabel!
+    
+    @IBOutlet weak var viewAllReview: UILabel!
+    
+    @IBOutlet weak var addToFavorites: UIButton!
+    @IBAction func updateQuantity(_ sender: Any) {
+    }
+    
+    @IBAction func addToCart(_ sender: UIButton) {
+    }
+    
+    @IBAction func buyNow(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
         addRightBarButtonItem()
         self.tabBarController?.tabBar.isHidden = true
-        
-        
         likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
-//        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: "", summary: "This is a good book, it's really interesting", category: "Fairy tale")
-//        navigationController?.navigationItem.title = book.name
+        dump(book)
+//        guard let url = URL(string: book!.slug) else { return  }
+//               let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+//                   guard let data = data, error == nil else{
+//                       return
+//                   }
+//
+//                   DispatchQueue.main.async{
+//
+//                       let img = UIImage(data: data)
+//                       self.img.image = img
+//                   }
+//               })
+//               task.resume()
+        self.name.text = book!.name
+        self.author.text = book!.author
+        self.publisher.text = book!.publisher
+        self.price.text = String(book!.price)
+        self.quantity.text = String(1)
     }
     func addRightBarButtonItem() {
         // Set Cart bar button item

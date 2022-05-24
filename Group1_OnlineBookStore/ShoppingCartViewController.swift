@@ -9,10 +9,41 @@
 import UIKit
 
 class ShoppingCartViewController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+    // MARK: Properties
+    @IBOutlet weak var shoppingCartTableView: UITableView!
+    @IBOutlet weak var purchaseBtn: UIButton!
+    var shoppingCart = SaveData.shoppingCartModel.shoppingCart
+    var booksInShoppingCart = [Book]()
+    var books = [Book]()
+    
+    @IBOutlet weak var totalPrice: UILabel!
+    @IBAction func selectAllItem(_ sender: Any) {
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        books = SaveData.bookModel.books
+        // Get books which are added to shopping cart
+        shoppingCartTableView.dataSource = self
+        for i in 0..<books.count {
+            for j in 0..<shoppingCart.count {
+                if shoppingCart[j].bookId == books[i].id {
+                    booksInShoppingCart.append(books[i])
+                    
+                }
+            }
+        }
     }
     
+    //Click on purchase button
+    @IBAction func purchase(_ sender: UIButton) {
+    }
+    
+    // Number of row in section
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shoppingCart.count
+    }
+    
+    // Render cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIndentifier = "shoppingCartCell"
         var cell: ShoppingCartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
@@ -20,28 +51,28 @@ class ShoppingCartViewController: UIViewController, UITableViewDataSource {
             tableView.register(UINib(nibName: "ShoppingCartTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIndentifier)
             cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier) as? ShoppingCartTableViewCell
         }
-        let book = books[indexPath.row]
-//        cell.bookImg.image = book.slug
-        cell.bookName.text = book.name
-        cell.price.text = String(book.price)
-        cell.quantity.text = String(1)
+        let item = self.booksInShoppingCart[indexPath.row]
+        if let url = URL(string: item.slug) {
+            
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                guard let data = data, error == nil else{
+                    return
+                }
+                DispatchQueue.main.async{
+                    
+                    let img = UIImage(data: data)
+                    cell.bookImg.image = img
+                }
+            })
+            task.resume()
+        }
+        else {
+            print("Invalid slug")
+        }
+        
+        cell.bookName.text = item.name
+        cell.price.text = String(item.price)
+        cell.quantity.text = String(item.quantity)
         return cell
     }
-    
-    
-    @IBOutlet weak var shoppingCartTableView: UITableView!
-    
-    @IBOutlet weak var purchaseBtn: UIButton!
-    @IBAction func purchase(_ sender: UIButton) {
-    }
-    var books = [Book]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //        purchaseBtn.layer.cornerRadius = purchaseBtn.bounds.size.height/4
-//        let book = Book(id: "1", name: "Xu xu dung khoc", author: "Hong Sakura", publisher: "Hoi nha van", price: 120000, quantity: 1, totalSold: 0, slug: "", summary: "This is a good book, it's really interesting", category: "Fairy tale")
-//        books.append(book)
-        shoppingCartTableView.dataSource = self
-    }
-    
 }
