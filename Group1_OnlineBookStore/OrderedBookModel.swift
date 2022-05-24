@@ -36,99 +36,111 @@ class OrderedBookModel: ObservableObject {
     //    }
     
     func getOrderedBookByOrderId(orderID: String){
-        //        db.collection("books_orders").whereField("order_id", isEqualTo: orderID).addSnapshotListener { (querySnapshot, error) in
-        //            guard let documents = querySnapshot?.documents else {
-        //                print("No documents")
-        //                return
-        //            }
-        //            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
-        //                let data = queryDocumentSnapshot.data()
-        //                let orderIDToGet = data["order_id"] as? String ?? ""
-        //                let bookid = data["book_id"] as? String ?? ""
-        //                let amount = data["quantity"] as? Int ?? -1
-        //
-        //                return OrderedBook(orderID: orderIDToGet, book: Book(id: bookid, name: "", author: "", publisher: "", price: 0, quantity: 1, totalSold: 0, slug: nil, summary: "", category: ""), amount: amount)
-        //            }
-        //        }
-        do {
-            db.collection("books_orders").whereField("order_id", isEqualTo: orderID)
-                .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Delete fail")
-                    } else if querySnapshot!.documents.count != 1 {
-                        print("")
-                    } else {
-                        if let documents = querySnapshot?.documents{
-                            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
-                                let data = queryDocumentSnapshot.data()
-                                let orderIDToGet = data["order_id"] as? String ?? ""
-                                let bookid = data["book_id"] as? String ?? ""
-                                let amount = data["quantity"] as? Int ?? -1
-                                var bookOnOrder:Book = Book()
-                                for item in self.booksModel.books{
-                                    if item.id == bookid {
-                                        bookOnOrder = item
-                                        break
-                                    }
-                                }
-                                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
-                            }
-                        }
-                        
+        db.collection("books_orders").whereField("order_id", isEqualTo: orderID).addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
+                let data = queryDocumentSnapshot.data()
+                let orderIDToGet = data["order_id"] as? String ?? ""
+                let bookid = data["book_id"] as? String ?? ""
+                let amount = data["quantity"] as? Int ?? -1
+                var bookOnOrder:Book = Book()
+                for item in self.booksModel.books{
+                    if item.id == bookid {
+                        bookOnOrder = item
+                        break
                     }
+                }
+                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
             }
         }
-        catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            db.collection("books_orders").whereField("order_id", isEqualTo: orderID)
+//                .getDocuments() { (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Delete fail")
+//                    } else if querySnapshot!.documents.count != 1 {
+//                        print("")
+//                    } else {
+//                        if let documents = querySnapshot?.documents{
+//                            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
+//                                let data = queryDocumentSnapshot.data()
+//                                let orderIDToGet = data["order_id"] as? String ?? ""
+//                                let bookid = data["book_id"] as? String ?? ""
+//                                let amount = data["quantity"] as? Int ?? -1
+//                                var bookOnOrder:Book = Book()
+//                                for item in self.booksModel.books{
+//                                    if item.id == bookid {
+//                                        bookOnOrder = item
+//                                        break
+//                                    }
+//                                }
+//                                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
+//                            }
+//                        }
+//
+//                    }
+//            }
+//        }
+//        catch {
+//            print(error.localizedDescription)
+//        }
     }
     
     func getAll(){
-        self.booksModel.getAllData()
-        //        db.collection("books_orders").whereField("order_id", isEqualTo: orderID).addSnapshotListener { (querySnapshot, error) in
-        //            guard let documents = querySnapshot?.documents else {
-        //                print("No documents")
-        //                return
-        //            }
-        //            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
-        //                let data = queryDocumentSnapshot.data()
-        //                let orderIDToGet = data["order_id"] as? String ?? ""
-        //                let bookid = data["book_id"] as? String ?? ""
-        //                let amount = data["quantity"] as? Int ?? -1
-        //
-        //                return OrderedBook(orderID: orderIDToGet, book: Book(id: bookid, name: "", author: "", publisher: "", price: 0, quantity: 1, totalSold: 0, slug: nil, summary: "", category: ""), amount: amount)
-        //            }
-        //        }
-        do {
-            db.collection("books_orders").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Delete fail")
-                    } else if querySnapshot!.documents.count != 1 {
-                        print("")
-                    } else {
-                        if let documents = querySnapshot?.documents{
-                            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
-                                let data = queryDocumentSnapshot.data()
-                                let orderIDToGet = data["order_id"] as? String ?? ""
-                                let bookid = data["book_id"] as? String ?? ""
-                                let amount = data["quantity"] as? Int ?? -1
-                                var bookOnOrder:Book = Book()
-                                for item in self.booksModel.books{
-                                    if item.id == bookid {
-                                        bookOnOrder = item
-                                        break
-                                    }
-                                }
-                                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
-                            }
-                        }
-                        
+        db.collection("books_orders").addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
+                let data = queryDocumentSnapshot.data()
+                let orderIDToGet = data["order_id"] as? String ?? ""
+                let bookid = data["book_id"] as? String ?? ""
+                let amount = data["quantity"] as? Int ?? -1
+                var bookOnOrder:Book = Book()
+                for item in self.booksModel.books{
+                    if item.id == bookid {
+                        bookOnOrder = item
+                        break
                     }
+                }
+                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
             }
         }
-        catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            db.collection("books_orders").getDocuments() { (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Delete fail")
+//                    } else if querySnapshot!.documents.count != 1 {
+//                        print("")
+//                    } else {
+//                        if let documents = querySnapshot?.documents{
+//                            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
+//                                let data = queryDocumentSnapshot.data()
+//                                let orderIDToGet = data["order_id"] as? String ?? ""
+//                                print(orderIDToGet)
+//                                let bookid = data["book_id"] as? String ?? ""
+//                                let amount = data["quantity"] as? Int ?? -1
+//                                var bookOnOrder:Book = Book()
+//                                for item in self.booksModel.books{
+//                                    if item.id == bookid {
+//                                        bookOnOrder = item
+//                                        break
+//                                    }
+//                                }
+//                                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
+//                            }
+//                        }
+//
+//                    }
+//            }
+//        }
+//        catch {
+//            print(error.localizedDescription)
+//        }
     }
     
     func addOrderedBook(order: Order) {
@@ -144,5 +156,17 @@ class OrderedBookModel: ObservableObject {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func getArrayOrderedBooks(orderIDs: [String]) -> [OrderedBook] {
+        var result = [OrderedBook]()
+        for id in orderIDs{
+            for item in self.orderedBooks{
+                if item.orderID == id{
+                    result.append(item)
+                }
+            }
+        }
+        return result
     }
 }

@@ -28,11 +28,9 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     var hidden:Bool?
     var orderID:String?
     var orders = [Order]()
-    var customers = [Customer]()
     var orderedBooks = [OrderedBook]()
     var orderedBooksToShow = [OrderedBook]()
     var orderToShow:Order?
-    var customerToShow:Customer?
     let formatDate = "MM/dd/yyyy HH:mm"
     
     override func viewDidLoad() {
@@ -42,28 +40,8 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             let heightConstraint = NSLayoutConstraint(item: contentView!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 810)
             contentView.addConstraint(heightConstraint)
         }
-        //Initializating orderedBooks
-//        let book = Book(id: "1", name: "Xu Xu dung khoc", author: "Pham Van Thanh", publisher: "Ha Noi", price: 11, quantity: 15, totalSold: 14, slug: UIImage(named: "XuXu"), summary: "x", category: "x")
-//        let book1 = Book(id: "2", name: "Green miles", author: "Ngoc Thu", publisher: "Ha Noi", price: 13, quantity: 15, totalSold: 14, slug: UIImage(named: "User's image"), summary: "x", category: "x")
-//        let orderedBook1 = OrderedBook(orderID: "OD15", book: book, amount: 2)
-//        let orderedBook2 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
-//        let orderedBook3 = OrderedBook(orderID: "OD16", book: book1, amount: 3)
-//        let orderedBook4 = OrderedBook(orderID: "OD15", book: book, amount: 2)
-//        orderedBooks.append(orderedBook1)
-//        orderedBooks.append(orderedBook2)
-//        orderedBooks.append(orderedBook3)
-//        orderedBooks.append(orderedBook4)
-//
-//        //Initializating customers
-//        let cus1 = Customer(id: "Cus1", name: "Nguyen Thi Mai Xuan", address: "547, Tan Thach, Chau Thanh, Ben Tren", phoneNumber: "0974422725")
-//        let cus2 = Customer(id: "Cus1", name: "Pham Van Son", address: "53, Vo Van Ngan, Linh Chieu, Thu Duc", phoneNumber: "0327542028")
-//        customers.append(cus1)
-//        customers.append(cus2)
-//        //Initializating orders
-//        let order1 = Order(id: "OD15", customerId: "Cus1", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 35, books: [orderedBook1, orderedBook4], state: "Cancelled")
-//        let order2 = Order(id: "OD16", customerId: "Cus2", orderDate: Date(), note: "No note", userId: "x", deliveryFee: 0, books: [orderedBook2, orderedBook3], state: "To confirm")
-//        orders.append(order1)
-//        orders.append(order2)
+        orders = SaveData.orderModel.orders
+
         
         navigationItem.title = "Order detail"
         //Delegate
@@ -83,14 +61,6 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         
-//        for item in customers{
-//            if orderToShow?.customerId == item.id{
-//                customerToShow = item
-//                break
-//            }
-//        }
-        
-        
         
         //MARK: Set UI
         lblOrderID.text = "Order ID: \(self.orderID ?? "ID is empty")"
@@ -102,11 +72,10 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             lblDiscount.text = "$0"
             lblTransportFee.text = "$\(orderToShow.deliveryFee)"
             lblTotalPrice.text = "$\(orderToShow.getTotalWithFee())"
-        }
-        if let customerToShow = self.customerToShow{
-            lblCustomerName.text = customerToShow.name
-            lblCustomerPhone.text = customerToShow.phoneNumber
-            lblCustomerAddress.text = customerToShow.address
+            
+            lblCustomerName.text = orderToShow.customerName
+            lblCustomerPhone.text = orderToShow.customerPhoneNumber
+            lblCustomerAddress.text = orderToShow.customerAddress
         }
     }
     
@@ -124,6 +93,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
                     //Go to cancel the order screen
                     let cancelView = CancellingOrderScreenViewController(nibName: "CancellingOrderScreenViewController", bundle: nil)
                     //        self.present(viewAllOrdersController, animated: true, completion: nil)
+                    cancelView.order = self.orderToShow
                     cancelView.navigationItem.title = "Cancel Order"
                     self.navigationController?.pushViewController(cancelView, animated: true)
                 }))
@@ -179,6 +149,20 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         let item = orderedBooksToShow[indexPath.row]
         
 //        cell.imageBook.image = item.book.slug
+        if let url = URL(string: item.book.slug){
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                guard let data = data, error == nil else{
+                    return
+                }
+                
+                DispatchQueue.main.async{
+                    
+                    let img = UIImage(data: data)
+                    cell.imageBook.image = img
+                }
+            })
+            task.resume()
+        }
         cell.lblBookNameAuthor.text = "\(item.book.name) - \(item.book.author)"
         cell.lblBookPrice.text = "$ \(item.book.price)"
         cell.lblQty.text = "Qty: \(item.amount)"
@@ -187,10 +171,4 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
 }
-extension Date{
-    func getFormater(format:String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: self)
-    }
-}
+

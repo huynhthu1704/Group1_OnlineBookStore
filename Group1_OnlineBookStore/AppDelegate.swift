@@ -18,12 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         if Auth.auth().currentUser != nil {
-            SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
             SaveData.reviewModel.getAllReview()
             SaveData.userModel.getCurrentUser()
             SaveData.categoryModel.getAllData()
             SaveData.bookModel.getAllData()
-            
+            SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
+            SaveData.orderedBooksModel.getAll()
         }
         
         //        UILabel.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Roboto"))

@@ -49,8 +49,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signIn(_ sender: Any) {
         //SaveData.bookModel.getAllData()
 //        let currentUser = User(id: 2, fullName: "", pwd: "", phoneNumber: "", slug: "", rank: "", role_id: 1)
-        SaveData.bookModel.getAllData()
-        SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
+//        SaveData.bookModel.getAllData()
         let email = emailField.text!
         let pwd = passwordField.text!
         if email.isEmpty ||
@@ -82,9 +81,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     func goToHomeScreen() {
         let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
-                      UIApplication.shared.windows.first?.rootViewController = tabBar
-                      UIApplication.shared.windows.first?.makeKeyAndVisible()
-                      SaveData.userModel.getCurrentUser()
+        UIApplication.shared.windows.first?.rootViewController = tabBar
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        SaveData.userModel.getCurrentUser()
     }
     func showCreateAccount(email : String, password : String) {
         let alert = UIAlertController(title: "Create account", message: "Would you like to create account?", preferredStyle: .alert)

@@ -36,7 +36,7 @@ class OrderModel: ObservableObject {
                 let cusPhoneNumber = data["phone_number"] as? String ?? ""
                 let status = data["status"] as? String ?? ""
                 let userId = data["user_id"] as? String ?? ""
-                let deliveryFee = data["deliveryFee"] as? Int ?? -1
+                let deliveryFee = data["delivery"] as? Int ?? -1
                 var orderedBookArray = [OrderedBook]()
                 for item in self.orderedBookModel.orderedBooks{
                     if item.orderID == orderId{
@@ -48,44 +48,69 @@ class OrderModel: ObservableObject {
         }
     }
     
-    func getOrderByUserId(userId: String) {
-        do {
-            db.collection("orders").whereField("user_id", isEqualTo: userId)
-                .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Delete fail")
-                    } else if querySnapshot!.documents.count != 1 {
-                        print("")
-                    } else {
-                        if let documents = querySnapshot?.documents{
-                            self.orders = documents.map { (queryDocumentSnapshot) -> Order in
-                                let data = queryDocumentSnapshot.data()
-                                let orderId = data["order_id"] as? String ?? ""
-                                let address = data["address"] as? String ?? ""
-                                let cusName = data["customer_name"] as? String ?? ""
-                                let note = data["note"] as? String ?? ""
-                                let orderDate = data["order_date"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
-                                let cusPhoneNumber = data["phone_number"] as? String ?? ""
-                                let status = data["status"] as? String ?? ""
-                                let userId = data["user_id"] as? String ?? ""
-                                let deliveryFee = data["deliveryFee"] as? Int ?? -1
-                                //get line item orderedBook to add array to order
-                                var orderedBookArray = [OrderedBook]()
-                                for item in self.orderedBookModel.orderedBooks{
-                                    if item.orderID == orderId{
-                                        orderedBookArray.append(item)
-                                    }
-                                }
-                                return Order(id: orderId, customerName: cusName, cusAddress: address, cusPhoneNumber: cusPhoneNumber, orderDate: orderDate.toDate() ?? Date(), note: note, userId: userId, deliveryFee: deliveryFee, books: orderedBookArray, state: status)
-                            }
-                        }
-                        
+    func getOrderByUserId(userId: Int) {
+        db.collection("orders").whereField("user_id", isEqualTo: userId).addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            self.orders = documents.map { (queryDocumentSnapshot) -> Order in
+                let data = queryDocumentSnapshot.data()
+                let orderId = data["order_id"] as? String ?? ""
+                let address = data["address"] as? String ?? ""
+                let cusName = data["customer_name"] as? String ?? ""
+                let note = data["note"] as? String ?? ""
+                let orderDate = data["order_date"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
+                let cusPhoneNumber = data["phone_number"] as? String ?? ""
+                let status = data["status"] as? String ?? ""
+                let userId = data["user_id"] as? String ?? ""
+                let deliveryFee = data["delivery"] as? Int ?? -1
+                var orderedBookArray = [OrderedBook]()
+                for item in self.orderedBookModel.orderedBooks{
+                    if item.orderID == orderId{
+                        orderedBookArray.append(item)
                     }
+                }
+                return Order(id: orderId, customerName: cusName, cusAddress: address, cusPhoneNumber: cusPhoneNumber, orderDate: orderDate.toDate() ?? Date(), note: note, userId: userId, deliveryFee: deliveryFee, books: orderedBookArray, state: status)
             }
         }
-        catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            db.collection("orders").whereField("user_id", isEqualTo: userId)
+//                .getDocuments() { (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Delete fail")
+//                    } else if querySnapshot!.documents.count != 1 {
+//                        print("")
+//                    } else {
+//                        if let documents = querySnapshot?.documents{
+//                            self.orders = documents.map { (queryDocumentSnapshot) -> Order in
+//                                let data = queryDocumentSnapshot.data()
+//                                let orderId = data["order_id"] as? String ?? ""
+//                                let address = data["address"] as? String ?? ""
+//                                let cusName = data["customer_name"] as? String ?? ""
+//                                let note = data["note"] as? String ?? ""
+//                                let orderDate = data["order_date"] as? String ?? Date().getFormater(format: "MM/dd/yyyy HH:mm")
+//                                let cusPhoneNumber = data["phone_number"] as? String ?? ""
+//                                let status = data["status"] as? String ?? ""
+//                                let userId = data["user_id"] as? String ?? ""
+//                                let deliveryFee = data["deliveryFee"] as? Int ?? -1
+//                                //get line item orderedBook to add array to order
+//                                var orderedBookArray = [OrderedBook]()
+//                                for item in self.orderedBookModel.orderedBooks{
+//                                    if item.orderID == orderId{
+//                                        orderedBookArray.append(item)
+//                                    }
+//                                }
+//                                return Order(id: orderId, customerName: cusName, cusAddress: address, cusPhoneNumber: cusPhoneNumber, orderDate: orderDate.toDate() ?? Date(), note: note, userId: userId, deliveryFee: deliveryFee, books: orderedBookArray, state: status)
+//                            }
+//                        }
+//
+//                    }
+//            }
+//        }
+//        catch {
+//            print(error.localizedDescription)
+//        }
     }
     
     func addOrder(order: Order) {

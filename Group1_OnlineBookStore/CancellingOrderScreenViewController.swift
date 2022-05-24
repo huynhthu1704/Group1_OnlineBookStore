@@ -10,8 +10,14 @@ import UIKit
 import DropDown
 class CancellingOrderScreenViewController: UIViewController {
 
+    var order:Order?
+    var formatDate = "MM/dd/yyyy HH:mm"
     @IBOutlet weak var viewDropDown: UIView!
     @IBOutlet weak var lblReason: UILabel!
+    @IBOutlet weak var lblOrderID: UILabel!
+    @IBOutlet weak var lblOrderDate: UILabel!
+    @IBOutlet weak var lblOrderState: UILabel!
+    @IBOutlet weak var textFieldForDetailedReason: UITextField!
     
     let dropDown = DropDown()
     var defaulValueForDropDown = ""
@@ -31,6 +37,13 @@ class CancellingOrderScreenViewController: UIViewController {
             self.lblReason.text = self.dropDownValues[index]
         }
         // Do any additional setup after loading the view.
+        
+        //Set order info
+        if let order = self.order {
+            self.lblOrderID.text = "Order ID: \(order.id)"
+            self.lblOrderDate.text = "Order date: \(order.orderDate.getFormater(format: formatDate))"
+            self.lblOrderState.text = "State: \(order.state)"
+        }
     }
 
     @IBAction func dropDownShow(_ sender: UITapGestureRecognizer) {

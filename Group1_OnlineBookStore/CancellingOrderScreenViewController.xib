@@ -9,7 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CancellingOrderScreenViewController" customModule="Group1_OnlineBookStore" customModuleProvider="target">
             <connections>
+                <outlet property="lblOrderDate" destination="6ge-JM-HNH" id="Kr8-su-SWq"/>
+                <outlet property="lblOrderID" destination="dL0-39-OS9" id="u2r-ow-Z2R"/>
+                <outlet property="lblOrderState" destination="6Xo-DB-eeJ" id="R4R-PH-JGS"/>
                 <outlet property="lblReason" destination="VCQ-pQ-xVk" id="w7E-bw-On4"/>
+                <outlet property="textFieldForDetailedReason" destination="MJT-4X-WCN" id="CPR-4B-ICT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewDropDown" destination="FQv-o6-9oV" id="Wbq-aV-ZKH"/>
             </connections>

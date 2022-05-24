@@ -29,7 +29,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
 //                userInfo.navigationItem.title = "User Information"
 //                navigationController?.pushViewController(userInfo, animated: true)
         
-        dump(SaveData.favoriteModel.books)
+        //dump(SaveData.favoriteModel.books)
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -54,9 +54,16 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
 
         currentUser = SaveData.userModel.currentUser
-        dump(SaveData.favoriteModel.books)
+        //dump(SaveData.favoriteModel.books)
+        //dump(currentUser)
         books = SaveData.bookModel.books
         favoriteBooks = SaveData.favoriteModel.books
+        
+        //Get order by User
+        if let user = currentUser {
+            SaveData.orderModel.getOrderByUserId(userId: user.id)
+        }
+        
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -120,7 +127,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
           let book = favoriteBooks[indexPath.row]
-        SaveData.bookModel.getBookDetail(bookId: book.id)
+            SaveData.bookModel.getBookDetail(bookId: book.id)
            let bookDetailViewController = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
            bookDetailViewController.modalPresentationStyle = .fullScreen
            present(bookDetailViewController, animated: true, completion: nil)
@@ -159,10 +166,16 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
+        var orderIDs = [String]()
+        for order in SaveData.orderModel.orders{
+            orderIDs.append(order.id)
+        }
         let viewAllOrdersController = MyOrdersViewController(nibName: "MyOrdersViewController", bundle: nil)
         //        self.present(viewAllOrdersController, animated: true, completion: nil)
+        viewAllOrdersController.orderedBooks = SaveData.orderedBooksModel.getArrayOrderedBooks(orderIDs: orderIDs)
         viewAllOrdersController.navigationItem.title = "My orders"
         navigationController?.pushViewController(viewAllOrdersController, animated: true)
+        
     }
     
     @IBAction func goToViewAllFavorites(_ sender: UIButton) {
