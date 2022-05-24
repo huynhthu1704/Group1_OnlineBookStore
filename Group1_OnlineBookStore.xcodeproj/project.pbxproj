@@ -14,7 +14,6 @@
 		665AE548283BB1C10081CA6A /* BookYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE546283BB1C10081CA6A /* BookYCollectionViewCell.swift */; };
 		665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */; };
 		665AE54B283BB9B90081CA6A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AE54A283BB9B90081CA6A /* CategoryModel.swift */; };
-		66808DA4283C0743005B26CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66808DA3283C0743005B26CC /* GoogleService-Info.plist */; };
 		66808DA6283C0CB3005B26CC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DA5283C0CB3005B26CC /* CategoryViewController.swift */; };
 		66808DAD283C15E3005B26CC /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DAB283C15E3005B26CC /* SeemoreViewController.swift */; };
 		66808DAE283C15E3005B26CC /* SeemoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66808DAC283C15E3005B26CC /* SeemoreViewController.xib */; };
@@ -43,6 +42,7 @@
 		A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443B0C2838E0850057CEAA /* BookListViewController.swift */; };
 		A5443B0F2838E0850057CEAA /* BookListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5443B0D2838E0850057CEAA /* BookListViewController.xib */; };
 		A54C3A28283BAC2A009BA6E2 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */; };
+		A55035A6283C6AF100A06F90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55035A5283C6AF100A06F90 /* GoogleService-Info.plist */; };
 		A555E082283A2F5600D1A01A /* AdminCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */; };
 		A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A555E081283A2F5600D1A01A /* AdminCategoryViewController.xib */; };
 		A555E086283A2F6D00D1A01A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */; };
@@ -149,7 +149,6 @@
 		665AE546283BB1C10081CA6A /* BookYCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYCollectionViewCell.swift; sourceTree = "<group>"; };
 		665AE547283BB1C10081CA6A /* BookYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookYCollectionViewCell.xib; sourceTree = "<group>"; };
 		665AE54A283BB9B90081CA6A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
-		66808DA3283C0743005B26CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66808DA5283C0CB3005B26CC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		66808DAB283C15E3005B26CC /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
 		66808DAC283C15E3005B26CC /* SeemoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeemoreViewController.xib; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		A5443B0C2838E0850057CEAA /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		A5443B0D2838E0850057CEAA /* BookListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListViewController.xib; sourceTree = "<group>"; };
 		A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
+		A55035A5283C6AF100A06F90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCategoryViewController.swift; sourceTree = "<group>"; };
 		A555E081283A2F5600D1A01A /* AdminCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminCategoryViewController.xib; sourceTree = "<group>"; };
 		A555E084283A2F6D00D1A01A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -412,7 +412,7 @@
 		A5866F17282A2838005B0C8C /* System files */ = {
 			isa = PBXGroup;
 			children = (
-				66808DA3283C0743005B26CC /* GoogleService-Info.plist */,
+				A55035A5283C6AF100A06F90 /* GoogleService-Info.plist */,
 				A574352D28251A340081321B /* Assets.xcassets */,
 				A574353228251A340081321B /* Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
@@ -697,7 +697,6 @@
 				A51C78A32833956600A593B9 /* PurchaseViewController.xib in Resources */,
 				A5A9CBFA2832868700890344 /* BookDetailViewController.xib in Resources */,
 				A5443B072838BDD80057CEAA /* CategoryCollectionViewCell.xib in Resources */,
-				66808DA4283C0743005B26CC /* GoogleService-Info.plist in Resources */,
 				A5A29E502837BEF000306642 /* BookCollectionViewCell.xib in Resources */,
 				D38F448428354469002E663E /* OrderDetailViewController.xib in Resources */,
 				D3EEF60A2837926600779863 /* ToReviewsViewController.xib in Resources */,
@@ -713,6 +712,7 @@
 				D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */,
+				A55035A6283C6AF100A06F90 /* GoogleService-Info.plist in Resources */,
 				A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */,
 				A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,

@@ -49,10 +49,14 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
+    override func viewWillAppear(_ animated: Bool) {
+                self.tabBarController?.tabBar.isHidden = false
+    }
+    
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        self.tabBarController?.tabBar.isHidden = false
         currentUser = SaveData.userModel.currentUser
         dump(SaveData.favoriteModel.books)
         books = SaveData.bookModel.books
@@ -123,8 +127,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         SaveData.bookModel.getBookDetail(bookId: book.id)
            let bookDetailViewController = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
            bookDetailViewController.modalPresentationStyle = .fullScreen
-           present(bookDetailViewController, animated: true, completion: nil)
-
+//           present(bookDetailViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(bookDetailViewController, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         

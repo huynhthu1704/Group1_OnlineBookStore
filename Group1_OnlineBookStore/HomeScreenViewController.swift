@@ -43,6 +43,11 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         newBookCollectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+                self.tabBarController?.tabBar.isHidden = false
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let reviews : [Review] = SaveData.reviewModel.reviews
@@ -52,7 +57,7 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
                    signIn.modalPresentationStyle = .fullScreen
                    present(signIn, animated: true, completion: nil)
         } else {
-            print(currentUser?.email)
+            SaveData.userModel.getCurrentUser()
         }
         // Customer navigation bar
         let nav = NavigationBar(navigationController: self.navigationController)
