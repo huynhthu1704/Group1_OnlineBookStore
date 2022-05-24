@@ -49,7 +49,8 @@ let identifier = "BookYCollectionViewCell"
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-books = SaveData.bookModel.books
+        books = SaveData.bookModel.books
+        dump(books)
         collectionView.delegate = self
            collectionView.dataSource = self
         

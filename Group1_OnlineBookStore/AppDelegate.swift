@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SaveData.reviewModel.getAllReview()
             SaveData.userModel.getCurrentUser()
             SaveData.categoryModel.getAllData()
-            SaveData.bookModel.getAllData()
+//            SaveData.bookModel.getAllData()
+            SaveData.bookModel.getBookById()
             SaveData.favoriteModel.getOrderedBookByOrderId(userID: 1)
             SaveData.orderedBooksModel.getAll()
         }

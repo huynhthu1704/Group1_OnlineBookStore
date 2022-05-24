@@ -51,7 +51,7 @@ class NavigationBar {
     
     @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
         print("Go to")
-          let vc = AdminCategoryViewController(nibName: "AdminCategoryViewController", bundle: nil)
+          let vc = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
                   self.navigationController?.pushViewController(vc, animated: true)
        }
     
