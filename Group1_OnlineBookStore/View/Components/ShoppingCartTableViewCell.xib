@@ -56,6 +56,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-1O-Abw">
                                                 <rect key="frame" x="35" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="changeQuantity:" destination="KGk-i7-Jjw" eventType="valueChanged" id="hqj-EX-Iky"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -77,6 +80,7 @@
                 <outlet property="bookName" destination="bdh-Rf-mOB" id="0n3-ZP-AMi"/>
                 <outlet property="price" destination="W4E-Sg-dK9" id="L7c-yy-0wE"/>
                 <outlet property="quantity" destination="quP-qo-Pvp" id="LiE-jw-qUd"/>
+                <outlet property="quantityStepper" destination="Dhi-1O-Abw" id="myi-2k-bgD"/>
                 <outlet property="selectBtn" destination="RN9-RH-oGc" id="3KJ-3T-3Ug"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
