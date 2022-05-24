@@ -10,13 +10,15 @@ import Foundation
 
 class Review {
     var userID : Int
-    var bookID : Int
+    var bookID : String
     var content : String?
     var ratingValue : Int
     // MARK: Constructor
-    init?(userID : Int, content : String = "", ratingValue : Int, bookID: Int) {
-        
-        guard 0 <= ratingValue && ratingValue <= 5 else {
+    init?(userID : Int, content : String = "", ratingValue : Int, bookID: String) {
+//        guard 0 < ratingValue && ratingValue <= 5 else {
+//            return nil
+//        }
+        if !(ratingValue >= 0 && ratingValue <= 5){
             return nil
         }
         self.userID = userID

@@ -17,8 +17,8 @@ class BookViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         bookName.text = "Welcome"
-        if  let review = Review(userID: 1, content: "", ratingValue: 4, bookID: 1) {
-            reviews.append(review)          }
+//        if  let review = Review(userID: 1, content: "", ratingValue: 4, bookID: 1) {
+//            reviews.append(review)          }
         //        reviewTableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         //
         if reviewTableView != nil {

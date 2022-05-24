@@ -90,6 +90,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         self.lblNumberOfSuccessfulOrders.text = String(numberDeliveredOrders)
         self.lblNumberOfToReceiveOrders.text = String(numberToReceiveOrders)
         self.lblNumberOfCancelledOrders.text = String(numberCancellation)
+        self.lblNumberOfToReviewOrders.text = String(SaveData.toReviewBooks.count)
+        
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white

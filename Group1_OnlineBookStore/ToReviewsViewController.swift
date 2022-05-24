@@ -11,6 +11,7 @@ import UIKit
 class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var ToReviewBookTableView: UITableView!
     var books = [Book]()
+    var reviews = [Review]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,27 @@ class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableVi
 //        books.append(book2)
 //        books.append(book3)
 //        books.append(book2)
+//        if let user = SaveData.userModel.currentUser {
+//            for item in SaveData.reviewModel.reviews{
+//                if item.userID == user.id && item.ratingValue == 0{
+//                    reviews.append(item)
+//                    for book in SaveData.bookModel.books{
+//                        if item.bookID == book.id{
+//                            self.books.append(book)
+//                            break
+//                        }
+//                    }
+//                }
+//            }
+//        }
+        for item in SaveData.toReviewBooks{
+            for book in SaveData.bookModel.books{
+                if item.bookID == book.id{
+                    self.books.append(book)
+                    break
+                }
+            }
+        }
     }
 
 
@@ -41,6 +63,21 @@ class ToReviewsViewController: UIViewController,UITableViewDataSource, UITableVi
         }
         let book = books[indexPath.row]
 //        cell.imageBook.image = book.slug
+        if let url = URL(string: book.slug){
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                guard let data = data, error == nil else{
+                    return
+                }
+                
+                DispatchQueue.main.async{
+                    
+                    let img = UIImage(data: data)
+                    cell.imageBook.image = img
+                }
+            })
+            task.resume()
+        }
+        
         cell.lblBookNameAuthor.text = "\(book.name) - \(book.author)"
         cell.lblBookPuslishingCompany.text = book.publisher
         cell.book = book

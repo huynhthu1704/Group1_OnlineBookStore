@@ -36,9 +36,9 @@ class ViewAllCommentViewController: UIViewController , UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Reviews"
-        if let review = Review(userID: 1, content: "It is fantastic", ratingValue: 4, bookID: 1) {
-            reviews.append(review)
-        }
+//        if let review = Review(userID: 1, content: "It is fantastic", ratingValue: 4, bookID: 1) {
+//            reviews.append(review)
+//        }
 //        if let review = Review(userID: "us2", content: "This is really a good book for every one", ratingValue: 4, bookID: "B02") {
 //            reviews.append(review)
 //        }

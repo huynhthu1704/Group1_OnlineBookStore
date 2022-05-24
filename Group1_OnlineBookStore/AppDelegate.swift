@@ -25,6 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //SaveData.shoppingCartModel.getAllShoppingCart()
 //            SaveData.shoppingCartModel.getAllShoppingCart()
             SaveData.userModel.getCurrentUser(completion: {
+                //Get to review book for that user
+                if let user = SaveData.userModel.currentUser {
+                    for item in SaveData.reviewModel.reviews{
+                        if item.userID == user.id && item.ratingValue == 0{
+                            SaveData.toReviewBooks.append(item)
+                        }
+                    }
+                }
+                
+                
                 SaveData.orderModel.getAllOrders()
                 SaveData.orderModel.getOrderByUserId(userId: SaveData.userModel.currentUser!.id)
                 SaveData.favoriteModel.getFavoriteBookByUserId(userID: SaveData.userModel.currentUser!.id, completion: {})

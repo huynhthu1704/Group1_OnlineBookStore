@@ -22,14 +22,33 @@ class ReviewModel: ObservableObject {
                 return
             }
             self.reviews = documents.map { (queryDocumentSnapshot) -> Review in
-                let data = queryDocumentSnapshot.data()
-                let bookId = data["book_id"] as? Int ?? 1
-                let userId = data["user_id"] as? Int ?? 1
+                let data = queryDocumentSnapshot.data()	
+                let bookId = data["book_id"] as? String ?? ""
+                let userId = data["user_id"] as? Int ?? -1
                 let content = data["content"] as? String ?? ""
                 let ratingStar = data["rating_star"] as? Int ?? 0
-                
-                print("id\(content)")
+                print("Star = \(ratingStar)")
                 return Review(userID: userId, content: content, ratingValue: ratingStar, bookID: bookId)!
+            }
+        }
+    }
+    
+    func reviewBook(bookID: String, userID: Int, content: String, ratingStar: Int){
+        do {
+            //db.collection("users").do
+            db.collection("reviews").whereField("book_id", isEqualTo: bookID).whereField("user_id", isEqualTo: userID)
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Update fail")
+                    } else if querySnapshot!.documents.count != 1 {
+                        print("Multiple book found")
+                    } else {
+                        let document = querySnapshot!.documents.first
+                        document!.reference.updateData([
+                            "content" : content,
+                            "rating_star": ratingStar
+                        ])
+                    }
             }
         }
     }
@@ -39,9 +58,23 @@ class ReviewModel: ObservableObject {
             db.collection("reviews").addDocument(data: [
                 "book_id": review.bookID,
                 "user_id": review.userID,
-                "content": review.content,
+                "content": review.content!,
                 "rating_star": review.ratingValue,
                 
+            ])
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func addReviewByThanh(bookID: String, userID: Int, content: String, ratingStar: Int) {
+        do {
+            db.collection("reviews").addDocument(data: [
+                "book_id": bookID,
+                "user_id": userID,
+                "content": content,
+                "rating_star": ratingStar,
             ])
         }
         catch {
@@ -71,7 +104,7 @@ class ReviewModel: ObservableObject {
         }
     }
     
-    func getReview(bookID : Int) -> [Review]{
+    func getReview(bookID : String) -> [Review]{
         var reviews = [Review]()
         for review in reviews {
             if (review.bookID == bookID) {
@@ -85,6 +118,16 @@ class ReviewModel: ObservableObject {
         var reviews = [Review]()
         for review in reviews {
             if (review.userID == userId) {
+                reviews.append(review)
+            }
+        }
+        return reviews
+    }
+    
+    func getToReviewByUser(userId : Int) -> [Review]{
+        var reviews = [Review]()
+        for review in reviews {
+            if (review.userID == userId && review.ratingValue == 0) {
                 reviews.append(review)
             }
         }

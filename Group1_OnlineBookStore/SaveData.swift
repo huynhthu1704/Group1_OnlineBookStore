@@ -19,4 +19,7 @@ class SaveData{
     
     static var orderModel = OrderModel()
     static var orderedBooksModel = OrderedBookModel()
+    
+    
+    static var toReviewBooks = [Review]()
 }
