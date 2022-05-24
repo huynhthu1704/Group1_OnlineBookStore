@@ -15,10 +15,10 @@ class ShoppingCartModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
-    func getAllShoppingCart() {
-        db.collection("shopping_cart").addSnapshotListener { (querySnapshot, error) in
+    func getUserShoppingCart(userId : Int, completion : @escaping () -> Void) {
+        db.collection("shopping_cart").whereField("user_id", isEqualTo: userId).getDocuments(completion: {querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
-                print("No documents")
+                print("Empty shopping cart")
                 return
             }
             self.shoppingCart = documents.map { (queryDocumentSnapshot) -> ShoppingCart in
@@ -28,24 +28,25 @@ class ShoppingCartModel: ObservableObject {
                 let quantity = data["quantity"] as? Int ?? 0
                 return ShoppingCart(userId: userId, bookId: bookId, quantity : quantity)
             }
-        }
+            completion()
+        })
     }
     
-    func addShoppingCart(shoppingCart: ShoppingCart) {
+    func addShoppingCart(shoppingCart: ShoppingCart, completion : @escaping () -> Void) {
         do {
             db.collection("shopping_cart").addDocument(data: [
                 "book_id": shoppingCart.bookId,
                 "user_id": shoppingCart.userId,
                 "quantity": shoppingCart.quantity,
-                
             ])
+            completion()
         }
         catch {
             print(error.localizedDescription)
         }
     }
     
-    func deleteShoppingCart(bookID : Int, userId : Int) {
+    func deleteShoppingCart(bookID : String, userId : Int, completion : @escaping () -> Void) {
         do {
             db.collection("shopping_cart").whereField("book_id", isEqualTo: bookID)
                 .getDocuments() { (querySnapshot, err) in
@@ -67,35 +68,12 @@ class ShoppingCartModel: ObservableObject {
         }
     }
     
-    func getShoppingCart(bookID : Int) -> [Review]{
-        var reviews = [Review]()
-        for review in reviews {
-            if (review.bookID == bookID) {
-                reviews.append(review)
-            }
-        }
-        return reviews
-    }
-    
-//    func getReviewByUser(userId : Int) -> [Review]{
-//        var reviews = [Review]()
-//        for review in reviews {
-//            if (review.userID == userId) {
-//                reviews.append(review)
-//            }
-//        }
-//        return reviews
-//    }
-//
     func updateShoppingCart(shoppingCart : ShoppingCart) {
         do {
-            //db.collection("users").do
             db.collection("shopping_cart").whereField("book_id", isEqualTo: shoppingCart.bookId)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Update fail")
-                    } else if querySnapshot!.documents.count != 1 {
-                        print("Multiple book found")
                     } else {
                         for document in querySnapshot!.documents {
                             let id = document.data()["user_id"] as? Int ?? 0

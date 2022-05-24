@@ -88,8 +88,11 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     }
     
     @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
-        let vc = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        SaveData.shoppingCartModel.getUserShoppingCart(userId: SaveData.userModel.currentUser!.id, completion: {
+            dump(SaveData.shoppingCartModel.shoppingCart)
+            let vc = ShoppingCartViewController(nibName: "ShoppingCartViewController", bundle: nil)
+                   self.navigationController?.pushViewController(vc, animated: true)
+        })
     }
     
     public func addCartItem() {
@@ -129,6 +132,7 @@ extension HomeScreenViewController : UICollectionViewDataSource {
             return cell
         }
     }
+ 
 }
 
 extension HomeScreenViewController : UICollectionViewDelegateFlowLayout {
