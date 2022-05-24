@@ -38,7 +38,7 @@ class ShoppingCartTableViewCell: UITableViewCell {
         } else if quantity == Int(sender.maximumValue) {
             updateQuantity(newQuantity: Int(sender.value))
             
-            let alert = UIAlertController(title: "", message: "Sorry we just have \(String(describing: Int(sender.maximumValue))) in the stock", preferredStyle: .alert)
+            let alert = UIAlertController(title: "", message: "Sorry we just have \(String(describing: Int(sender.maximumValue))) books in the stock", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
                 
             }))

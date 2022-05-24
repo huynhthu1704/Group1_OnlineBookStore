@@ -19,9 +19,25 @@ class CategoryViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as? CategoryTableViewCell)!
                 let category = categories[indexPath.row]
-        //        cell.img = category.img
-                cell.lblName.text = category.name
-                return cell
+        if let url = URL(string: category.img){
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+                guard let data = data, error == nil else{
+                    return
+                }
+                
+                DispatchQueue.main.async{
+                    
+                    let img = UIImage(data: data)
+                    cell.img.image = img
+                }
+            })
+            task.resume()
+        }
+       
+        cell.lblName.text = category.name
+       
+        
+        return cell
     }
      func addRightBarButtonItem() {
            // Set Cart bar button item
