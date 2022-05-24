@@ -17,7 +17,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     let identifier = "BookCollectionViewCell"
     var currentUser : User?
-    var books = [Book]()
+    var favoriteBooks = [Book]()
     @IBAction func goToSetting(_ sender: UIBarButtonItem) {
 //        let date = "08/19/2020 16:20"
 //        var orderedBooks = [OrderedBook]()
@@ -28,8 +28,6 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
 //                //        self.present(viewAllOrdersController, animated: true, completion: nil)
 //                userInfo.navigationItem.title = "User Information"
 //                navigationController?.pushViewController(userInfo, animated: true)
-        
-        //dump(SaveData.favoriteModel.books)
     }
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
@@ -42,10 +40,8 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     //MARK: UI for My orders area
     @IBOutlet weak var myOrdersStackView: UIStackView!
-    var user:User?
     
     //MARK: Collection my favorite
-    var favoriteBooks = [Book]()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var myFavoritesStackView: UIStackView!
     
@@ -56,12 +52,13 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     //MARK:Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tabBarController?.tabBar.isHidden = false
         currentUser = SaveData.userModel.currentUser
-        //dump(SaveData.favoriteModel.books)
-        //dump(currentUser)
-        books = SaveData.bookModel.books
-        favoriteBooks = SaveData.favoriteModel.books
+        self.favoriteBooks = SaveData.favoriteModel.books
+        //dump("1 \(self.favoriteModel.books.count)")
+        //dump("1 \(self.favoriteBooks.count)")
+//        books = SaveData.bookModel.books
+//        favoriteBooks = SaveData.favoriteModel.books
+        
         
         //Get order by User
         if let user = currentUser {

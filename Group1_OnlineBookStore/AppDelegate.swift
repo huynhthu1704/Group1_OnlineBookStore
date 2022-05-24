@@ -20,15 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Auth.auth().currentUser != nil {
             SaveData.reviewModel.getAllReview()
             SaveData.categoryModel.getAllData()
-                       SaveData.bookModel.getAllData()
-                       SaveData.shoppingCartModel.getAllShoppingCart()
+            SaveData.shoppingCartModel.getAllShoppingCart()
             SaveData.userModel.getCurrentUser(completion: {
+                SaveData.favoriteModel.getFavoriteBookByUserId(userID: SaveData.userModel.currentUser!.id, completion: {})
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = storyboard.instantiateViewController(identifier: "TabBar")
                                    UIApplication.shared.windows.first?.rootViewController = tabBar
                                    UIApplication.shared.windows.first?.makeKeyAndVisible()})
-           
-            
         }
         
         //        UILabel.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Roboto"))

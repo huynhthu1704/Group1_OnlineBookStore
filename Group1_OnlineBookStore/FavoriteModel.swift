@@ -15,59 +15,29 @@ class FavoriteModel: ObservableObject {
     private var booksModel = BookModel()
     private var db = Firestore.firestore()
     
-    init() {
-        self.booksModel.getAllData()
-    }
     
-    func getOrderedBookByOrderId(userID: Int){
-//        do {
-//            db.collection("favourites_book")
-//                .getDocuments() { (querySnapshot, err) in
-//                    if let err = err {
-//                        print("Get fail")
-//                    } else if querySnapshot!.documents.count != 1 {
-//                        print("")
-//                    } else {
-//                        if let documents = querySnapshot?.documents{
-//                            self.books = documents.map { (queryDocumentSnapshot) -> Book in
-//                                let data = queryDocumentSnapshot.data()
-//                                let bookid = data["book_id"] as? String ?? ""
-//                                var bookOnFavorite:Book = Book()
-//                                for item in self.booksModel.books{
-//                                    if item.id == bookid {
-//                                        bookOnFavorite = item
-//                                        break
-//                                    }
-//                                }
-//                                return bookOnFavorite
-//                            }
-//                        }
-//
-//                    }
-//            }
-//        }
-//        catch {
-//            print(error.localizedDescription)
-//        }
-        print("start")
-        db.collection("favourites_book").whereField("user_id", isEqualTo: userID).addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
-            }
-              print("exist")
-            self.books = documents.map { (queryDocumentSnapshot) -> Book in
-                let data = queryDocumentSnapshot.data()
-                let bookid = data["book_id"] as? String ?? ""
-                print("bookid\(bookid)")
-                var bookOnFavorite:Book = Book()
-                for item in self.booksModel.books{
-                    if item.id == bookid {
-                        bookOnFavorite = item
-                        break
-                    }
+    func getFavoriteBookByUserId(userID: Int, completion : @escaping () -> Void){
+        self.booksModel.getAllData {
+            self.db.collection("favourites_book").whereField("user_id", isEqualTo: userID).addSnapshotListener { (querySnapshot, error) in
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents")
+                    return
                 }
-                return bookOnFavorite
+                print("exist")
+                self.books = documents.map { (queryDocumentSnapshot) -> Book in
+                    let data = queryDocumentSnapshot.data()
+                    let bookid = data["book_id"] as? String ?? ""
+                    print("bookid\(bookid)")
+                    var bookOnFavorite:Book = Book()
+                    for item in self.booksModel.books{
+                        if item.id == bookid {
+                            bookOnFavorite = item
+                            break
+                        }
+                    }
+                    return bookOnFavorite
+                }
+                completion()
             }
         }
     }
