@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     //MARK: Properties
-    let books = [Book]()
+    var books = [Book]()
     let topSaleBook = [Book]()
     let topSaleBookIdentifier = "TopSaleBookCollectionViewCell"
     let newBookIdentifier = "NewBookCollectionViewCell"
@@ -21,6 +21,7 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var topSaleCollectionView: UICollectionView!
     
     override func viewDidLayoutSubviews() {
+        print("Did lay out")
         super.viewDidLayoutSubviews()
         // Set top Sale collection view's height equal to its child cell
         let flow = topSaleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -44,21 +45,41 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("Will appear")
         self.tabBarController?.tabBar.isHidden = false
-        
+       
     }
     
     override func viewDidLoad() {
+        print("did load")
         super.viewDidLoad()
+        SaveData.bookModel.getAllBooks(completion: {bookList in
+                          self.books = bookList
+                          dump(bookList)
+                          self.topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.topSaleBookIdentifier)
+                         
+                          self.topSaleCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+                          
+                          // Register datasource + nib collection view cell for new product collection view
+                          self.newBookCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.newBookIdentifier)
+                        
+                          self.newBookCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+                          })
+        self.topSaleCollectionView.dataSource = self
+                          self.topSaleCollectionView.delegate = self
+        self.newBookCollectionView.dataSource = self
+                         self.newBookCollectionView.delegate = self
         let reviews : [Review] = SaveData.reviewModel.reviews
         let currentUser = Auth.auth().currentUser
         if currentUser == nil {
             let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInScreen")
             signIn.modalPresentationStyle = .fullScreen
             present(signIn, animated: true, completion: nil)
-        } else {
-            dump(SaveData.userModel.currentUser)
         }
+        
+       
+            dump(SaveData.userModel.currentUser)
+        
         // Customer navigation bar
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
@@ -66,16 +87,6 @@ class HomeScreenViewController: UIViewController, UICollectionViewDelegate {
         addCartItem()
         
         // Register datasource + nib collection view cell for topSale collection view
-        topSaleCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: topSaleBookIdentifier)
-        topSaleCollectionView.dataSource = self
-        topSaleCollectionView.delegate = self
-        topSaleCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        // Register datasource + nib collection view cell for new product collection view
-        newBookCollectionView.register(UINib(nibName: "BookCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: newBookIdentifier)
-        newBookCollectionView.dataSource = self
-        newBookCollectionView.delegate = self
-        newBookCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
     @objc func goToShoppingCart(_ sender: UIBarButtonItem) {
@@ -106,6 +117,7 @@ extension HomeScreenViewController : UICollectionViewDataSource {
         if collectionView == topSaleCollectionView {
             let cell = topSaleCollectionView.dequeueReusableCell(withReuseIdentifier: topSaleBookIdentifier, for: indexPath) as! BookCollectionViewCell
             let book : Book = books[indexPath.row]
+            print("Sach: \(book.name)")
             //            cell.img.image = book.slug
             cell.name.text = book.name
             cell.price.text = String(book.price)
