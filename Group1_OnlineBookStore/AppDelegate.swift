@@ -20,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Auth.auth().currentUser != nil {
             SaveData.reviewModel.getAllReview()
             SaveData.categoryModel.getAllData()
+            SaveData.orderedBooksModel.getAll()
+            SaveData.bookModel.getAllData(completion: {})
             SaveData.shoppingCartModel.getAllShoppingCart()
             SaveData.userModel.getCurrentUser(completion: {
+                SaveData.orderModel.getAllOrders()
                 SaveData.favoriteModel.getFavoriteBookByUserId(userID: SaveData.userModel.currentUser!.id, completion: {})
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = storyboard.instantiateViewController(identifier: "TabBar")

@@ -133,4 +133,28 @@ class OrderModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    func cancelOrder(orderID: String, completion : @escaping (Bool) -> Void) ->Bool {
+        var successfulCancel = false
+        do {
+            //db.collection("users").do
+            db.collection("orders").whereField("order_id", isEqualTo: orderID).whereField("status", isEqualTo: "To confirm")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Update fail")
+                    } else if querySnapshot!.documents.count != 1 {
+                        print("Multiple book found")
+                    } else {
+                        let document = querySnapshot!.documents.first
+                        document!.reference.updateData([
+                            "status": "Cancelled"
+                        ])
+                        successfulCancel = true
+                    }
+                    completion(successfulCancel)
+            }
+        }
+       
+        return successfulCancel
+    }
 }

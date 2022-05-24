@@ -89,24 +89,26 @@ class OrderedBookModel: ObservableObject {
     }
     
     func getAll(){
-        db.collection("books_orders").addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
-            }
-            self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
-                let data = queryDocumentSnapshot.data()
-                let orderIDToGet = data["order_id"] as? String ?? ""
-                let bookid = data["book_id"] as? String ?? ""
-                let amount = data["quantity"] as? Int ?? -1
-                var bookOnOrder:Book = Book()
-                for item in self.booksModel.books{
-                    if item.id == bookid {
-                        bookOnOrder = item
-                        break
-                    }
+        self.booksModel.getAllData {
+            self.db.collection("books_orders").addSnapshotListener { (querySnapshot, error) in
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents")
+                    return
                 }
-                return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
+                self.orderedBooks = documents.map { (queryDocumentSnapshot) -> OrderedBook in
+                    let data = queryDocumentSnapshot.data()
+                    let orderIDToGet = data["order_id"] as? String ?? ""
+                    let bookid = data["book_id"] as? String ?? ""
+                    let amount = data["quantity"] as? Int ?? -1
+                    var bookOnOrder:Book = Book()
+                    for item in self.booksModel.books{
+                        if item.id == bookid {
+                            bookOnOrder = item
+                            break
+                        }
+                    }
+                    return OrderedBook(orderID: orderIDToGet, book: bookOnOrder, amount: amount)
+                }
             }
         }
 //        do {

@@ -10,6 +10,8 @@ import UIKit
 import DropDown
 class CancellingOrderScreenViewController: UIViewController {
 
+    var cancelModel = CancelReasonModel()
+    var orderModel = OrderModel()
     var order:Order?
     var formatDate = "MM/dd/yyyy HH:mm"
     @IBOutlet weak var viewDropDown: UIView!
@@ -62,9 +64,50 @@ class CancellingOrderScreenViewController: UIViewController {
                 // show the alert
                 self.present(alert, animated: true, completion: nil)
             }else{
-                //Cancel order
-                //Switch to MyOrdersScreen
-                navigationController?.popViewController(animated: true)
+                if let order = self.order {
+                    let alert = UIAlertController(title: "CANCEL ORDER", message: "Do you want to cancel the order with id: \(order.id)?", preferredStyle: UIAlertController.Style.alert)
+                    
+                    // add the actions (buttons)
+                    alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {
+                        action in
+                        
+                        //Cancel order
+                        self.orderModel.cancelOrder(orderID: order.id, completion: {isSuccess in
+                            if isSuccess{
+                                //Add reason cancel to fire store
+                                self.cancelModel.addCancelReason(orderID: order.id, mainReason: self.lblReason.text!, detailedReason: self.textFieldForDetailedReason.text ?? "No detailed reason", dateToCancelOrder: Date().getFormater(format: self.formatDate))
+                                
+                                
+                                let alertToSuccess = UIAlertController(title: "CANCEL ORDER", message: "The order with id: \(order.id) is canceled successfully!", preferredStyle: UIAlertController.Style.alert)
+                                
+                                // add an action (button)
+                                alertToSuccess.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                                    //Switch to MyOrdersScreen
+                                    self.navigationController?.popViewController(animated: true)
+                                }))
+                                
+                                // show the alert
+                                self.present(alertToSuccess, animated: true, completion: nil)
+                            }else{
+                                let alertToNotSuccess = UIAlertController(title: "CANCEL ORDER", message: "The order with id: \(order.id) can not be cancelled! Because that order no longer belongs to the state To confirm", preferredStyle: UIAlertController.Style.alert)
+                                
+                                // add an action (button)
+                                alertToNotSuccess.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                                
+                                // show the alert
+                                self.present(alertToNotSuccess, animated: true, completion: nil)
+                            }
+                            
+                            
+                        })
+                
+                    }))
+                    alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
             }
         }
     }

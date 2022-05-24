@@ -54,16 +54,13 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         currentUser = SaveData.userModel.currentUser
         self.favoriteBooks = SaveData.favoriteModel.books
-        //dump("1 \(self.favoriteModel.books.count)")
-        //dump("1 \(self.favoriteBooks.count)")
-//        books = SaveData.bookModel.books
-//        favoriteBooks = SaveData.favoriteModel.books
         
         
         //Get order by User
         if let user = currentUser {
             SaveData.orderModel.getOrderByUserId(userId: user.id)
         }
+        
         
         // Set text color for username and rank
         userName.textColor = UIColor.white
