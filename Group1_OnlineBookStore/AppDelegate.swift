@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SaveData.categoryModel.getAllData()
             SaveData.orderedBooksModel.getAll()
             SaveData.bookModel.getAllData(completion: {})
-            SaveData.shoppingCartModel.getAllShoppingCart()
+            //SaveData.shoppingCartModel.getAllShoppingCart()
             SaveData.userModel.getCurrentUser(completion: {
                 SaveData.orderModel.getAllOrders()
                 SaveData.orderModel.getOrderByUserId(userId: SaveData.userModel.currentUser!.id)

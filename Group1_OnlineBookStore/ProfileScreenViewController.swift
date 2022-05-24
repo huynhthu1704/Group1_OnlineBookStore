@@ -65,9 +65,31 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         currentUser = SaveData.userModel.currentUser
         self.favoriteBooks = SaveData.favoriteModel.books
         
+        //Set statistical for user
+        self.lblNumberOfFavoriteBooks.text = String(SaveData.favoriteModel.books.count)
+        var numberToConfirmOrders = 0
+        var numberDeliveredOrders = 0
+        var numberToReceiveOrders = 0
+        var numberCancellation = 0
         
-        
-        
+        for item in SaveData.orderModel.orders{
+            switch item.state {
+            case "To confirm":
+                numberToConfirmOrders += 1
+            case "To receive":
+                numberToReceiveOrders += 1
+            case "Delivered":
+                numberDeliveredOrders += 1
+            case "Cancelled":
+                numberCancellation += 1
+            default:
+                break
+            }
+        }
+        self.lblNumberOfToConfirmOrders.text = String(numberToConfirmOrders)
+        self.lblNumberOfSuccessfulOrders.text = String(numberDeliveredOrders)
+        self.lblNumberOfToReceiveOrders.text = String(numberToReceiveOrders)
+        self.lblNumberOfCancelledOrders.text = String(numberCancellation)
         // Set text color for username and rank
         userName.textColor = UIColor.white
         userRank.textColor = UIColor.white
@@ -169,6 +191,7 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
     
     
     @IBAction func goToViewAllOrders(_ sender: UIButton) {
+        SaveData.orderModel.getOrderByUserId(userId: SaveData.userModel.currentUser!.id)
         var orderIDs = [String]()
         for order in SaveData.orderModel.orders{
             orderIDs.append(order.id)
