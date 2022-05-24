@@ -29,6 +29,16 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
 //                userInfo.navigationItem.title = "User Information"
 //                navigationController?.pushViewController(userInfo, animated: true)
     }
+    //MARK: statistics for users
+    @IBOutlet weak var lblNumberOfFavoriteBooks: UILabel!
+    @IBOutlet weak var lblNumberOfSuccessfulOrders: UILabel!
+    @IBOutlet weak var lblNumberOfToReceiveOrders: UILabel!
+    @IBOutlet weak var lblNumberOfReviewedBooks: UILabel!
+    @IBOutlet weak var lblNumberOfToConfirmOrders: UILabel!
+    
+    @IBOutlet weak var lblNumberOfCancelledOrders: UILabel!
+    @IBOutlet weak var lblNumberOfToReviewOrders: UILabel!
+    
     //MARK: UI for user's info area
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userRank: UILabel!
@@ -56,10 +66,6 @@ class ProfileScreenViewController: UIViewController, UICollectionViewDelegate, U
         self.favoriteBooks = SaveData.favoriteModel.books
         
         
-        //Get order by User
-        if let user = currentUser {
-            SaveData.orderModel.getOrderByUserId(userId: user.id)
-        }
         
         
         // Set text color for username and rank

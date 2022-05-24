@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SaveData.shoppingCartModel.getAllShoppingCart()
             SaveData.userModel.getCurrentUser(completion: {
                 SaveData.orderModel.getAllOrders()
+                SaveData.orderModel.getOrderByUserId(userId: SaveData.userModel.currentUser!.id)
                 SaveData.favoriteModel.getFavoriteBookByUserId(userID: SaveData.userModel.currentUser!.id, completion: {})
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = storyboard.instantiateViewController(identifier: "TabBar")

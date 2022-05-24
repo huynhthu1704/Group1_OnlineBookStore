@@ -75,6 +75,7 @@ class MyOrdersViewController: UIViewController, UITableViewDataSource, UITableVi
                 DispatchQueue.main.async{
                     
                     let img = UIImage(data: data)
+                    //cell.imageBook.image = img
                     cell.imageBook.image = img
                 }
             })
