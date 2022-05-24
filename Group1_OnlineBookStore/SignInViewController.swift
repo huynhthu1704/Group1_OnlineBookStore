@@ -87,7 +87,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         let tabBar = self.storyboard?.instantiateViewController(identifier: "TabBar")
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()
-        SaveData.userModel.getCurrentUser()
     }
     func showCreateAccount(email : String, password : String) {
         let alert = UIAlertController(title: "Create account", message: "Would you like to create account?", preferredStyle: .alert)

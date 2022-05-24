@@ -17,7 +17,6 @@
 		66808DA6283C0CB3005B26CC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DA5283C0CB3005B26CC /* CategoryViewController.swift */; };
 		66808DAD283C15E3005B26CC /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66808DAB283C15E3005B26CC /* SeemoreViewController.swift */; };
 		66808DAE283C15E3005B26CC /* SeemoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66808DAC283C15E3005B26CC /* SeemoreViewController.xib */; };
-		66808DBA283C5880005B26CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66808DB9283C5880005B26CC /* GoogleService-Info.plist */; };
 		A50E29B52837CFE900394471 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E29B42837CFE800394471 /* NavigationBar.swift */; };
 		A51C789A283383EA00A593B9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C7898283383EA00A593B9 /* EditInfoViewController.swift */; };
 		A51C789B283383EA00A593B9 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51C7899283383EA00A593B9 /* EditInfoViewController.xib */; };
@@ -43,7 +42,6 @@
 		A5443B0E2838E0850057CEAA /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443B0C2838E0850057CEAA /* BookListViewController.swift */; };
 		A5443B0F2838E0850057CEAA /* BookListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5443B0D2838E0850057CEAA /* BookListViewController.xib */; };
 		A54C3A28283BAC2A009BA6E2 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */; };
-		A55035A6283C6AF100A06F90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55035A5283C6AF100A06F90 /* GoogleService-Info.plist */; };
 		A55035A8283C7A1400A06F90 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55035A7283C7A1400A06F90 /* ShoppingCart.swift */; };
 		A55035AA283C7AA800A06F90 /* ShoppingCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55035A9283C7AA800A06F90 /* ShoppingCartModel.swift */; };
 		A555E082283A2F5600D1A01A /* AdminCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */; };
@@ -63,6 +61,7 @@
 		A56852F12830CB8D00083378 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F02830CB8D00083378 /* Category.swift */; };
 		A56852F32830CD0700083378 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F22830CD0700083378 /* Order.swift */; };
 		A56852F52830CE4B00083378 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F42830CE4B00083378 /* Customer.swift */; };
+		A56B646E283CC4EA00B39B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56B646D283CC4EA00B39B06 /* GoogleService-Info.plist */; };
 		A5704F6E2836A3AD0069FFD8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */; };
 		A5704F772836C4BB0069FFD8 /* BookItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */; };
 		A5704F782836C4BB0069FFD8 /* BookItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */; };
@@ -155,7 +154,6 @@
 		66808DA5283C0CB3005B26CC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		66808DAB283C15E3005B26CC /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
 		66808DAC283C15E3005B26CC /* SeemoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeemoreViewController.xib; sourceTree = "<group>"; };
-		66808DB9283C5880005B26CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7133625EB0A74B43EB5D17BB /* Pods_Group1_OnlineBookStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CA940926D9140217AE0B04 /* Pods-Group1_OnlineBookStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group1_OnlineBookStoreTests.release.xcconfig"; path = "Target Support Files/Pods-Group1_OnlineBookStoreTests/Pods-Group1_OnlineBookStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		762904853BE64FC0C4A1CF0D /* Pods_Group1_OnlineBookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group1_OnlineBookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +182,6 @@
 		A5443B0C2838E0850057CEAA /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		A5443B0D2838E0850057CEAA /* BookListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListViewController.xib; sourceTree = "<group>"; };
 		A54C3A27283BAC29009BA6E2 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
-		A55035A5283C6AF100A06F90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A55035A7283C7A1400A06F90 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		A55035A9283C7AA800A06F90 /* ShoppingCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartModel.swift; sourceTree = "<group>"; };
 		A555E080283A2F5500D1A01A /* AdminCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCategoryViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +201,7 @@
 		A56852F02830CB8D00083378 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A56852F22830CD0700083378 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A56B646D283CC4EA00B39B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -418,7 +416,7 @@
 		A5866F17282A2838005B0C8C /* System files */ = {
 			isa = PBXGroup;
 			children = (
-				66808DB9283C5880005B26CC /* GoogleService-Info.plist */,
+				A56B646D283CC4EA00B39B06 /* GoogleService-Info.plist */,
 				A574352D28251A340081321B /* Assets.xcassets */,
 				A574353228251A340081321B /* Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
@@ -720,7 +718,7 @@
 				D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */,
-				66808DBA283C5880005B26CC /* GoogleService-Info.plist in Resources */,
+				A56B646E283CC4EA00B39B06 /* GoogleService-Info.plist in Resources */,
 				A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */,
 				A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
