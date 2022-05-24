@@ -17,12 +17,18 @@ class CategoryCollectionViewController: UICollectionViewController {
     var cartButton = UIBarButtonItem()
     var categories = [Category]()
     @IBOutlet weak var categoryCollectionViewHeight: NSLayoutConstraint!
-//    override func viewDidLayoutSubviews() {
+    //    override func viewDidLayoutSubviews() {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        
+    }
     override func viewDidLoad(  ) {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
-//        nav.addSearchBarItem(navigationItem: navigationItem)
+        //        nav.addSearchBarItem(navigationItem: navigationItem)
         addRightBarButtonItem()
         // Register cell classes
         self.collectionView!.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
@@ -94,7 +100,7 @@ class CategoryCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
         let category : Category = categories[indexPath.row]
-//        cell.img.image = category.img
+        //        cell.img.image = category.img
         cell.name.text = category.name
         
         return cell

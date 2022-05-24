@@ -21,6 +21,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource {
         let nav = NavigationBar(navigationController: self.navigationController)
         nav.setUp()
         addRightBarButtonItem()
+        self.tabBarController?.tabBar.isHidden = true
         
         
         likeBtn.imageView?.layer.transform = CATransform3DMakeScale(1.8, 1.8, 1.8)
