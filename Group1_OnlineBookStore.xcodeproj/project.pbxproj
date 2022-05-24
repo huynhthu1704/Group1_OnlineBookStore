@@ -61,6 +61,7 @@
 		A56852F12830CB8D00083378 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F02830CB8D00083378 /* Category.swift */; };
 		A56852F32830CD0700083378 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F22830CD0700083378 /* Order.swift */; };
 		A56852F52830CE4B00083378 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56852F42830CE4B00083378 /* Customer.swift */; };
+		A56B6470283D028900B39B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56B646F283D028900B39B06 /* GoogleService-Info.plist */; };
 		A5704F6E2836A3AD0069FFD8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */; };
 		A5704F772836C4BB0069FFD8 /* BookItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */; };
 		A5704F782836C4BB0069FFD8 /* BookItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */; };
@@ -96,7 +97,6 @@
 		D37CBECF28376EA500D60DD6 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CBECD28376EA500D60DD6 /* UserInfoViewController.swift */; };
 		D37CBED028376EA500D60DD6 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37CBECE28376EA500D60DD6 /* UserInfoViewController.xib */; };
 		D38232FE283CC7A5002DAD46 /* CancelReasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38232FD283CC7A5002DAD46 /* CancelReasonModel.swift */; };
-		D3823300283CC8A0002DAD46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D38232FF283CC8A0002DAD46 /* GoogleService-Info.plist */; };
 		D38F447B28353847002E663E /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F447928353847002E663E /* MyOrdersViewController.swift */; };
 		D38F447C28353847002E663E /* MyOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F447A28353847002E663E /* MyOrdersViewController.xib */; };
 		D38F448328354468002E663E /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F448128354468002E663E /* OrderDetailViewController.swift */; };
@@ -202,6 +202,7 @@
 		A56852F02830CB8D00083378 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A56852F22830CD0700083378 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A56852F42830CE4B00083378 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A56B646F283D028900B39B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5704F6D2836A3AD0069FFD8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A5704F752836C4BB0069FFD8 /* BookItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5704F762836C4BB0069FFD8 /* BookItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -243,7 +244,6 @@
 		D37CBECD28376EA500D60DD6 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		D37CBECE28376EA500D60DD6 /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		D38232FD283CC7A5002DAD46 /* CancelReasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReasonModel.swift; sourceTree = "<group>"; };
-		D38232FF283CC8A0002DAD46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D38F447928353847002E663E /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		D38F447A28353847002E663E /* MyOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersViewController.xib; sourceTree = "<group>"; };
 		D38F448128354468002E663E /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -418,9 +418,9 @@
 		A5866F17282A2838005B0C8C /* System files */ = {
 			isa = PBXGroup;
 			children = (
+				A56B646F283D028900B39B06 /* GoogleService-Info.plist */,
 				A574352D28251A340081321B /* Assets.xcassets */,
 				A574353228251A340081321B /* Info.plist */,
-				D38232FF283CC8A0002DAD46 /* GoogleService-Info.plist */,
 				A574352128251A2D0081321B /* AppDelegate.swift */,
 				A574352328251A2D0081321B /* SceneDelegate.swift */,
 			);
@@ -721,7 +721,7 @@
 				D3EEF6122837E46900779863 /* MyReviewsViewController.xib in Resources */,
 				A56852EA2830B7A600083378 /* ReviewTableViewCell.xib in Resources */,
 				665AE549283BB1C10081CA6A /* BookYCollectionViewCell.xib in Resources */,
-				D3823300283CC8A0002DAD46 /* GoogleService-Info.plist in Resources */,
+				A56B6470283D028900B39B06 /* GoogleService-Info.plist in Resources */,
 				A5A9CC002832AC3C00890344 /* ShoppingCartTableViewCell.xib in Resources */,
 				A555E083283A2F5600D1A01A /* AdminCategoryViewController.xib in Resources */,
 				A574352E28251A340081321B /* Assets.xcassets in Resources */,
